@@ -1,3 +1,4 @@
+import Header from '../components/Header.js';
 import Navigator from '../components/Navigator.js'
 import Footer from '../components/Footer.js'
 
@@ -6,6 +7,7 @@ import styles from '../pages/login.module.scss'
 function Login() {
     return (
         <div className={styles.bodyContainer}>
+            <Header />
             <Navigator />
             <div className={styles.loginContainer}>
                 <form>

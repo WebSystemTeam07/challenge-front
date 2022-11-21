@@ -1,0 +1,38 @@
+.bodyContainer {
+}
+
+.questionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.infoContainer {
+    display: flex;
+    column-gap: 1vw;
+    align-items: center;
+    color: #1c8cc9;
+    padding: 0.9vw 0vw;
+
+    p {
+        color: #000000;
+        margin: 0;
+    }
+}
+
+.answerContainer {
+    display: flex;
+    column-gap: 1vw;
+    align-items: center;
+    color: #1c8cc9;
+    background-color: #ebf4f7;
+    padding: 0.9vw 1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.8vw;
+
+    p {
+        color: #000000;
+        margin: 0;
+    }
+}

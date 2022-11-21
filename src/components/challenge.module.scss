@@ -32,6 +32,8 @@
 
 .arrayContainer {
     display: flex;
+    align-items: center;
+    column-gap: 0.3vw;
 
     p {
         font-size: small;

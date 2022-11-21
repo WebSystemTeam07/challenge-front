@@ -10,7 +10,7 @@ import styles from "../pages/main.module.scss"
 function Main() {
     return (
         <div className={styles.mainContainer}>
-            <Header loginUrl='./login' />
+            <Header />
             <Navigator />
             <div className={styles.mainWrapper}>
                 <div className={styles.imageContainer}>
@@ -18,8 +18,8 @@ function Main() {
                 </div>
                 <div className={styles.textContainer}>
                     <p>
-                        <span>당신을 위한 챌린지</span>
-                        <span>모두의 챌린지</span>
+                        <span>당신의 인생을 위해</span>
+                        <span>포 마이 라이프</span>
                     </p>
                 </div>
             </div>
