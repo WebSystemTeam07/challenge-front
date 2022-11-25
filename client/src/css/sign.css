@@ -1,0 +1,115 @@
+#container{
+    display : block;
+    text-align : center;
+    margin: 0 auto;
+    padding: 100px;
+    z-index: -1;
+    
+}
+
+
+#signContainer{
+    margin: 0 auto;
+    position : relative;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#signContainer:before {
+    content: "";
+    display: block;
+}
+
+
+.title{
+    font-size : 20px;
+    font-weight: 800;
+    margin : 20px 0;
+    text-size-adjust: none;
+    font-family: campton, "Apple SD Gothic Neo", NanumBarunGothic, 나눔바른고딕, "Malgun Gothic", "맑은 고딕", dotum, sans-serif;;
+}
+
+.subTitle{
+    font-size : 15px;
+    text-size-adjust: none;
+    font-family: campton, "Apple SD Gothic Neo", NanumBarunGothic, 나눔바른고딕, "Malgun Gothic", "맑은 고딕", dotum, sans-serif;;
+}
+
+.inputBlock{
+    width: 70%; 
+    height: 25px;
+    padding: 10px; 
+    margin: 10px 0;
+    border: 1px solid #d4d4d4;
+    font-size: 12px; 
+    font-weight: 500;
+    color: #1a1a1a;
+    
+}
+.oneInputBlock{
+    width: 60%; 
+    height: 20px;
+    padding: 10px; 
+    margin: 10% 0;
+    border: 1px solid #d4d4d4;
+    font-size: 12px; 
+    font-weight: 500;
+    color: #1a1a1a;
+    
+}
+
+.signButton{
+    border: none;
+    background-color: #d4d4d4;
+    width: 70%; 
+    height: 45px;
+    padding: 10px; 
+    margin: 20px 0;
+    border: none;
+    font-size: 15px; 
+}
+.signButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.goButton{
+    border: none;
+    width: 50px; 
+    height: 42px;
+    /* padding: 10px;  */
+    margin-left: 10px;
+    border: none;
+}
+.goButton:hover{
+    background-color: black;
+    color: white;
+}
+
+a{
+    color : grey;
+    font-size: 14px; 
+}
+a:hover{
+    color: black;
+}
+
+
+#horizon{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
