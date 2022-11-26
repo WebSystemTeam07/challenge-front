@@ -1,115 +1,109 @@
+* {
+    font-family: "Nanum Gothic" !important;
+  }
+
 #container{
-    display : block;
+    display : flex;
+    width: 100%;
     text-align : center;
-    margin: 0 auto;
-    padding: 100px;
-    z-index: -1;
-    
-}
-
-
-#signContainer{
-    margin: 0 auto;
-    position : relative;
-    max-width: 400px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 5%;
-    border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-#signContainer:before {
-    content: "";
-    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
 }
 
+#inputContainer{
+    display : flex;
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
+    text-align : center;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 0 auto;
+}
 
-.title{
+.bigEnter{
+    height : 50px;
+}
+
+#title{
     font-size : 20px;
-    font-weight: 800;
-    margin : 20px 0;
+    font-weight: 500;
     text-size-adjust: none;
     font-family: campton, "Apple SD Gothic Neo", NanumBarunGothic, 나눔바른고딕, "Malgun Gothic", "맑은 고딕", dotum, sans-serif;;
 }
 
-.subTitle{
-    font-size : 15px;
-    text-size-adjust: none;
-    font-family: campton, "Apple SD Gothic Neo", NanumBarunGothic, 나눔바른고딕, "Malgun Gothic", "맑은 고딕", dotum, sans-serif;;
+#horizon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align : center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .inputBlock{
-    width: 70%; 
+    width: 100%; 
     height: 25px;
-    padding: 10px; 
-    margin: 10px 0;
-    border: 1px solid #d4d4d4;
+    padding: 10px 5px; 
+    margin: 15px 0px;
+    border: 1px solid #ececec;
     font-size: 12px; 
     font-weight: 500;
-    color: #1a1a1a;
-    
+    /* color: #1a1a1a; */
 }
-.oneInputBlock{
-    width: 60%; 
-    height: 20px;
-    padding: 10px; 
-    margin: 10% 0;
-    border: 1px solid #d4d4d4;
-    font-size: 12px; 
-    font-weight: 500;
-    color: #1a1a1a;
-    
+
+.inputBlock:focus{
+    border: 1px solid #438AC3;
+    outline: none;
+}
+
+#inputBlock_email{
+    width: 80%;
+}
+
+.authButton{
+    border: none;
+    width: 20%; 
+    height: 45px;
+    border: 1px solid #438AC3;
+    border-radius: 5px;
+    background-color: white;
+    color: #438AC3;
+    margin: 10px;
+}
+.authButton:hover{
+    background-color:  #438AC3;
+    color : white;
+    outline: none;
 }
 
 .signButton{
     border: none;
-    background-color: #d4d4d4;
-    width: 70%; 
-    height: 45px;
+    background-color: #438AC3;
+    width: 30%;
+    max-width: 300px; 
+    height: 50px;
     padding: 10px; 
     margin: 20px 0;
     border: none;
     font-size: 15px; 
-}
-.signButton:hover{
-    background-color: black;
     color: white;
 }
 
-.goButton{
-    border: none;
-    width: 50px; 
-    height: 42px;
-    /* padding: 10px;  */
-    margin-left: 10px;
-    border: none;
-}
-.goButton:hover{
-    background-color: black;
-    color: white;
-}
 
 a{
-    color : grey;
+    color : #c2c0c0;
     font-size: 14px; 
 }
 a:hover{
-    color: black;
+    color:  #438AC3;
+    font-weight: 500;
 }
 
 
-#horizon{
-    width: 100%;
-    height: 100%;
-    margin-top: 10px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
 
