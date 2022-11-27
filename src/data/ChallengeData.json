@@ -1,0 +1,33 @@
+{
+  "data":[{
+    "id":"0",
+    "type":"group",
+    "name":"샐러드 먹기"
+},
+{
+  "id":"1",
+    "type":"group",
+    "name":"하루 1만보 걷기"
+},
+{
+  "id":"3",
+    "type":"group",
+    "name":"책 읽기"
+},
+{
+  "id":"4",
+    "type":"indiv",
+    "name":"책 읽기"
+},
+{
+  "id":"5",
+    "type":"indiv",
+    "name":"물마시기"
+},
+{
+  "id":"6",
+    "type":"indiv",
+    "name":"영화보기"
+}
+]
+}
