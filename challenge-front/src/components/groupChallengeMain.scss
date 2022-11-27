@@ -1,0 +1,88 @@
+.groupChallengeBoardContainer{
+    padding: 100px;
+}
+
+.pathContainer{
+    background-color: #e4f3fd;
+    display: flex;
+    align-items: center;
+    padding: 0 19.2vw;
+    height: 5.0vh;
+    span {
+        font-size: small;
+    }
+}
+
+.groupChallengeBoardHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    padding: 0 19.2vw;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.categoryPath{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.searchContianer{
+    width: 400px;
+    height: 20px;
+    padding: 10px;
+    border: solid;
+    border-width: thin;
+    border-radius: 30px;
+    border-color: #c9c9c9;
+}
+
+.groupChallengeCategories{
+    display: flex;
+    height: 8vh;
+    padding: 0 19.2vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.challengeItemContainer{
+    display:inline-flex;
+    height: 15vh;
+    padding: 0 19.2vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.challengeImg{
+    height: 18.0vh;
+    width: 30.0vh;
+    border-radius: 15px;
+}
+
+.challengeTextInfo{
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 20px;
+    font-size: small;
+}
+
+.highlightBlue{
+    font-weight: bold;
+    color:#1c8cc9;
+}
