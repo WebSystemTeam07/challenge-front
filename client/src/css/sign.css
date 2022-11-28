@@ -1,0 +1,109 @@
+* {
+    font-family: "Nanum Gothic" !important;
+  }
+
+#container{
+    display : flex;
+    width: 100%;
+    text-align : center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+#inputContainer{
+    display : flex;
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
+    text-align : center;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.bigEnter{
+    height : 50px;
+}
+
+#title{
+    font-size : 20px;
+    font-weight: 500;
+    text-size-adjust: none;
+    font-family: campton, "Apple SD Gothic Neo", NanumBarunGothic, 나눔바른고딕, "Malgun Gothic", "맑은 고딕", dotum, sans-serif;;
+}
+
+#horizon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align : center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.inputBlock{
+    width: 100%; 
+    height: 25px;
+    padding: 10px 5px; 
+    margin: 15px 0px;
+    border: 1px solid #ececec;
+    font-size: 12px; 
+    font-weight: 500;
+    /* color: #1a1a1a; */
+}
+
+.inputBlock:focus{
+    border: 1px solid #438AC3;
+    outline: none;
+}
+
+#inputBlock_email{
+    width: 80%;
+}
+
+.authButton{
+    border: none;
+    width: 20%; 
+    height: 45px;
+    border: 1px solid #438AC3;
+    border-radius: 5px;
+    background-color: white;
+    color: #438AC3;
+    margin: 10px;
+}
+.authButton:hover{
+    background-color:  #438AC3;
+    color : white;
+    outline: none;
+}
+
+.signButton{
+    border: none;
+    background-color: #438AC3;
+    width: 30%;
+    max-width: 300px; 
+    height: 50px;
+    padding: 10px; 
+    margin: 20px 0;
+    border: none;
+    font-size: 15px; 
+    color: white;
+}
+
+
+a{
+    color : #c2c0c0;
+    font-size: 14px; 
+}
+a:hover{
+    color:  #438AC3;
+    font-weight: 500;
+}
+
+
+
+

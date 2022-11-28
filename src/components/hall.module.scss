@@ -1,0 +1,21 @@
+.boardContainer {
+    padding: 0 19.2vw;
+}
+
+.titleContainer {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5vmin;
+
+    p {
+        font-size: larger;
+    }
+}
+
+.arrayContainer {
+    p {
+        font-size: small;
+    }
+}
