@@ -1,0 +1,30 @@
+.detailBoardContainer{
+    padding: 0 19.2vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.detailBoardImage{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 55vh;
+    border-radius: 20px;
+}
+
+.detailBoardTagContainer{
+
+}
+
+.detailBoardHeader{
+    border:solid;
+    border-color: #cecece;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.detailBoardTag{
+    padding-right: 10px;
+    color: #1c8cc9;
+}

@@ -12,7 +12,7 @@ function GroupChallengeMain(){
         <React.Fragment>
             <Header/>
             <Navigator/>
-            <Path/>
+            <Path path="전체보기 > 그룹 챌린지"/>
             <ChallengeBoard challengeData={challengeData}/>
             <Footer/>
         </React.Fragment>

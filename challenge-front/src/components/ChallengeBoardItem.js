@@ -1,27 +1,28 @@
-
+import { Link } from "react-router-dom";
 import "../components/groupChallengeMain.scss";
 
 function ChallengeBoardItem(props){
+    let challenge = props.challenge;
     return(
         <div>
-            <span className="challengeItemContainer">
-                <img className="challengeImg" src={props.challenge.imageUrl} />
+            <Link to="/groupChallengeMain/groupChallengeDetail" state={{challenge:challenge}} className="challengeItemContainer" style={{ textDecoration: "none" }}>
+                <img className="challengeImg" src={challenge.imageUrl} />
                 <span className="challengeTextInfo">
-                    <div className="challengeTitle">{props.challenge.title}</div>
-                    <div className="tagsContainer">{props.challenge.tag.map((item)=>(<span className="tag">{item}</span>))}</div>
+                    <div className="challengeTitle">{challenge.title}</div>
+                    <div className="tagsContainer">{challenge.tag.map((item)=>(<span className="tag">{item}</span>))}</div>
                     <div>
-                        <span className="highlightBlue">{props.challenge.startDate}</span>
+                        <span className="highlightBlue">{challenge.startDate}</span>
                         에 시작해서
-                        <span className="highlightBlue"> {props.challenge.term}일 </span>
+                        <span className="highlightBlue"> {challenge.term}일 </span>
                         동안 도전해요!
                     </div> 
-                    <div className="participantsInfo">
-                        현재
-                        <span className="highlightBlue"> {props.challenge.member.length}명 </span>
-                        도전 중!
-                    </div>
                 </span>
-            </span>            
+                <div className="participantsInfo">
+                    현재{" "}
+                    <span className="highlightBlue">{challenge.member.length}명{" "}</span>
+                    도전 중!
+                </div>
+            </Link>            
         </div>
     )
 }

@@ -18,7 +18,7 @@ function ChallengeBoard(props){
                 <span className="searchContianer">검색어를 입력하세요</span>
             </span>
             <span className="groupChallengeCategories">
-                {categories.map((item) => (<span onClick={()=>{setCategory(item)}}>{item}</span>))}
+                {categories.map((item) => (<span className={category == item ? "categorySelected": "categoryName"} onClick={()=>{setCategory(item)}}>{item}</span>))}
             </span>
             <ChallengeCategoryFilter categories={categories} category={category} setCategory={setCategory} challengeData={props.challengeData}/>
         </span>
