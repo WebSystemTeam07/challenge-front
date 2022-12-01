@@ -41,11 +41,21 @@ const Board=(givenAuth)=>{
   const personData=data.data;
   console.log(personData)
   console.log(givenAuth.givenAuth)
+  if(givenAuth.givenAuth!=undefined){
+    for(let i=0;i<personData.length;i++){
+      if(i==givenAuth.givenAuth.day-1){
+        personData[i].attend="O";
+        break;
+      }
+      if(personData[i].attend==""){
+        personData[i].attend="X";
+      }
+    }
+  }
   for(let i=0;i<5;i++){
     if(givenAuth.givenAuth!=undefined){
     if(i==givenAuth.givenAuth.day-1){
       personData[i].attend="O";
-      console.log("changed!");
     }}
     first_week.push(
       <div className="flex_container">
@@ -57,7 +67,6 @@ const Board=(givenAuth)=>{
     if(givenAuth.givenAuth!=undefined){
     if(i==givenAuth.givenAuth.day-1){
       personData[i].attend="O";
-      console.log("changed!");
     }}
     second_week.push(
       <div className="flex_container">
@@ -69,7 +78,6 @@ const Board=(givenAuth)=>{
     if(givenAuth.givenAuth!=undefined){
     if(i==givenAuth.givenAuth.day-1){
       personData[i].attend="O";
-      console.log("changed!");
     }}
     third_week.push(
       <div className="flex_container">
@@ -81,7 +89,6 @@ const Board=(givenAuth)=>{
     if(givenAuth.givenAuth!=undefined){
     if(i==givenAuth.givenAuth.day-1){
       personData[i].attend="O";
-      console.log("changed!");
     }}
     fourth_week.push(
       <div className="flex_container">
@@ -93,7 +100,6 @@ const Board=(givenAuth)=>{
     if(givenAuth.givenAuth!=undefined){
     if(i==givenAuth.givenAuth.day-1){
       personData[i].attend="O";
-      console.log("changed!");
     }}
     fifth_week.push(
       <div className="flex_container">
@@ -103,10 +109,8 @@ const Board=(givenAuth)=>{
   }
   for(let i=25;i<30;i++){
     if(givenAuth.givenAuth!=undefined){
-    console.log("i",i,givenAuth.givenAuth.day-1)
     if(i==givenAuth.givenAuth.day-1){
       personData[i].attend="O";
-      console.log("changed!");
     }
   }
     last_week.push(
@@ -115,8 +119,6 @@ const Board=(givenAuth)=>{
     </div>
     )
   }
-  console.log(typeof(fifth_week))
-  console.log(fifth_week[4])
 return(
   <>
   <div className='flex'>
