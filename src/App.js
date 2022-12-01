@@ -3,6 +3,7 @@ import {Routes, Route,NavLink} from 'react-router-dom';
 import MyChallenge from './pages/MyChallenge';
 import GroupChallengePage from './pages/GroupChallengePage';
 import NewChallenge from './components/NewChallenge';
+import NewPost from './components/NewPost';
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
       <Route path="/MyChallenge" element={<MyChallenge/>} />
       <Route path="/GroupChallengePage" element={<GroupChallengePage/>}/>
       <Route path="/NewChallenge" element={<NewChallenge/>}/>
+      <Route path="/post" element={<NewPost/>}/>
      </Routes>
      
     </div>
