@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../components/groupChallengeMain.scss";
+import "./groupChallengeMain.scss";
 
 function ChallengeBoardItem(props){
     let challenge = props.challenge;

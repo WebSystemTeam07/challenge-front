@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../components/Header.js";
 import Footer from '../components/Footer.js';
 import Navigator from "../components/Navigator.js";
-import Path from "../components/Path.js";
-import ChallengeBoard from "../components/ChallengeBoard.js";
+import Path from "../components/groupChallenge/Path.js";
+import ChallengeBoard from "../components/groupChallenge/ChallengeBoard";
 
-import challengeData from "../data/ChallengeData.js";
+import challengeData from "../data/GroupChallengeData"
 
 function GroupChallengeMain(){
     return(

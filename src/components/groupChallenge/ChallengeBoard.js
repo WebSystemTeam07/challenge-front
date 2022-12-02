@@ -1,4 +1,4 @@
-import "../components/groupChallengeMain.scss";
+import "./groupChallengeMain.scss";
 
 import React, {useState} from "react"
 

@@ -13,7 +13,9 @@ function Navigator() {
                 <Link to='/introduce' style={{ textDecoration: "none" }}>
                     <p>서비스 소개</p>
                 </Link>
-                <p>그룹 챌린지</p>
+                <Link to="/groupChallengeMain" style={{ textDecoration: "none" }}>
+                    <p>그룹 챌린지</p>
+                </Link>
                 <p>개인 챌린지</p>
                 <p>마이페이지</p>
             </div>

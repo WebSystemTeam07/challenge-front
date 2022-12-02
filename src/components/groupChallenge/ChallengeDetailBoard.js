@@ -1,4 +1,4 @@
-import "../components/groupChallengeDetail.scss";
+import "./groupChallengeDetail.scss";
 
 function ChallengeDtailBoard(props){
     const challenge = props.challenge

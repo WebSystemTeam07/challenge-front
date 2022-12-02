@@ -1,7 +1,8 @@
 import './App.css';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import MyChallenge from './pages/MyChallenge';
-import GroupChallengePage from './pages/GroupChallengePage';
+import GroupChallengeMain from './pages/GroupChallengeMain';
+import GroupChallengeDetail from "./pages/GroupChallengeDetail";
 import NewChallenge from './components/NewChallenge';
 import MyPage from './components/myPage/MyPage'
 import SignIn from './components/user/SignIn';
@@ -23,7 +24,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/MyChallenge" element={<MyChallenge />} />
-        <Route path="/GroupChallengePage" element={<GroupChallengePage />} />
+        <Route path="/GroupChallengePage" element={<GroupChallengeMain />} />
+        <Route path="/groupChallengeMain/groupChallengeDetail" element={<GroupChallengeDetail/>}/>
         <Route path="/NewChallenge" element={<NewChallenge />} />
       </Routes>
 
