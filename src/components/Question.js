@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import styles from "../components/question.module.scss"
+import styles from "../components/styles/question.module.scss"
 
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import AnnouncementIcon from '@mui/icons-material/Announcement';

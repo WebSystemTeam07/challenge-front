@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import styles from "../components/component.module.scss"
+import styles from "../components/styles/component.module.scss"
 
 function Header({loginUrl}) {
     return(

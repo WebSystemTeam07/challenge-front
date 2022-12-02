@@ -5,3 +5,27 @@
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
 }
+
+.articleContainer {
+    width: 100%;
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        color: #1c8cc9;
+    }
+}
+
+.infoContainer {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.dateContainer {
+    display: flex;
+    column-gap: 0.5rem;
+}

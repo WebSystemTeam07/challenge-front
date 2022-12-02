@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { Link } from "react-router-dom"
 
-import styles from "../components/challenge.module.scss"
+import styles from "../components/styles/challenge.module.scss"
 
 function ChallengeBoard() {
     return(
