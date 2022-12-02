@@ -1,0 +1,125 @@
+.groupChallengeBoardContainer{
+    padding: 100px;
+}
+
+.pathContainer{
+    background-color: #e4f3fd;
+    display: flex;
+    align-items: center;
+    padding: 0 19.2vw;
+    height: 5.0vh;
+    span {
+        font-size: small;
+    }
+}
+
+.groupChallengeBoardHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    padding: 0 19.2vw;
+    margin-top: 25px;
+    margin-bottom: 70px;
+    justify-content: space-between;
+}
+
+.categoryPath{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.searchContianer{
+    width: 400px;
+    height: 20px;
+    padding: 10px;
+    border: solid;
+    border-width: thin;
+    border-radius: 30px;
+    border-color: #c9c9c9;
+}
+
+.groupChallengeCategories{
+    display: flex;
+    height: 8vh;
+    padding: 0 19.2vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoryName{
+    padding-bottom: 10px;
+    font-size: 18px;
+    border:solid;
+    width: 105px;
+    border:solid;
+    border-color:#e0e0e0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 3px;
+    text-align: center;
+}
+
+.categorySelected{
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: #1c8cc9;
+    border:solid;
+    width: 105px;
+    border:solid;
+    border-color:#1c8cc9;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 3px;
+    text-align: center;
+}
+
+.challengeItemContainer{
+    display:inline-flex;
+    padding: 0 19.2vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.challengeImg{
+    height: 18.0vh;
+    width: 30.0vh;
+    border-radius: 15px;
+}
+
+.challengeTextInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 21px;
+    padding-left: 25px;
+}
+
+.participantsInfo{
+    font-size: 21px;
+    padding-left: 100px;
+    padding-top: 5%;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 13px;
+    font-size: small;
+}
+
+.highlightBlue{
+    font-weight: bold;
+    color:#1c8cc9;
+}
