@@ -9,12 +9,7 @@ function App() {
  
   return (
     <div className="App">
-      <p> 
-      <NavLink to='/'>Home&nbsp;</NavLink>
-      </p>
-        <NavLink to="/MyChallenge" style={{textDecoration:'none'}}>MyChallenge&nbsp;&nbsp;</NavLink>
-        <NavLink to="/GroupChallengePage" style={{textDecoration:'none'}}>GroupChallengePage&nbsp;&nbsp;</NavLink>
-        <NavLink to="/NewChallenge" style={{textDecoration:'none'}}>New Challenge&nbsp;&nbsp;</NavLink>
+     
      <Routes>
       <Route path='/'/>
       <Route path="/MyChallenge" element={<MyChallenge/>} />

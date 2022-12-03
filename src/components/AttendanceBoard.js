@@ -1,6 +1,4 @@
-import Card from './Card';
 import React,{useEffect, useState} from 'react';
-import {useTable} from 'react-table';
 import './AttendanceBoard.css';
 import data from '../data/PeronalChallengeData.json';
 const AttendanceBoard=(attend)=>{

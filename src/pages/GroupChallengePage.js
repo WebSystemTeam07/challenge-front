@@ -3,11 +3,6 @@ import React,{useState,useEffect} from 'react';
 import {Routes, Route,NavLink,useNavigate} from 'react-router-dom';
 
 const GroupChallengePage=()=>{
-  const navigate=useNavigate();
-  const onClickNewPostButton=()=>{
-    navigate("/post");
-   console.log("clicked!")
-  }
 return(
   <div>
   <p>그룹페이지</p>

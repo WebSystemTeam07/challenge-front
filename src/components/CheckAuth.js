@@ -16,7 +16,7 @@ const CheckAuth=(props)=>{
   }
   return(
     <>
-  <button type='button' onClick={(e)=>{
+  <button type='button'  onClick={(e)=>{
     checkAuth(startDate);
     e.currentTarget.disabled=true;
   }}>인증</button> 
