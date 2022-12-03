@@ -53,15 +53,23 @@
     .eachContents {
         margin: 0 5px 0 20px;
         width: 70%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
 
-        .tag {
-            border: 1px solid #e4eaee;
-            border-radius: 5px;
-            padding: 2px 3px;
-            margin: 5px 2px;
-            font-size: 9px;
-            font-weight: 100;
-            background-color: #e4eaee;
+        .tags{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .tag {
+                border: 1px solid #e4eaee;
+                border-radius: 5px;
+                padding: 2px 3px;
+                margin: 5px 2px;
+                font-size: 9px;
+                font-weight: 100;
+                background-color: #e4eaee;
+            }
         }
 
         .challengeTitle {

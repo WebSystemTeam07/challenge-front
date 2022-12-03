@@ -35,11 +35,14 @@ export default function EachChallenge(props) {
                 <img src={challenge.imageUrl} />
             </div>
             <div className='eachContents'>
+                <div className= 'tags'>
+                    
                 {tags.map(tag => {
                     return (
                         <span className='tag'>{tag}</span>
-                    )}
-                )}
+                        )}
+                        )}
+                        </div>
                 <div className='challengeTitle'>{challenge.title}</div>
             </div>
 
