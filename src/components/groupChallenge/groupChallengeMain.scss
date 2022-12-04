@@ -32,7 +32,8 @@
 .searchContianer{
     width: 400px;
     height: 20px;
-    padding: 10px;
+    padding: 12px;
+    padding-left: 20px;
     border: solid;
     border-width: thin;
     border-radius: 30px;
@@ -93,14 +94,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 21px;
+    font-size: large;
     padding-left: 25px;
 }
 
 .participantsInfo{
-    font-size: 21px;
-    padding-left: 100px;
-    padding-top: 5%;
+    font-size: large;
+    padding-left: 150px;
+    padding-top: 45px;
 }
 
 .tagsContainer {
@@ -122,4 +123,8 @@
 .highlightBlue{
     font-weight: bold;
     color:#1c8cc9;
+}
+
+.challengeItemContainer{
+    color: black;
 }
