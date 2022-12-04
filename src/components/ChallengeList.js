@@ -1,12 +1,10 @@
 import React,{useState,useMemo} from 'react';
 import Tab from './Tab';
-import Navigator from './Navigator';
-import Header from './Header';
+
 const ChallengeList=()=>{
 return(
   <React.Fragment>
-    <Header/>
-    <Navigator/>
+   
     <h2>나의 챌린지</h2>
 <Tab/>
 </React.Fragment>

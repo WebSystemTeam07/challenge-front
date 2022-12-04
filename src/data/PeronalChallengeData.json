@@ -1,47 +1,48 @@
 {
   "data":[{
+    "challengeId":"1",
     "day": "1",
-    "attend": "O"
+    "attend": true
   },
 {
   "day": "2",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "3",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "4",
-  "attend": "X"
+  "attend": false
 },
 {
   "day": "5",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "6",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "7",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "8",
-  "attend": "X"
+  "attend": false
 },
 {
   "day": "9",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "10",
-  "attend": "X"
+  "attend": false
 },
 {
   "day": "11",
-  "attend": "O"
+  "attend": true
 },
 {
   "day": "12",

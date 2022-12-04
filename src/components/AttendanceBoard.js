@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import './AttendanceBoard.css';
-import data from '../data/PeronalChallengeData.json';
+import authData from '../data/userTaskData.json';
+import dailyData from '../data/taskData.json';
 const AttendanceBoard=(attend)=>{
   console.log("attend",attend)
   useEffect(()=>{
@@ -11,11 +12,12 @@ const AttendanceBoard=(attend)=>{
  )
 }
 const Square=({day,attend})=>{
+  console.log({day,attend})
   let auth;
-  if(attend=='O'){
+  if(attend===true){
     auth="O";
   }
-  else if(attend=='X'){
+  else if(attend===false){
     auth="X";
   }
   else{
@@ -23,97 +25,75 @@ const Square=({day,attend})=>{
   }
   return(
     <>
-    <p>{day}</p>
-    <p>{auth}</p>
+    <p className='day'>{day}</p>
+    <p className='auth'>{auth}</p>
     </>
   )
 }
 const Board=(givenAuth)=>{
-  console.log("board",givenAuth.givenAuth)
   let first_week=[];
   let second_week=[];
   let third_week=[];
   let fourth_week=[];
   let fifth_week=[];
   let last_week=[];
-  const personData=data.data;
-  console.log(personData)
-  console.log(givenAuth.givenAuth)
+  const userTaskData=authData.userTask;
+  console.log("personData",userTaskData)
+  const taskData=dailyData.task;
+  console.log("taskData",taskData)
+
+  console.log("givenAuth",givenAuth.givenAuth)
   if(givenAuth.givenAuth!=undefined){
-    for(let i=0;i<personData.length;i++){
+    console.log("in")
+    for(let i=0;i<userTaskData.length;i++){
       if(i==givenAuth.givenAuth.day-1){
-        personData[i].attend="O";
+        userTaskData[0].status[i]=true;
         break;
       }
-      if(personData[i].attend==""){
-        personData[i].attend="X";
+      if(userTaskData[0].status[i]==""){
+        userTaskData[0].status[i]=false;
       }
     }
   }
   for(let i=0;i<5;i++){
-    if(givenAuth.givenAuth!=undefined){
-    if(i==givenAuth.givenAuth.day-1){
-      personData[i].attend="O";
-    }}
     first_week.push(
       <div className="flex_container">
-    <Square day={personData[i].day} attend={personData[i].attend}/>
+    <Square day={taskData[i].day} attend={userTaskData[0].status[i]}/>
     </div>
     )
   }
   for(let i=5;i<10;i++){
-    if(givenAuth.givenAuth!=undefined){
-    if(i==givenAuth.givenAuth.day-1){
-      personData[i].attend="O";
-    }}
     second_week.push(
       <div className="flex_container">
-    <Square day={personData[i].day} attend={personData[i].attend}/>
+    <Square day={taskData[i].day} attend={userTaskData[0].status[i]}/>
     </div>
     )
   }
   for(let i=10;i<15;i++){
-    if(givenAuth.givenAuth!=undefined){
-    if(i==givenAuth.givenAuth.day-1){
-      personData[i].attend="O";
-    }}
     third_week.push(
       <div className="flex_container">
-    <Square day={personData[i].day} attend={personData[i].attend}/>
+   <Square day={taskData[i].day} attend={userTaskData[0].status[i]}/>
     </div>
     )
   }
   for(let i=15;i<20;i++){
-    if(givenAuth.givenAuth!=undefined){
-    if(i==givenAuth.givenAuth.day-1){
-      personData[i].attend="O";
-    }}
     fourth_week.push(
       <div className="flex_container">
-    <Square day={personData[i].day} attend={personData[i].attend}/>
+   <Square day={taskData[i].day} attend={userTaskData[0].status[i]}/>
     </div>
     )
   }
   for(let i=20;i<25;i++){
-    if(givenAuth.givenAuth!=undefined){
-    if(i==givenAuth.givenAuth.day-1){
-      personData[i].attend="O";
-    }}
     fifth_week.push(
       <div className="flex_container">
-    <Square day={personData[i].day} attend={personData[i].attend}/>
+    <Square day={taskData[i].day} attend={userTaskData[0].status[i]}/>
     </div>
     )
   }
   for(let i=25;i<30;i++){
-    if(givenAuth.givenAuth!=undefined){
-    if(i==givenAuth.givenAuth.day-1){
-      personData[i].attend="O";
-    }
-  }
     last_week.push(
       <div className="flex_container">
-    <Square day={personData[i].day} attend={personData[i].attend}/>
+    <Square day={taskData[i].day} attend={userTaskData[0].status[i]}/>
     </div>
     )
   }

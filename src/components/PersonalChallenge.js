@@ -4,13 +4,19 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CheckAuth from "./CheckAuth";
 import AttendanceBoard from "./AttendanceBoard";
-
+import ChallengeData from '../data/ChallengeData.json';
 function Question() {
-    const [open, setOpen] = useState(0);
     const [attend,setAttend]=useState([]);//인증확인
-
-    const toggleAnswer = () => {
-        setOpen(open => !open);
+    const ivChallengeData=ChallengeData.data.filter((item)=>
+    item.type=='personal');
+    const [open, setOpen] = useState([0]);
+    const toggleAnswer = (idx) => {
+      console.log("idx",idx)
+      let tmp_arr=[];
+      tmp_arr=[...open];
+      console.log(tmp_arr);
+      tmp_arr[idx]=!open[idx];
+        setOpen(tmp_arr);
     }
     const getAuth=(auth)=>{
       setAttend(auth);
@@ -31,32 +37,40 @@ function Question() {
     }
     return(
         <>
-                <div>
+                <div className="group_title">
                 <h2>개인챌린지 목록</h2>
-                    <p className="text_button_center">
-                    <img src="https://www.kfoodtimes.com/news/photo/202004/10750_20581_367.png" alt="샐러드 사진"/>
+                <div className="group_center">
+                {ivChallengeData.map((item,idx)=>{
+                return(
+                  <>
+                <div className="text_button_center">
+                    <img src={item.img} alt="샐러드 사진"/>
                       <div className="textBox">
-                      프로젝트 이름  
+                      {item.title}  
                       </div>
-                      <pre>{"                                "}</pre>
-                      <pre>{"                                "}</pre>
-                      <button type="button" onClick={toggleAnswer} className="button_interval">{ open ? <Closed/>: <Opened/>}</button></p>
-                </div>
-            { open ? (
-                <div>
+                      <button type="button" onClick={()=>toggleAnswer(idx)} className="button_interval">{ open[idx] ? <Closed/>: <Opened/>}</button></div>
+            
+            { open[idx] ? (
                     <p>{<>
                       <div className="board">
                       <div className="board_center">
+                        {console.log("attend",attend)}
                       <AttendanceBoard attend={attend}/>
                       </div>
-                      <div className="flex">
+                      <div className="flex_button">
                       <CheckAuth getAuth={getAuth}/>
                       </div>
                       </div>
                       </>
                       }</p>
-                </div>
+             
             ) : ("")}
+           
+            </>
+                    )
+                })}
+          </div>
+          </div>          
 
       </>
 

@@ -31,6 +31,7 @@ const NewChallenge=()=>{
   }
   return(
     <div>
+      
       {!isEditing&&<button onClick={startEditingHandler}>Add New Challenge</button>}
       {isEditing&&<ChallengeForm 
       onSaveChallengeData={saveChallengeDataHandler}

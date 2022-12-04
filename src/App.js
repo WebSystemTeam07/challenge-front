@@ -2,8 +2,9 @@ import './App.css';
 import {Routes, Route,NavLink} from 'react-router-dom';
 import MyChallenge from './pages/MyChallenge';
 import GroupChallengePage from './pages/GroupChallengePage';
-import NewChallenge from './components/NewChallenge';
+import NewChallenge from './pages/NewChallenge';
 import NewPost from './components/NewPost';
+import Navigator from './components/Navigator'
 
 function App() {
  
