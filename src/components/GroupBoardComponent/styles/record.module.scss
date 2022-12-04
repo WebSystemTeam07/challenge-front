@@ -3,3 +3,24 @@
     border-radius: 10px;
     padding: 1rem 1.5rem;
 }
+
+.titleContainer {
+    display: flex;
+    column-gap: 0.5rem;
+    padding: 0.6rem 0;
+    align-items: center;
+}
+
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+}
+
+.listWrapper {
+    width: 24rem;
+}

@@ -20,7 +20,10 @@ function GroupBoard() {
     const challenge = {
         title: "하루 한 번 샐러드 먹기",
         tag: ["매일", "식단"],
-        people: 1028
+        people: 1028,
+        now: new Date('2022-12-02'),
+        startDate: new Date('2022-11-30'),
+        endDate: new Date('2022-12-07'),
     }
 
     const user = {
@@ -40,10 +43,13 @@ function GroupBoard() {
                 />
                 <div className={styles.firstContainer}>
                     <div className={styles.successWrapper}>
-                        <SuccessRateBoard />
+                        <SuccessRateBoard 
+                            challenge={challenge}
+                            users={MemberList}
+                        />
                     </div>
                     <div className={styles.recordWrapper}>
-                        <RecordBoard />
+                        <RecordBoard props={MemberList} />
                     </div>               
                 </div>
                 <div>

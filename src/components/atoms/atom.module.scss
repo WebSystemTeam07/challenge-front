@@ -29,3 +29,63 @@
     display: flex;
     column-gap: 0.5rem;
 }
+
+.donutContainer {
+
+}
+
+.svgContainer {
+
+}
+
+.circleContainer {
+
+}
+
+.animationContainer {
+
+}
+
+.percentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 0.3rem;
+
+    p {
+        color: #888888;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+}
+
+.recordContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.rankContainer {
+    width: 0.2rem;
+}
+
+.profileBox {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 70%;
+}

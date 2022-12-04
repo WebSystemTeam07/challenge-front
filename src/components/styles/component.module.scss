@@ -31,10 +31,14 @@
 
 .navigatorContainer {
     display: flex;
-    height: 8vh;
+    height: 8.5vh;
     padding: 0 19.2vw;
     justify-content: space-between;
     align-items: center;
+
+    p {
+        font-size: medium;
+    }
 }
 
 .menuContainer {

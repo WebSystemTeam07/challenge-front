@@ -29,7 +29,9 @@ function App() {
       <Route path="/groupchallengepage" element={<GroupChallengeMain/>}/>
       <Route path="/newchallenge" element={<NewChallenge/>}/>
       <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
-      <Route path="/login" element={<Login/>}/>
+      <Route path="/login" element={<SignIn />}/>
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/mypage" element={<MyPage/>} />
     </Routes>
     </div>
   );

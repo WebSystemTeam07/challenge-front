@@ -8,7 +8,9 @@ function Header({loginUrl}) {
             <Link to='/login' style={{ textDecoration: "none" }}>
                 <p>로그인</p>
             </Link>
-            <p>회원가입</p>
+            <Link to='/signup' style={{ textDecoration: "none" }}>
+                <p>회원가입</p>
+            </Link>
         </div>
     );
 }
