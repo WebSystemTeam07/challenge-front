@@ -1,7 +1,7 @@
 import {useState} from 'react';
 const CheckAuth=(props)=>{
   const [attend,setAttend]=useState([]);//인증확인
-  const startDate="2022-11-05";
+  const startDate="2022-11-15";
   const checkAuth=(startDate)=>{
     const now=new Date();
     let year = now.getFullYear();  
