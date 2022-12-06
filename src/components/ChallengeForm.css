@@ -12,10 +12,13 @@
   align-items: center;
   
 }
+.form{
+ 
+  margin: 0 2vh 1vh 2vh; 
+}
 .form button{
   width: 8vw;
   height: 4vh;
-  margin: 0 0 1vh 1vh; 
   justify-content: center;
   align-items: center;
   display: flex;

@@ -12,7 +12,7 @@ const GroupChallenge=()=>{
   return(
     <>
     <div className='group_title'>
-    <h2>그룹챌린지 목록</h2>
+    <h2>참여 중인 챌린지</h2>
     <div className='group_center'>
     {gpChallengeData.map((item)=>{
       return(

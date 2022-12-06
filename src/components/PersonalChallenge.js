@@ -5,7 +5,8 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CheckAuth from "./CheckAuth";
 import AttendanceBoard from "./AttendanceBoard";
 import ChallengeData from '../data/ChallengeData.json';
-function Question() {
+
+const PersonalChallenge=()=> {
     const [attend,setAttend]=useState([]);//인증확인
     const ivChallengeData=ChallengeData.data.filter((item)=>
     item.type=='personal');
@@ -19,6 +20,7 @@ function Question() {
         setOpen(tmp_arr);
     }
     const getAuth=(auth)=>{
+      console.log(auth)
       setAttend(auth);
       }
     const Opened=()=>{
@@ -38,7 +40,7 @@ function Question() {
     return(
         <>
                 <div className="group_title">
-                <h2>개인챌린지 목록</h2>
+                <h2>참여 중인 챌린지</h2>
                 <div className="group_center">
                 {ivChallengeData.map((item,idx)=>{
                 return(
@@ -46,26 +48,25 @@ function Question() {
                 <div className="text_button_center">
                     <img src={item.img} alt="샐러드 사진"/>
                       <div className="textBox">
-                      {item.title}  
+                      {item.title}<br/>  
+                      {item.startDate}
                       </div>
                       <button type="button" onClick={()=>toggleAnswer(idx)} className="button_interval">{ open[idx] ? <Closed/>: <Opened/>}</button></div>
-            
             { open[idx] ? (
                     <p>{<>
                       <div className="board">
                       <div className="board_center">
                         {console.log("attend",attend)}
-                      <AttendanceBoard attend={attend}/>
+                        
+                      <AttendanceBoard attend={attend} challengeId={item.id}/>
                       </div>
-                      <div className="flex_button">
-                      <CheckAuth getAuth={getAuth}/>
+                      <div className="auth_button">
+                      <CheckAuth getAuth={getAuth} startDate={item.startDate} id={item.id}/>
                       </div>
                       </div>
                       </>
                       }</p>
-             
             ) : ("")}
-           
             </>
                     )
                 })}
@@ -79,4 +80,4 @@ function Question() {
 }
 
 
-export default Question;
+export default PersonalChallenge;

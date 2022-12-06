@@ -1,7 +1,7 @@
 import {useState} from 'react';
 const CheckAuth=(props)=>{
   const [attend,setAttend]=useState([]);//인증확인
-  const startDate="2022-11-15";
+  console.log("startDate",props.startDate)
   const checkAuth=(startDate)=>{
     const now=new Date();
     let year = now.getFullYear();  
@@ -11,14 +11,13 @@ const CheckAuth=(props)=>{
     let stDate=new Date(startDate_arr[0],startDate_arr[1],startDate_arr[2]);
     let today=new Date(year,month,date);
     let day=(today.getTime()-stDate.getTime())/(1000*60*60*24);
-    const tmp_attend={"day":day,"attend":true}
+    const tmp_attend={"id":props.id,"day":day,"attend":true}
     setAttend([...attend,tmp_attend]);
   }
   return(
     <>
   <button type='button'  onClick={(e)=>{
-    checkAuth(startDate);
-    e.currentTarget.disabled=true;
+    checkAuth(props.startDate);
   }}>인증</button> 
   {console.log(attend)}
   {props.getAuth(attend)}
