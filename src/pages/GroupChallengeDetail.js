@@ -4,7 +4,7 @@ import Header from "../components/Header.js";
 import Footer from '../components/Footer.js';
 import Navigator from "../components/Navigator.js";
 import Path from "../components/groupChallenge/Path.js";
-import ChallengeDetailBoard from "../components/groupChallenge/ChallengeDetailBoard.js"
+import ChallengeDetailBoard from "../components/groupChallenge/ChallengeDetailBoard.js";
 
 function GroupChallengeDetail(){
     const location = useLocation();

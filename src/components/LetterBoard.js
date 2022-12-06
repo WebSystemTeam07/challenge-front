@@ -29,29 +29,31 @@ function NoticeLetterBoard({title, list}) {
     const List = list.slice((page - 1) * 13, page * 13)
 
     return(
-        <div>
+        <div className={styles.boardContainer}>
             <p className={styles.titleContainer}>{title}</p>
-            <div className={styles.headerContainer}>
-                <div className={styles.keyWrapper}>
-                    <p>번호</p>
-                </div>
-                <div className={styles.titleWrapper}>
-                    <p>제목</p>
-                </div>
-                <div className={styles.nameWrapper}>
-                    <p>작성자</p>
-                </div>
-                <div className={styles.dateWrapper}>
-                    <p>작성일</p>
-                </div>
-            </div>
             <div>
-                {List.map((article, index) => (
-                    <ArticleComponent
-                        props={article}
-                        index={index + 1}
-                    />
-                ))}
+                <div className={styles.headerContainer}>
+                    <div className={styles.keyWrapper}>
+                        <p>번호</p>
+                    </div>
+                    <div className={styles.titleWrapper}>
+                        <p>제목</p>
+                    </div>
+                    <div className={styles.nameWrapper}>
+                        <p>작성자</p>
+                    </div>
+                    <div className={styles.dateWrapper}>
+                        <p>작성일</p>
+                    </div>
+                </div>
+                <div>
+                    {List.map((article, index) => (
+                        <ArticleComponent
+                            props={article}
+                            index={index + 1}
+                        />
+                    ))}
+                </div>
             </div>
             <div className={styles.arrowContainer}>
                 <div className={styles.decrementWrapper} onClick={decrementHandler}>
