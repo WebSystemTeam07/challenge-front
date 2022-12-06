@@ -15,7 +15,7 @@ function ChallengeBoard(props){
         <span className="groupChallengeBoardContainer">
             <span className="groupChallengeBoardHeader">
                 <span className="categoryPath"> 그룹 챌린지 {'>'} {category}</span>
-                <span className="searchContianer">검색어를 입력하세요</span>
+                <input type="text" className="searchContianer"  placeholder="검색어를 입력하세요"/>
             </span>
             <span className="groupChallengeCategories">
                 {categories.map((item) => (<span className={category == item ? "categorySelected": "categoryName"} onClick={()=>{setCategory(item)}}>{item}</span>))}

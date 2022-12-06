@@ -10,6 +10,7 @@ import SignIn from './components/user/SignIn';
 import SignUp from './components/user/SignUp';
 
 import ChattingBoard from './components/GroupBoardComponent/ChattingBoard';
+import Rounter from "./Router";
 
 import Main from './pages/Main';
 import Introduce from './pages/Introduce';
