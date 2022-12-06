@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 //import './ChallengeForm.css';
 const ChallengeForm=(props)=>{
   const [enteredTitle,setEnteredTitle]=useState('');
@@ -97,30 +97,30 @@ const ChallengeForm=(props)=>{
 
 export default ChallengeForm;
 
-const StyledInput = styled.input`
-  position: absolute;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 1px;
-`;
-const StyledLabel = styled.label`
-  position: relative;
-  display: flex;
-  align-items: center;
-  user-select: none;
+// const StyledInput = styled.input`
+//   position: absolute;
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   height: 1px;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   width: 1px;
+// `;
+// const StyledLabel = styled.label`
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   user-select: none;
 
-  &:before {
-    content: "";
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: white;
-    border: 2px solid gainsboro;
-    border-radius: 0.35rem;
-  }
-`;
-const StyledP = styled.p`
-  margin-left: 0.5rem;
-`;
+//   &:before {
+//     content: "";
+//     height: 1.5rem;
+//     width: 1.5rem;
+//     background-color: white;
+//     border: 2px solid gainsboro;
+//     border-radius: 0.35rem;
+//   }
+// `;
+// const StyledP = styled.p`
+//   margin-left: 0.5rem;
+// `;

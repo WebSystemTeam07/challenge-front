@@ -1,7 +1,7 @@
 import Recommand from "../components/Recommand.js";
 import RecommandList from "../data/RecommandList.js";
 
-import styles from "../components/recommand.module.scss"
+import styles from "../components/styles/recommand.module.scss"
 
 function RecommandBoard() {
     return (

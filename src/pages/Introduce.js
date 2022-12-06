@@ -7,7 +7,7 @@ import Title from "../components/Title.js";
 import QuestionList from "../data/QuestionList.js";
 import Question from "../components/Question.js";
 
-import styles from "../pages/introduce.module.scss"
+import styles from "../pages/styles/introduce.module.scss"
 
 function Introduce() {
     return(

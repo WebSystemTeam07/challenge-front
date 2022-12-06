@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
-import "../components/challenge.module.scss"
 
-import styles from "../components/challenge.module.scss"
+import styles from "../components/styles/challenge.module.scss"
 
 function Challenge({title, tag, url, imgSrc}) {
     return(

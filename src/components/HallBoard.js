@@ -1,4 +1,4 @@
-import styles from "../components/hall.module.scss"
+import styles from "../components/styles/hall.module.scss"
 
 function HallBoard() {
     return (

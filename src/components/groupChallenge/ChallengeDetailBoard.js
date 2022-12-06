@@ -1,6 +1,6 @@
 import "./groupChallengeDetail.scss";
 
-function ChallengeDtailBoard(props){
+function ChallengeDetailBoard(props){
     const challenge = props.challenge
     return(
         <div className="detailBoardContainer">
@@ -35,4 +35,4 @@ function ChallengeDtailBoard(props){
     )
 }
 
-export default ChallengeDtailBoard;
+export default ChallengeDetailBoard;

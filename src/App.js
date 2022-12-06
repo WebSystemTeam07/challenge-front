@@ -1,34 +1,36 @@
-import './App.css';
+import './App.css'
 import { Routes, Route, NavLink } from 'react-router-dom';
 import MyChallenge from './pages/MyChallenge';
 import GroupChallengeMain from './pages/GroupChallengeMain';
 import GroupChallengeDetail from "./pages/GroupChallengeDetail";
 import NewChallenge from './components/NewChallenge';
+import GroupBoardDetail from './pages/GroupBoardDetail'
 import MyPage from './components/myPage/MyPage'
 import SignIn from './components/user/SignIn';
 import SignUp from './components/user/SignUp';
 
-function App() {
+import ChattingBoard from './components/GroupBoardComponent/ChattingBoard';
 
+import Main from './pages/Main';
+import Introduce from './pages/Introduce';
+import GroupBoard from './pages/GroupBoard'
+
+function App() {
   return (
     <div className="App">
-      <p>
-        <NavLink to='/'>Home&nbsp;</NavLink>
-      </p>
-      <NavLink to="/MyChallenge" style={{ textDecoration: 'none' }}>MyChallenge&nbsp;&nbsp;</NavLink>
-      <NavLink to="/GroupChallengePage" style={{ textDecoration: 'none' }}>GroupChallengePage&nbsp;&nbsp;</NavLink>
-      <NavLink to="/NewChallenge" style={{ textDecoration: 'none' }}>New Challenge&nbsp;&nbsp;</NavLink>
       <Routes>
-        <Route path='/' />
-        <Route path="/signin" element={<SignIn />} />
+        <Route path='/' element={<Main />}/>
+        <Route path='/introduce' element={<Introduce />}/>
+        <Route path="/mychallenge" element={<MyChallenge/>} />
+        <Route path="/groupchallengepage" element={<GroupChallengeMain/>}/>
+        <Route path="/newchallenge" element={<NewChallenge/>}/>
+        <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
+        <Route path="/login" element={<SignIn />}/>
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/mypage" element={<MyPage />} />
-        <Route path="/MyChallenge" element={<MyChallenge />} />
-        <Route path="/GroupChallengePage" element={<GroupChallengeMain />} />
-        <Route path="/groupChallengeMain/groupChallengeDetail" element={<GroupChallengeDetail/>}/>
-        <Route path="/NewChallenge" element={<NewChallenge />} />
+        <Route path="/mypage" element={<MyPage/>} />
+        <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
+        <Route path="/chat" element={<ChattingBoard />} />
       </Routes>
-
     </div>
   );
 }
