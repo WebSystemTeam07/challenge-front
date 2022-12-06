@@ -5,7 +5,7 @@ import ChallengeBoard from "../components/ChallengeBoard.js";
 import RecommandBoard from "../components/RecommandBoard.js";
 import HallBoard from "../components/HallBoard.js";
 
-import styles from "../pages/main.module.scss"
+import styles from "../pages/styles/main.module.scss"
 
 function Main() {
     return (

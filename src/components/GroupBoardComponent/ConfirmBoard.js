@@ -6,7 +6,7 @@ import AddIcon from '@mui/icons-material/Add';
 
 function ConfirmBoard({props}) {
 
-    const List = props.slice(0, 6);
+    const List = props.slice(0, 10);
 
     return(
         <div className={styles.confirmContainer}>

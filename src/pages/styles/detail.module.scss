@@ -1,0 +1,29 @@
+.boardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 19.2vw;
+
+    row-gap: 1.8rem;
+    column-gap: 1.8rem;
+}
+
+.bodyContainer {
+    display: flex;
+}
+
+.navigatorContainer {
+    width: 13rem;
+    font-size: larger;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.letterContainer {
+    width: 100%;
+}
+
+.clicked {
+    color: #1c8cc9;
+}

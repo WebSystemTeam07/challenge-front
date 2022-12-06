@@ -3,6 +3,10 @@ import DonutChart from "./DonutChart";
 
 function RecordButton({rank, user}) {
 
+    const status = user.status;
+    const count = status.filter(status => 't' === status).length;
+    const percent = count / status.length;
+
     return(
         <div className={styles.recordContainer}>
             <div className={styles.infoContainer}>
@@ -17,8 +21,9 @@ function RecordButton({rank, user}) {
             <div className={styles.chartWrapper}>
                 <DonutChart 
                     color="#1c8cc9"
-                    percent={0.7}
+                    percent={percent}
                     size="45px"
+                    font="0.1rem"
                 />
             </div>
         </div>

@@ -12,8 +12,9 @@ import ConfirmBoard from '../components/GroupBoardComponent/ConfirmBoard.js';
 import GroupTitleBoard from '../components/GroupBoardComponent/GroupTitleBoard.js';
 import RecordBoard from '../components/GroupBoardComponent/RecordBoard.js';
 import SuccessRateBoard from '../components/GroupBoardComponent/SuccessRateBoard.js';
+import ChattingBoard from '../components/GroupBoardComponent/ChattingBoard.js';
 
-import styles from '../pages/board.module.scss'
+import styles from '../pages/styles/board.module.scss'
 
 function GroupBoard() {
     
@@ -55,8 +56,13 @@ function GroupBoard() {
                 <div>
                     <NoticeBoard props={NoticeList} />
                 </div>
-                <div className={styles.confirmWrapper}>
-                    <ConfirmBoard props={ConfirmList} />
+                <div className={styles.secondContainer}>
+                    <div className={styles.confirmWrapper}>
+                        <ConfirmBoard props={ConfirmList} />
+                    </div>
+                    <div className={styles.chattingWrapper}>
+                        <ChattingBoard />
+                    </div>
                 </div>
             </div>
             <Footer />

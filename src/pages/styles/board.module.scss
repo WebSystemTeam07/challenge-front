@@ -1,0 +1,44 @@
+.boardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 19.2vw;
+
+    row-gap: 1.8rem;
+    column-gap: 1.8rem;
+}
+
+.firstContainer {
+    display: flex;
+    row-gap: 1.8rem;
+    column-gap: 1.8rem;
+}
+
+.secondContainer {
+    display: flex;
+    row-gap: 1.8rem;
+    column-gap: 1.8rem;
+}
+
+.successWrapper {
+    width: 25%;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.recordWrapper {
+    width: 75%;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.confirmWrapper {
+    width: 50%;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.chattingWrapper {
+    width: 50%;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}

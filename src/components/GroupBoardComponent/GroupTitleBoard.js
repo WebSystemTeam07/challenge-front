@@ -1,10 +1,23 @@
+import { useState } from "react";
+import GroupChallengeModal from "../atoms/GroupChallengeModal";
 import styles from "./styles/group.module.scss"
 
 import FaceIcon from '@mui/icons-material/Face';
 
 function GroupTitleBoard({challenge, user}) {
 
+    const [open, setOpen] = useState(0);
+
+    const openModal = () => {
+        setOpen(1);
+    }
+
+    const closeModal = () => {
+        setOpen(0);
+    }
+
     const tags = challenge.tag;
+    const title = challenge.title;
 
     return(
         <div className={styles.boardContainer}>
@@ -30,7 +43,10 @@ function GroupTitleBoard({challenge, user}) {
                         <p>{challenge.people} 명 참여중</p>
                     </div>
                 </div>
-                <button>챌린지 소개</button>
+                <div>
+                    <button onClick={openModal}>챌린지 소개</button>
+                    <GroupChallengeModal open={open} close={closeModal} header={title} />
+                </div>
             </div>
         </div>
     );

@@ -1,0 +1,68 @@
+.titleContainer {
+    font-size: larger;
+}
+
+.headerContainer {
+    width: 100%;
+    height: 2.8rem;
+    display: flex;
+    background-color: #ebf4f7;
+
+    align-items: center;
+
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.arrowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 1.5rem;
+}
+
+.decrementWrapper {
+    transform: scale(0.7);
+}
+
+.incrementWrapper {
+    transform: scale(0.7);
+}
+
+.numberWrapper {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyWrapper {
+    width: 10%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.titleWrapper {
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.nameWrapper {
+    width: 15%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.dateWrapper {
+    width: 15%;
+
+    display: flex;
+    justify-content: center;
+}

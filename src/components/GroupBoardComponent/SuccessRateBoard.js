@@ -13,6 +13,7 @@ function SuccessRateBoard({challenge, users}) {
                 color="#1c8cc9"
                 percent={0.7}
                 size="13rem"
+                font="large"
             />
         </div>
     );
