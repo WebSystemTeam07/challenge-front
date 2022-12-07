@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import { io } from "socket.io-client";
 import dayjs from "dayjs";
 
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "http://localhost:5500";
 
 export const socket = io.connect(ENDPOINT, {
     cors: {origin: '*'}
