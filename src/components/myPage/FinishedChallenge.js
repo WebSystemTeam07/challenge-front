@@ -1,28 +1,25 @@
 import React from 'react'
+import dummy from './../../data/dummy.json'
+import EachChallenge from './EachChallenge';
 
 export default function FinishedChallenge(props) {
-    const challenge = props.data
-    // {
-    //     "id" : 0,
-    //     "type" : 'personal',
-    //     "contents" : 'this is one ongoing',
-    //     "title" : "title-0",
-    //     "term" : 10,
-    //     "date" : '2022-09-01',
-    //     'status' : true
-    //   },
+    const finishedChallenges = dummy.challenge;
+  
   return (
     <>
-    <div>FinishedChallenge</div>
-    <div>id : {challenge.id}</div>
-    <div>type : {challenge.type}</div>
-    <div>title : {challenge.title}</div>
-    <div>contents : {challenge.contents}</div>
-    <div>term : {challenge.term}</div>
-    <div>date : {challenge.date}</div>
-    <div>status : {challenge.status}</div>
-    <br/>
+      <div id="selectedTitle">
+        <h3>완료한 챌린지</h3>
+        {
+          finishedChallenges.map(challenge => 
+          {
+            return <EachChallenge data={challenge} />
+          })
+        }
+        <br />
+      </div>
     </>
   )
-}
+  
+  
 
+}

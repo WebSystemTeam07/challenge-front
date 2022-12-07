@@ -11,30 +11,28 @@ import SignUp from './components/user/SignUp';
 
 import ChattingBoard from './components/GroupBoardComponent/ChattingBoard';
 
-
 import Main from './pages/Main';
 import Introduce from './pages/Introduce';
 import GroupBoard from './pages/GroupBoard'
 
-
 function App() {
   return (
     <div className="App">
-    <Routes>
-      <Route path='/' element={<Main />}/>
-      <Route path='/introduce' element={<Introduce />}/>
-      <Route path="/mychallenge" element={<MyChallenge/>} />
-      <Route path="/groupchallengepage" element={<GroupChallengeMain/>}/>
-      <Route path="/newchallenge" element={<NewChallenge/>}/>
-      <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
-      <Route path="/login" element={<SignIn />}/>
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/mypage" element={<MyPage/>} />
-      <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
-      <Route path="/chat" element={<ChattingBoard />} />
-    </Routes>
-  </div>
-
+      <Routes>
+        <Route path='/' element={<Main />}/>
+        <Route path='/introduce' element={<Introduce />}/>
+        <Route path="/mychallenge" element={<MyChallenge/>} />
+        <Route path="/groupchallengepage" element={<GroupChallengeMain/>}/>
+        <Route path="/groupchallengepage/groupChallengeDetail" element={<GroupChallengeDetail/>}/>
+        <Route path="/newchallenge" element={<NewChallenge/>}/>
+        <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
+        <Route path="/login" element={<SignIn />}/>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/mypage" element={<MyPage/>} />
+        <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
+        <Route path="/chat" element={<ChattingBoard />} />
+      </Routes>
+    </div>
   );
 }
 
