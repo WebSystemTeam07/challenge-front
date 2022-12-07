@@ -7,8 +7,13 @@
     },
     {
       "userId":"21424234",
+      "challengeId":"6",
+      "status":[true,true,false,true,true,true,true,false,"","","","","","","","","","","","","","","","","","","","","",""]
+    },
+    {
+      "userId":"5",
       "challengeId":"5",
-      "status":[true,true,false,true,true,true,true,false,"","","","","","","","","","","","","","","","","","","",""]
+      "status":[true,true,true,true,true,true,true,false,true,true,false,"","","","","","","","","","","","","","","","","","",""]
     }
   ]
 }

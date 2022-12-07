@@ -12,8 +12,6 @@ import styles from "../pages/styles/introduce.module.scss"
 function Introduce() {
     return(
         <>
-        <Header />
-        <Navigator />
         <Bar path="전체 > " content="서비스 소개" />
         <Title title="서비스 소개" />
         <div className={styles.boardContainer}>
@@ -24,8 +22,6 @@ function Introduce() {
                 />
             ))}
         </div>
-        
-        <Footer />
         </>
     );
 }

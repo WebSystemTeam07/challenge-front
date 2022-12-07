@@ -34,8 +34,6 @@ function GroupBoard() {
 
     return (
         <div className={styles.bodyContainer}>
-            <Header />
-            <Navigator />
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > "} content={"그룹 게시판"} />
             <div className={styles.boardContainer}>
                 <GroupTitleBoard 
@@ -65,7 +63,6 @@ function GroupBoard() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

@@ -5,10 +5,8 @@ import Footer from '../components/Footer';
 const myChallenge=()=>{
   return(
     <div>
-      <Header />
-            <Navigator />
 <ChallengeList/>
-<Footer />
+
 </div>
   );
 }
