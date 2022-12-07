@@ -27,3 +27,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: "AppleSDGothicNeoL";
+  src: url('./fonts/AppleSDGothicNeoL.ttf') format('truetype');
+}
+@font-face {
+  font-family: "AppleSDGothicNeoM";
+  src: url('./fonts/AppleSDGothicNeoM.ttf') format('truetype');
+}
+* {
+  font-family: 'AppleSDGothicNeoL';
+}

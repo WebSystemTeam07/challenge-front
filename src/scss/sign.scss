@@ -1,6 +1,9 @@
+<<<<<<< HEAD:src/css/sign.css
 /* * {
     font-family: "Nanum Gothic" !important;
   } */
+=======
+>>>>>>> 811a1e65e930bb13e89d0e61429ec06242df47b5:src/scss/sign.scss
 
 #container{
     display : flex;
@@ -46,18 +49,19 @@
 }
 
 .inputBlock{
-    width: 100%; 
+    width: 100%;
+    max-width: 350px; 
     height: 25px;
     padding: 10px 5px; 
     margin: 15px 0px;
-    border: 1px solid #ececec;
+    border: 2px solid #ececec;
     font-size: 12px; 
     font-weight: 500;
     /* color: #1a1a1a; */
 }
 
 .inputBlock:focus{
-    border: 1px solid #438AC3;
+    border: 2px solid #438AC3;
     outline: none;
 }
 
@@ -68,11 +72,13 @@
 .authButton{
     border: none;
     width: 20%; 
+    max-width: 100px; 
     height: 45px;
-    border: 1px solid #438AC3;
+    border: 2px solid #438AC3;
     border-radius: 5px;
     background-color: white;
     color: #438AC3;
+    font-weight: 600;
     margin: 10px;
 }
 .authButton:hover{

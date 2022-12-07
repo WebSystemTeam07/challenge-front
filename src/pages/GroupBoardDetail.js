@@ -42,8 +42,6 @@ function GroupBoardDetail() {
 
     return(
         <div>
-            <Header />
-            <Navigator />
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > 그룹 게시판 > "} content={"공지사항"}/>
             <div className={styles.boardContainer}>
                 <GroupTitleBoard 
@@ -74,7 +72,6 @@ function GroupBoardDetail() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
