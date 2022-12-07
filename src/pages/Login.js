@@ -7,8 +7,6 @@ import styles from '../pages/styles/login.module.scss'
 function Login() {
     return (
         <div className={styles.bodyContainer}>
-            <Header />
-            <Navigator />
             <div className={styles.loginContainer}>
                 <form>
                     <p>
@@ -22,7 +20,6 @@ function Login() {
                     
                 </form>
             </div>
-            <Footer />
         </div>
     );
 }

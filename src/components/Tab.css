@@ -1,0 +1,18 @@
+
+.tabMenu {
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+  .submenu {
+    width:30vw;
+    padding: 15px 10px;
+    cursor: pointer;
+    background-color: #ebf4f7 ;
+    
+  }
+  .focused{
+    background-color:#16bff7;
+  }

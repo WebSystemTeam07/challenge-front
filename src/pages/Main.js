@@ -10,8 +10,7 @@ import styles from "../pages/styles/main.module.scss"
 function Main() {
     return (
         <div className={styles.mainContainer}>
-            <Header />
-            <Navigator />
+           
             <div className={styles.mainWrapper}>
                 <div className={styles.imageContainer}>
                     <img className={styles.mainImage} src={process.env.PUBLIC_URL + '/main3.jpg'} alt="default"></img>
@@ -26,7 +25,7 @@ function Main() {
             <ChallengeBoard />
             <RecommandBoard />
             <HallBoard />
-            <Footer />
+          
         </div>
     );
 }
