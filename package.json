@@ -10,14 +10,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
     "axios": "^1.2.1",
     "jquery": "^3.6.1",
     "rc-progress": "^3.4.1",
-=======
     "dayjs": "^1.11.7",
     "env-cmd": "^10.1.0",
->>>>>>> origin
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
