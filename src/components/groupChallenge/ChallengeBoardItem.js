@@ -19,7 +19,7 @@ function ChallengeBoardItem(props){
                 </span>
                 <div className="participantsInfo">
                     현재{" "}
-                    <span className="highlightBlue">{challenge.member.length}명{" "}</span>
+                    <span className="highlightBlue">{challenge.member}명{" "}</span>
                     도전 중!
                 </div>
             </Link>            

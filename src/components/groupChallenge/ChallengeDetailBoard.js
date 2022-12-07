@@ -17,7 +17,7 @@ function ChallengeDtailBoard(props){
                     <div className="detailBoardTitle">{challenge.title}</div>
                     <div>
                         <span className="ownerData">{challenge.ownerId}</span>
-                        <span className="participantsData">{challenge.member.length}명 참여중</span>
+                        <span className="participantsData">{challenge.member}명 참여중</span>
                     </div>
                     <button className="joinBtn">참여하기</button>
                 </span>
