@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { Link } from "react-router-dom"
 
-import styles from "../components/challenge.module.scss"
+import styles from "../components/styles/challenge.module.scss"
 
 function ChallengeBoard() {
     return(
@@ -27,7 +27,7 @@ function ChallengeBoard() {
                         />
                     ))}
                 </div>
-                <Link to="" style={{ textDecoration: "none" }}>
+                <Link to="/groupchallengepage" style={{ textDecoration: "none" }}>
                     <div className={styles.moreButton}><p>더 보러 가기</p></div>
                 </Link>
             </div>

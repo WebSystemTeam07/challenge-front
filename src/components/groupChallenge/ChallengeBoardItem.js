@@ -5,8 +5,8 @@ function ChallengeBoardItem(props){
     let challenge = props.challenge;
     return(
         <div>
-            <Link to="/groupChallengeMain/groupChallengeDetail" state={{challenge:challenge}} className="challengeItemContainer" style={{ textDecoration: "none" }}>
-                <img className="challengeImg" src={challenge.imageUrl} />
+            <Link to="/groupchallengepage/groupChallengeDetail" state={{challenge:challenge}} className="challengeItemContainer" style={{ textDecoration: "none" }}>
+                <img className="challengeImg" src={challenge.imageUrl} alt="이미지가 없습니다." />
                 <span className="challengeTextInfo">
                     <div className="challengeTitle">{challenge.title}</div>
                     <div className="tagsContainer">{challenge.tag.map((item)=>(<span className="tag">{item}</span>))}</div>

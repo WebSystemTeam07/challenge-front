@@ -1,11 +1,10 @@
 import "./groupChallengeDetail.scss";
 
-function ChallengeDtailBoard(props){
+function ChallengeDetailBoard(props){
     const challenge = props.challenge
     return(
         <div className="detailBoardContainer">
             <img className="detailBoardImage" src={challenge.imageUrl}/>
-            <span className="detailBoardTagContainer">
                 <span className="detailBoardHeader">
                     <div className="detailBoardTagContainer">
                         {
@@ -14,25 +13,28 @@ function ChallengeDtailBoard(props){
                         ))
                         }
                     </div>
-                    <div className="detailBoardTitle">{challenge.title}</div>
+                    <div>
+                        <span className="detailBoardTitle">{challenge.title}</span>
+                        <button className="joinBtn">참여하기</button>
+                    </div>
                     <div>
                         <span className="ownerData">{challenge.ownerId}</span>
                         <span className="participantsData">{challenge.member}명 참여중</span>
                     </div>
-                    <button className="joinBtn">참여하기</button>
                 </span>
-                <span className="detailBoardContents">
+                
+                <span className="challengeDetailContents">
                     <span className="challengeIntro">
                         <div className="detailBoardSubTitle">챌린지 소개</div>
-                        <div></div>
+                        <div className="introContents">{challenge.contents}</div>
                     </span>
                     <span className="challengeCertifiMethod">
-                        <span className="detailBoardSubTitle">챌린지 방법</span>
+                        <div className="detailBoardSubTitle">챌린지 방법</div>
+                        <div className="methodContents">{challenge.method}</div>
                     </span>
                 </span>
-            </span>
         </div>
     )
 }
 
-export default ChallengeDtailBoard;
+export default ChallengeDetailBoard;

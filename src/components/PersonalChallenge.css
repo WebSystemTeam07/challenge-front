@@ -1,0 +1,56 @@
+.textBox{
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+
+.board{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .board_center{
+    display: flex;
+    flex-direction: column;
+    width:30vw;
+    margin:2vw;
+   }
+
+.text_button_center{
+    display: flex;
+    align-items: center;
+    flex-direction: row ;
+    justify-content: space-between;
+    margin-right: 2vw;
+    width: 50vw;
+    height: 20vh;
+    margin-bottom: 2vh;
+}
+
+img{
+    width: 18vw;
+    height: 18vh;
+    object-fit: cover;
+    margin-left: 2vw;
+}
+.button_interval{
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.fullscreen{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.flex_button button{
+    margin-right: 10vw;
+    width: 5vw;
+    height: 5vh;
+    justify-content: center;
+    
+}

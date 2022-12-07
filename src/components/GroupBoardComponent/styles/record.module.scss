@@ -1,0 +1,36 @@
+.recordContainer {
+    padding: 1rem 1.5rem;
+}
+
+.titleContainer {
+    display: flex;
+    column-gap: 0.5rem;
+    padding: 0.6rem 0 1rem 0;
+    align-items: center;
+}
+
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+}
+
+.listWrapper {
+    width: 24rem;
+
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            order: calc(2 * #{$i} - 1);
+        }
+    }
+
+    @for $i from 5 through 8 {
+        &:nth-child(#{$i}) {
+            order: calc(2 * (#{$i} - 4));
+        }
+    }
+}

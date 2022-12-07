@@ -1,4 +1,4 @@
-import styles from "../components/component.module.scss"
+import styles from "../components/styles/component.module.scss"
 
 function Bar({path, content}) {
     return(

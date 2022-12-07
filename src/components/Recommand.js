@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 
-import styles from "../components/recommand.module.scss"
+import styles from "../components/styles/recommand.module.scss"
 
 function Recommand({title, url, content, imgSrc}) {
 
