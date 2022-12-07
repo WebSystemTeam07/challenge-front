@@ -10,7 +10,6 @@ import SignIn from './components/user/SignIn';
 import SignUp from './components/user/SignUp';
 
 import ChattingBoard from './components/GroupBoardComponent/ChattingBoard';
-import Rounter from "./Router";
 
 import Main from './pages/Main';
 import Introduce from './pages/Introduce';
@@ -24,6 +23,7 @@ function App() {
         <Route path='/introduce' element={<Introduce />}/>
         <Route path="/mychallenge" element={<MyChallenge/>} />
         <Route path="/groupchallengepage" element={<GroupChallengeMain/>}/>
+        <Route path="/groupchallengepage/groupChallengeDetail" element={<GroupChallengeDetail/>}/>
         <Route path="/newchallenge" element={<NewChallenge/>}/>
         <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
         <Route path="/login" element={<SignIn />}/>
