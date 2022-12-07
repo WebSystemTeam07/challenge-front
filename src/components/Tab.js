@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import styles from './Tab.css';
+import './styles/Tab.css';
 import PersonalChallenge from './PersonalChallenge';
 import GroupChallenge from './GroupChallenge';
 

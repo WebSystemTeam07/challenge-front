@@ -11,6 +11,9 @@
   width: 15vw;
   height:10vh;
 }
+.content_conatiner, .true{
+background-color:#c8e0f3 ;
+}
 .day{
 font-size: 2.5vh;
 margin: 0;
@@ -30,5 +33,4 @@ font-weight: bold;
 .content{
 font-size:2vh;
 margin: 0;
-font-family: 'AppleSDGothicNeoL';
 }

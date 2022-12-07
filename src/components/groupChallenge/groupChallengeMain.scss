@@ -46,6 +46,7 @@
     padding: 0 19.2vw;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .categoryName{
@@ -88,6 +89,9 @@
     height: 18.0vh;
     width: 30.0vh;
     border-radius: 15px;
+    object-fit: cover;
+    object-position: 0 30%;
+    
 }
 
 .challengeTextInfo{

@@ -11,8 +11,11 @@
     padding: 15px 10px;
     cursor: pointer;
     background-color: #ebf4f7 ;
+    color: gray;
+    text-align: center;
     
   }
   .focused{
     background-color:#16bff7;
+    color: white;
   }

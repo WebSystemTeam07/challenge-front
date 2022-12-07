@@ -20,7 +20,7 @@
 }
 
 .listWrapper {
-    width: 24rem;
+    width: 20vw;
 
     @for $i from 1 through 4 {
         &:nth-child(#{$i}) {

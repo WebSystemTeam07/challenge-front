@@ -23,7 +23,7 @@
   flex-direction: column;
   text-align: center;
 }
-img{
+.list img{
   width: 18vw;
   height: 18vh;
   object-fit: cover;

@@ -3,21 +3,22 @@
     align-items: center;
     display: flex;
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 1.3vw;
+    font-family: "AppleSDGothicNeoL";
 }
-
-.board{
+.textBox button{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+}
+.board{
+  
  }
 
  .board_center{
     display: flex;
     flex-direction: column;
-    width:30vw;
-    margin:2vw;
+    border:solid 0.1vw #c8e0f3;
+    margin-bottom: 2vh;
+    width: 50vw;
    }
 
 .text_button_center{
@@ -25,13 +26,12 @@
     align-items: center;
     flex-direction: row ;
     justify-content: space-between;
-    margin-right: 2vw;
     width: 50vw;
     height: 20vh;
     margin-bottom: 2vh;
 }
 
-img{
+.text_button_center img{
     width: 18vw;
     height: 18vh;
     object-fit: cover;
@@ -40,17 +40,26 @@ img{
 .button_interval{
     padding-left: 1vw;
     padding-right: 1vw;
+    display: flex;
 }
 .fullscreen{
     display: flex;
     flex-direction: column;
-    
-    
 }
-.flex_button button{
-    margin-right: 10vw;
+.auth_button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.auth_button button{
     width: 5vw;
     height: 5vh;
     justify-content: center;
-    
+    align-items: center;
+    margin-left: 1vw;
+}
+.group_title h2{
+color:#1c8cc9;
+text-decoration: underline;
+text-underline-position:under;
 }
