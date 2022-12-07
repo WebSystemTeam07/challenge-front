@@ -19,3 +19,6 @@ code {
   font-family: "AppleSDGothicNeoM";
   src: url('./fonts/AppleSDGothicNeoM.ttf') format('truetype');
 }
+* {
+  font-family: 'AppleSDGothicNeoL';
+}
