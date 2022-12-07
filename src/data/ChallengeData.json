@@ -1,33 +1,96 @@
 {
   "data":[{
     "id":"0",
+    "ownerId":"1",
     "type":"group",
-    "name":"샐러드 먹기"
+    "title":"샐러드 먹기",
+    "contents":"설명",
+    "category":"습관",
+    "method":"글",
+    "tag":["샐러드","식단","건강"],
+    "member":5,
+    "startDate":"2022-11-05",
+    "endDate":"2022-12-05",
+    "term":30,
+    "imageUrl":"https://media.istockphoto.com/photos/woman-going-to-eat-salad-picture-id888026614"
+    
 },
 {
   "id":"1",
-    "type":"group",
-    "name":"하루 1만보 걷기"
+  "ownerId":"2",
+  "title":"하루 1만보 걷기",
+  "contents":"설명",
+  "category":"운동",
+  "method":"글",
+  "tag":["걷기","건강","다이어트"],
+  "member":6,
+  "startDate":"2022-12-06",
+  "endDate":"2023-03-06",
+  "term":90,
+  "type":"group",
+  "imageUrl":"https://cdn.kormedi.com/wp-content/uploads/2022/04/ck_tip101e15090019_l-580x387.jpg"
+    
+   
 },
 {
   "id":"3",
-    "type":"group",
-    "name":"책 읽기"
+  "ownerId":"2",
+    "title":"책 읽기",
+    "contents":"설명",
+  "category":"공부",
+  "method":"사진",
+  "tag":["독서","취미"],
+  "member":10,
+  "startDate":"2022-12-06",
+  "endDate":"2023-01-06",
+  "term":30,
+  "type":"group",
+  "imageUrl":"https://cdn.kormedi.com/wp-content/uploads/2022/04/ck_tip101e15090019_l-580x387.jpg"
 },
 {
   "id":"4",
-    "type":"indiv",
-    "name":"책 읽기"
+    "type":"personal",
+    "ownerId":"4",
+    "title":"책 읽기",
+    "contents":"설명",
+    "category":"공부",
+    "method":"출석",
+    "tag":["독서","취미"],
+    "member":1,
+    "startDate":"2022-12-06",
+    "endDate":"2022-12-21",
+    "term":15,
+    "img":"https://cdn.kormedi.com/wp-content/uploads/2022/04/ck_tip101e15090019_l-580x387.jpg"
 },
 {
   "id":"5",
-    "type":"indiv",
-    "name":"물마시기"
+    "type":"personal",
+    "ownerId":"5",
+    "title":"물마시기",
+    "contents":"설명",
+    "category":"습관",
+    "method":"출석",
+    "tag":["건강"],
+    "member":1,
+    "startDate":"2022-11-06",
+    "endDate":"2022-12-06",
+    "term":30,
+    "img":"https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2xMI/image/nF_ofPE06haWsJOjX_ox-9qMhmw.jpg"
 },
 {
   "id":"6",
-    "type":"indiv",
-    "name":"영화보기"
+    "type":"personal",
+    "ownerId":"21424234",
+    "title":"샐러드 먹기",
+    "contents":"설명",
+    "category":"습관",
+    "method":"출석",
+    "tag":["샐러드","식단","건강"],
+    "member":1,
+    "startDate":"2022-11-06",
+    "endDate":"2022-12-06",
+    "term":30,
+    "img":"https://www.kfoodtimes.com/news/photo/202004/10750_20581_367.png"
 }
 ]
 }
