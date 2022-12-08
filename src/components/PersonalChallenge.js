@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles/PersonalChallenge.css"
+import styles from "./styles/personal.module.scss";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CheckAuth from "./CheckAuth";
@@ -39,30 +39,26 @@ const PersonalChallenge=()=> {
     }
     return(
         <>
-                <div className="group_title">
-                <h2>참여 중인 챌린지</h2>
-                <div className="group_center">
+        <div className={styles.group_center}>
                 {ivChallengeData.map((item,idx)=>{
                 return(
                   <>
-                <div className="text_button_center">
+                <div className={styles.text_button_center}>
                     <img src={item.img} alt="샐러드 사진"/>
-                      <div className="textBox">
+                      <div className={styles.textBox}>
                       {item.title}<br/>  
                       {item.startDate}
                       </div>
-                      <button type="button" onClick={()=>toggleAnswer(idx)} className="button_interval">{ open[idx] ? <Closed/>: <Opened/>}</button></div>
+                      <button type="button" onClick={()=>toggleAnswer(idx)} className={styles.button_interval}>{ open[idx] ? <Closed/>: <Opened/>}</button></div>
             { open[idx] ? (
                     <p>{<>
-                      <div className="board">
-                      <div className="board_center">
+                      <div className={styles.board_center}>
                         {console.log("attend",attend)}
                         
                       <AttendanceBoard attend={attend} challengeId={item.id}/>
                       </div>
-                      <div className="auth_button">
+                      <div className={styles.auth_button}>
                       <CheckAuth getAuth={getAuth} startDate={item.startDate} id={item.id}/>
-                      </div>
                       </div>
                       </>
                       }</p>
@@ -71,10 +67,7 @@ const PersonalChallenge=()=> {
                     )
                 })}
           </div>
-          </div>          
-
       </>
-
     );
 
 }

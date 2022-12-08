@@ -1,6 +1,6 @@
 import ChallengeData from '../data/ChallengeData.json';
 import { useNavigate } from 'react-router-dom';
-import './styles/GroupChallenge.css';
+import styles from './styles/personal.module.scss';
 
 const GroupChallenge=()=>{
   const gpChallengeData=ChallengeData.data.filter((item)=>
@@ -12,22 +12,19 @@ const GroupChallenge=()=>{
 }
   return(
     <>
-    <div className='group_title'>
-    <h2>참여 중인 챌린지</h2>
-    <div className='group_center'>
+    <div className={styles.group_center}>
     {gpChallengeData.map((item)=>{
       return(
-  <li key={item.id} className="list">
+  <li key={item.id} className={styles.list}>
    <img src={item.imageUrl} alt={"대체사진"}/>
-   <div className='textBox'>
+   <div className={styles.textBox}>
   {item.title}
   </div>
-  <button type='button' className='group_button' onClick={onMoveHandler}>그룹 게시판 이동</button>
+  <button type='button' className={styles.group_button} onClick={onMoveHandler}>그룹 게시판 이동</button>
   </li>
       )
     }
   )}
-  </div>
   </div>
   </>
   )

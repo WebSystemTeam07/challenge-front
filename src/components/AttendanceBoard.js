@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import './styles/AttendanceBoard.css';
+import styles from './styles/attend.module.scss';
 import authData from '../data/userTaskData.json';
 import dailyData from '../data/taskData.json';
 const AttendanceBoard=({attend,challengeId})=>{
@@ -27,13 +27,15 @@ const Square=({day,attend,content})=>{
     auth="X";
   }
   else{
-    auth="";
+    auth=" ";
   }
   return(
     <>
-    <p className='day'>{day}</p>
-    <p className='content'>{content}</p>
-    <p className={auth==="O"||auth==="" ? "auth_true" : "auth_false"}>{auth}</p>
+    <p className={styles.day}>{day}</p>
+    <p className={styles.content}>{content}</p>
+    <p className={styles.auth}>
+ {auth==="O"||auth===" " ? <p className={styles.true}>{auth}</p> :<p className={styles.false}>{auth}</p>}
+  </p>
     </>
   )
 }
@@ -64,64 +66,76 @@ const Board=({givenAuth,userTaskData,taskData})=>{
   }
   for(let i=0;i<5;i++){
     first_week.push(
-      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
-    <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
+      <div className={styles.content_container}>
+        {userTaskData[0].status[i]===true ? <div className={styles.true}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>
+        : 
+        <div className={styles.false}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>}
     </div>
     )
   }
   for(let i=5;i<10;i++){
     second_week.push(
-      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
-    <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
-    </div>
+      <div className={styles.content_container}>
+      {userTaskData[0].status[i]===true ? <div className={styles.true}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>
+      : 
+      <div className={styles.false}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>}
+  </div>
     )
   }
   for(let i=10;i<15;i++){
     third_week.push(
-      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
-   <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
+      <div className={styles.content_container}>
+        {userTaskData[0].status[i]===true ? <div className={styles.true}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>
+        : 
+        <div className={styles.false}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>}
     </div>
     )
   }
   for(let i=15;i<20;i++){
     fourth_week.push(
-      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
-   <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
-    </div>
+      <div className={styles.content_container}>
+      {userTaskData[0].status[i]===true ? <div className={styles.true}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>
+      : 
+      <div className={styles.false}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>}
+  </div>
     )
   }
   for(let i=20;i<25;i++){
     fifth_week.push(
-      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
-    <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
-    </div>
+      <div className={styles.content_container}>
+      {userTaskData[0].status[i]===true ? <div className={styles.true}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>
+      : 
+      <div className={styles.false}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>}
+  </div>
     )
   }
   for(let i=25;i<30;i++){
     last_week.push(
-      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
-    <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
-    </div>
+      <div className={styles.content_container}>
+      {userTaskData[0].status[i]===true ? <div className={styles.true}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>
+      : 
+      <div className={styles.false}>  <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/> </div>}
+  </div>
     )
   }
 return(
   <>
-  <div className='line_container'>
+  <div className={styles.line_container}>
   {first_week}
   </div>
-  <div className='line_container'>
+  <div className={styles.line_container}>
   {second_week}
   </div>
-  <div className='line_container'>
+  <div className={styles.line_container}>
   {third_week}
   </div>
-  <div className='line_container'>
+  <div className={styles.line_container}>
   {fourth_week}
   </div>
-  <div className='line_container'>
+  <div className={styles.line_container}>
   {fifth_week}
   </div>
-  <div className='line_container'>
+  <div className={styles.line_container}>
   {last_week}
   </div>
   </>

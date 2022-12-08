@@ -4,10 +4,9 @@
     display: flex;
     font-weight: bold;
     font-size: 1.3vw;
-    font-family: "AppleSDGothicNeoL";
-}
-.textBox button{
-    display: flex;
+    button{
+        display: flex;
+    }
 }
 .board{
   
@@ -29,14 +28,14 @@
     width: 50vw;
     height: 20vh;
     margin-bottom: 2vh;
+    img{
+        width: 18vw;
+        height: 18vh;
+        object-fit: cover;
+        margin-left: 2vw;
+    }
 }
 
-.text_button_center img{
-    width: 18vw;
-    height: 18vh;
-    object-fit: cover;
-    margin-left: 2vw;
-}
 .button_interval{
     padding-left: 1vw;
     padding-right: 1vw;
@@ -50,16 +49,37 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    button{
+        width: 5vw;
+        height: 5vh;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1vw;
+    }
 }
-.auth_button button{
-    width: 5vw;
-    height: 5vh;
-    justify-content: center;
+.list{
+    display:flex;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 1vw;
-}
-.group_title h2{
-color:#1c8cc9;
-text-decoration: underline;
-text-underline-position:under;
-}
+    width: 50vw;
+    height:20vh;
+    margin-bottom: 2vh;
+    img{
+      width: 18vw;
+      height: 18vh;
+      object-fit: cover;
+      margin-left: 2vw;
+    }
+  }
+  .group_button{
+    width: 8vw;
+    height: 4vh;
+    justify-content: center;
+    font-size: 1.5vh;
+  }
+  .group_center{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
