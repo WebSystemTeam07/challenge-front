@@ -16,6 +16,12 @@ export default function Test() {
             })
     }, [])
 
+    /**
+     * 함수 순서는 pdf순서대로
+     * 
+     */
+
+
     // http://localhost:5500/user/point
     async function usersbyPoint() {
         return await axios.get(port.url + '/user/point')
@@ -24,6 +30,36 @@ export default function Test() {
     async function uptodateChallenge() {
         return await axios.get(port.url + '/challenge/group/uptodate')
     }
+
+    // http://localhost:5500/user/challenge/:challengeId
+    async function usersbyChallenge () {
+        const challengeId = 13443
+        return await axios.get(port.url + `/user/challenge/${challengeId}`)
+    }
+    
+    // http://localhost:5500/post/:challengeId
+    async function readPosts () {
+        const challengeId = 18427
+        return await axios.get(port.url + `/post/${challengeId}`)
+    }
+
+    // http://localhost:5500/post/:challengeId
+    async function writePosts () {
+        const challengeId = 18427
+        return await axios.post(port.url + `/post/${challengeId}`, {
+            "userId" : "15002",
+            "title" : "title",
+            "contents" :"contents",
+            "date" : "Sat Dec 24 2022 09:00:00 GMT+0900 (한국 표준시)"
+        })
+    }
+
+    // http://localhost:5500/post/:challengeId
+    async function getTasks () {
+        const challengeId = 18427
+        return await axios.get(port.url + `/task/${challengeId}`)
+    }
+    
 
     // http://localhost:5500/challenge/new
     async function newchallenge() {
@@ -61,7 +97,16 @@ export default function Test() {
             "userId": 15764,
             "challengeId": 13443,
         })
+    }
 
+    // http://localhost:5500/challenge/group
+    async function getGroupChallenge() {
+        return await axios.get(port.url + `/challenge/group`)
+    }
+
+    // http://localhost:5500/challenge/personal
+    async function getPersonalChallenge() {
+        return await axios.get(port.url + `/challenge/personal`)
     }
 
     // http://localhost:5500/challenge/join
@@ -71,6 +116,31 @@ export default function Test() {
             "challengeId": 13443,
         })
     }
+
+    // http://localhost:5500/post/:challengeId
+    async function writePosts2 () {
+        const challengeId = 18427
+        return await axios.post(port.url + `/post/${challengeId}`, {
+            "userId" : "15002",
+            "title" : "title",
+            "contents" :"contents",
+            "date" : "Sat Dec 24 2022 09:00:00 GMT+0900 (한국 표준시)"
+        })
+    }
+
+    // http://localhost:5500/post/task/:challengeId
+    async function postTask () {
+        const challengeId = 18427
+        return await axios.post(port.url + `/task/${challengeId}`, {
+            "userId" : "15002",
+            "day" :5,
+            "title" : "titleoftask",
+            "contents" :"contentsoftask",
+            "date" : "Sat Dec 24 2022 09:00:00 GMT+0900 (한국 표준시)"
+        })
+    }
+
+
 
     // http://localhost:5500/userTask 
     // [ERROR] 배열 못읽어옴 postman에서는 제대로 작동
