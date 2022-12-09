@@ -15,6 +15,8 @@ import Main from './pages/Main';
 import Introduce from './pages/Introduce';
 import GroupBoard from './pages/GroupBoard'
 
+import Test from './pages/Test';
+
 function App() {
   return (
     <div className="App">
@@ -31,6 +33,7 @@ function App() {
         <Route path="/mypage" element={<MyPage/>} />
         <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
         <Route path="/chat" element={<ChattingBoard />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </div>
   );
