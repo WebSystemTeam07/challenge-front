@@ -4,8 +4,7 @@ import Tab from './Tab';
 const ChallengeList=()=>{
 return(
   <React.Fragment>
-   
-    <h2>나의 챌린지</h2>
+    <h2 className='challengeTitle'>나의 챌린지</h2>
 <Tab/>
 </React.Fragment>
 );

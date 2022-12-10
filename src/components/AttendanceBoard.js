@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import './AttendanceBoard.css';
+import './styles/AttendanceBoard.css';
 import authData from '../data/userTaskData.json';
 import dailyData from '../data/taskData.json';
 const AttendanceBoard=({attend,challengeId})=>{
@@ -64,42 +64,42 @@ const Board=({givenAuth,userTaskData,taskData})=>{
   }
   for(let i=0;i<5;i++){
     first_week.push(
-      <div className="content_container">
+      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
     <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
     </div>
     )
   }
   for(let i=5;i<10;i++){
     second_week.push(
-      <div className="content_container">
+      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
     <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
     </div>
     )
   }
   for(let i=10;i<15;i++){
     third_week.push(
-      <div className="content_container">
+      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
    <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
     </div>
     )
   }
   for(let i=15;i<20;i++){
     fourth_week.push(
-      <div className="content_container">
+      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
    <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
     </div>
     )
   }
   for(let i=20;i<25;i++){
     fifth_week.push(
-      <div className="content_container">
+      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
     <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
     </div>
     )
   }
   for(let i=25;i<30;i++){
     last_week.push(
-      <div className="content_container">
+      <div className={userTaskData[0].status[i]===true ? "content_container true" : "content_container false"}>
     <Square day={taskData[i].day} attend={userTaskData[0].status[i]} content={taskData[i].content}/>
     </div>
     )

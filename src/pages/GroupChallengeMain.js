@@ -1,4 +1,4 @@
-import {React, useEffect} from "react";
+import { React, useEffect, useState } from "react";
 import Header from "../components/Header.js";
 import Footer from '../components/Footer.js';
 import Navigator from "../components/Navigator.js";
@@ -8,25 +8,30 @@ import ChallengeBoard from "../components/groupChallenge/ChallengeBoard";
 import axios from 'axios';
 import port from "./../assets/port.json";
 
-function GroupChallengeMain(){
-    const challengeData =[] 
-    
-    useEffect (() => {
+function GroupChallengeMain() {
+    const [challengeData, setChallengeData] = useState([])
+
+    useEffect(() => {
         getChallengeData().then(data => {
-            challengeData = data
+            setChallengeData([...challengeData,
+                data])
             console.log(challengeData)
         }).catch(e =>
             console.log(e.message))
-    },[])
+    }, [])
+
     async function getChallengeData() {
-        return await axios.get(port.url +'/challenge/group')
+        return await axios.get(port.url + '/challenge/group')
     }
     
-    return(
-        <React.Fragment>
-            <Path path="전체보기 > 그룹 챌린지"/>
-            <ChallengeBoard challengeData={challengeData}/>
-        </React.Fragment>
+    
+
+    return (
+        <>
+            <Path path="전체보기 > 그룹 챌린지" />
+            {challengeData.length > 0
+                && <ChallengeBoard challengeData={challengeData} />}
+        </>
     )
 }
 

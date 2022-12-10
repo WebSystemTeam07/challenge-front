@@ -1,6 +1,7 @@
 import ChallengeData from '../data/ChallengeData.json';
 import { useNavigate } from 'react-router-dom';
-import './GroupChallenge.css';
+import './styles/GroupChallenge.css';
+
 const GroupChallenge=()=>{
   const gpChallengeData=ChallengeData.data.filter((item)=>
     item.type=="group")
