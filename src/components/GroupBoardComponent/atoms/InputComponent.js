@@ -1,6 +1,9 @@
 import { useState, useCallback, useContext } from 'react';
 import { SocketContext, SOCKET_EVENT } from "../../../service/socket";
 
+import styles from "./component.module.scss"
+import SendIcon from '@mui/icons-material/Send';
+
 function InputComponent({name}) {
 
     const [message, setMessage] = useState("");
@@ -21,16 +24,20 @@ function InputComponent({name}) {
     }, [socket, name, message]);
 
     return(
-        <div>
+        <div className={styles.formContainer}>
             <form onSubmit={handleMessage}>
-                <input 
-                    type='text'
-                    placeholder={placeholder}
-                    value={message}
-                    onChange={({target: {value}}) => setMessage(value)}
-                    onKeyPress={(e) => e.key === 'Enter' ? handleMessage(e) : null}
-                />
-                <button type="submit">전송</button>
+                <div className={styles.inputWrapper}>
+                    <textarea
+                        placeholder={placeholder}
+                        value={message}
+                        onChange={({target: {value}}) => setMessage(value)}
+                        onKeyPress={(e) => e.key === 'Enter' ? handleMessage(e) : null}
+                        className={styles.inputContainer}
+                    />
+                </div>
+                <div className={styles.buttonWrapper}>
+                    <button type="submit"><SendIcon style={{ fill: '#1c8cc9' }} /></button>
+                </div>
             </form>
         </div>
     );

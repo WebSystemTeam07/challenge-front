@@ -8,7 +8,7 @@ function SuccessRateBoard({challenge, users}) {
 
     return(
         <div className={styles.rateContainer}>
-            <p><span>{btDay + 1}</span> 일 째 도전 중!</p>
+            <p className={styles.titleContainer}><span>{btDay + 1}</span> 일 째 도전 중!</p>
             <DonutChart 
                 color="#1c8cc9"
                 percent={0.7}

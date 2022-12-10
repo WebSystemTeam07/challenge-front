@@ -9,10 +9,12 @@ function Challenge({title, tag, url, imgSrc}) {
                 <div className={styles.imageContainer}>
                     <img className={styles.logoImage} src={imgSrc} alt="default"></img>
                 </div>
-                <div className={styles.tagContainer}>
-                    <span className={styles.challengeTag}>{tag}</span>
+                <div className={styles.headerContainer}>
+                    <div className={styles.tagContainer}>
+                        <span className={styles.challengeTag}>{tag}</span>
+                    </div>
+                    <p className={styles.challengeName}>{title}</p>
                 </div>
-                <p className={styles.challengeName}>{title}</p>
             </div>
         </Link>
         

@@ -12,7 +12,7 @@ function ChallengeBoard() {
             <div className={styles.titleContainer}>
                 <p>현재 진행중인 챌린지</p>
                 <div className={styles.arrayContainer}>
-                    <p>인기 순</p>
+                    <p>최신 순</p>
                     <ExpandMoreIcon fontSize="small"></ExpandMoreIcon> 
                 </div>  
             </div>

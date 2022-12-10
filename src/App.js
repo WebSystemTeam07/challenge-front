@@ -14,6 +14,7 @@ import ChattingBoard from './components/GroupBoardComponent/ChattingBoard';
 import Main from './pages/Main';
 import Introduce from './pages/Introduce';
 import GroupBoard from './pages/GroupBoard'
+import GroupBoardArticle from './pages/GroupBoardArticle';
 
 function App() {
   return (
@@ -26,11 +27,11 @@ function App() {
         <Route path="/groupchallengepage/groupChallengeDetail" element={<GroupChallengeDetail/>}/>
         <Route path="/newchallenge" element={<NewChallenge/>}/>
         <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
+        <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
+        <Route path="/groupchallengepage/board/detail/article" element={<GroupBoardArticle />} />
         <Route path="/login" element={<SignIn />}/>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/mypage" element={<MyPage/>} />
-        <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
-        <Route path="/chat" element={<ChattingBoard />} />
       </Routes>
     </div>
   );

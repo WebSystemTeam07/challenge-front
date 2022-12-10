@@ -31,12 +31,13 @@
     margin-bottom: 2vh;
 }
 
-img{
+.text_button_center img{
     width: 18vw;
     height: 18vh;
     object-fit: cover;
     margin-left: 2vw;
 }
+
 .button_interval{
     padding-left: 1vw;
     padding-right: 1vw;

@@ -4,6 +4,16 @@
 }
 
 @font-face {
+  font-family: "AppleSDGothicNeoUL";
+  src: url("./fonts/AppleSDGothicNeoUL.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeoR";
+  src: url("./fonts/AppleSDGothicNeoR.ttf") format('truetype');
+}
+
+@font-face {
   font-family: "AppleSDGothicNeoM";
   src: url("./fonts/AppleSDGothicNeoM.ttf") format('truetype');
 }
@@ -20,21 +30,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  font-size: 0.9rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-@font-face {
-  font-family: "AppleSDGothicNeoL";
-  src: url('./fonts/AppleSDGothicNeoL.ttf') format('truetype');
-}
-@font-face {
-  font-family: "AppleSDGothicNeoM";
-  src: url('./fonts/AppleSDGothicNeoM.ttf') format('truetype');
-}
-* {
-  font-family: 'AppleSDGothicNeoL';
 }

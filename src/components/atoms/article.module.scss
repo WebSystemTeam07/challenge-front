@@ -6,6 +6,12 @@
     align-items: center;
 
     border-bottom: 1px solid #eeeeee;
+
+    color: black;
+
+    &:hover {
+        color: #1c8cc9;
+    }
 }
 
 .dateContainer {

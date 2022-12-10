@@ -8,7 +8,7 @@ import styles from "./component.module.scss"
 
 function MessageComponent({name}) {
     const [messages, setMessages] = useState([]);
-    const window = useRef(null);
+    const window = useRef();
     const socket = useContext(SocketContext);
 
     const scrollToBottom = useCallback(() => {
@@ -28,6 +28,7 @@ function MessageComponent({name}) {
 
     useEffect(() => {
         socket.on(SOCKET_EVENT.RECEIVE, handleMessage);
+        scrollToBottom();
 
         return () => {
             socket.off(SOCKET_EVENT.RECEIVE, handleMessage);
@@ -36,19 +37,28 @@ function MessageComponent({name}) {
 
     return(
         <div className={styles.messageContainer}>
-            <div>
+            <div className={styles.messageComponentContainer} ref={window}>
                 {messages.map((message) => {
-                    const { name, content, time } = message;
+                    const { nickname, content, time } = message;
+                    console.log(message);
                     return(
-                        <div>
-                            <div>{name}</div>
-                            <div>{content}</div>
-                            <div>{time}</div>
-                        </div>
+                        <>
+                            { nickname !== undefined ? 
+                                <div className={styles.messageComponent}>
+                                    <div className={styles.nameWrapper}>{nickname}</div>
+                                        <div className={styles.timeContainer}>
+                                        <p className={styles.timeText}>{time}</p>
+                                        <div className={styles.messageWrapper}>
+                                            <p>{content}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            : <div className={styles.joinComponent}><p>{content}</p></div>}
+                        </>
                     );
                 })}
             </div>
-            <div>
+            <div className={styles.inputComponentContainer}>
                 <InputComponent name={name} />
             </div>
         </div>

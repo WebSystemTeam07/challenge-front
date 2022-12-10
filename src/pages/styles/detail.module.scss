@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 2vw 19.2vw;
 
-    row-gap: 1.8rem;
+    row-gap: 2rem;
     column-gap: 1.8rem;
 }
 
@@ -13,11 +13,15 @@
 
 .navigatorContainer {
     width: 13rem;
-    font-size: larger;
+    font-size: large;
 
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
+
+    p {
+        font-family: "AppleSDGothicNeoR" !important;
+    }
 }
 
 .letterContainer {

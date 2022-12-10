@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import { io } from "socket.io-client";
 import dayjs from "dayjs";
 
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "http://localhost:5500";
 
 export const socket = io.connect(ENDPOINT, {
     cors: {origin: '*'}
@@ -20,19 +20,27 @@ export const makeMessage = (data) => {
     const {name, content, type, time} = data;
     
     let receiveName;
-    let receiveContent = "";
+    let receiveContent;
 
-    if (type === SOCKET_EVENT.JOIN) {
-        receiveContent = `${name} 님이 들어왔습니다.`;
+    if (type === SOCKET_EVENT.JOIN && name.length > 1) {
+        receiveContent = `'${name}' 님이 들어왔습니다.`;
+
+        return {
+            nickname: receiveName,
+            content: receiveContent
+        }
+
     } else if (type === SOCKET_EVENT.SEND) {
         receiveContent = String(content);
         receiveName = name;
-    }
 
-    return {
-        nickname: receiveName,
-        content: receiveContent,
-        time: dayjs(time).format("HH:mm")
+        return {
+            nickname: receiveName,
+            content: receiveContent,
+            time: dayjs(time).format("HH:mm")
+        }
+    } else {
+        return {}
     }
 }
 

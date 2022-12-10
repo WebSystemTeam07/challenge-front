@@ -1,6 +1,123 @@
+.boardContainer {
+    display: flex;
+    align-items: center;
+}
+
 .messageContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messageComponentContainer {
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
+    height: calc(100% - 5rem);
+    overflow-y: auto;
+
+    padding: 1.2rem;
+}
+
+.joinComponent {
+    display: flex;
+    justify-content: center;
+
+    margin: 0.1rem 0;
+
+    p {
+        font-size: smaller;
+    }
+}
+
+.messageComponent {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0.6rem 0;
+
+    justify-items: flex-end;
+    row-gap: 0.25rem;
+}
+
+.nameWrapper {
+    text-align: right;
+    font-size: smaller;
+    font-family: "AppleSDGothicNeoM" !important;
+}
+
+.timeContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    column-gap: 0.4rem;
+
+    p {
+        font-size: smaller;
+    }
+
+    .timeText {
+        color: #bbbbbb;
+        font-size: 0.6rem;
+    }
+}
+
+.messageWrapper {
+    display: flex;
+    padding: 0.7rem;
+
+    background-color: #ebf4f7;
+    border-radius: 10px;
+}
+
+.inputComponentContainer {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+
+    padding: 1.2rem;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.formContainer {
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+
+    position: relative;
+
+    .inputWrapper {
+        display: flex;
+    }
+
+    textarea {
+        width: calc(100% - 77px);
+        height: 50px;
+        border: 0;
+        margin: 0.7rem;
+        resize: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .buttonWrapper {
+        position: absolute;
+        top: calc(100% - 0.7rem);
+        right: 0.2rem;
+        transform: translate( 0, -100% );
+
+        button {
+            border: 0;
+            background-color: rgba( 255, 255, 255, 0);
+            transform: rotate(-45deg) scale(0.9);
+        }
+    }
 }

@@ -25,7 +25,7 @@ function RecordBoard({props}) {
         <div className={styles.recordContainer}>
             <div className={styles.bodyContainer}>
                 <div className={styles.titleContainer}>
-                    <AccessTimeIcon />
+                    <AccessTimeIcon style={{ fill: '#1c8cc9' }} />
                     <p>실시간 기록</p>
                 </div>
                 <div className={styles.listContainer}>

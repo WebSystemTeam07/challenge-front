@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Navigator from './components/Navigator';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import {BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

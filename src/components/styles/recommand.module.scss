@@ -54,12 +54,16 @@
     row-gap: 0.5vh;
 
     p {
-        font-size: larger;
+        font-size: 1.2rem;
+        font-family: "AppleSDGothicNeoR";
         margin: 0;
+        line-height: 1.7rem;
     }
 
     span {
         color: #1c8cc9;
+        font-weight: bold;
+        margin: 0 0.1rem;
     }
 }
 

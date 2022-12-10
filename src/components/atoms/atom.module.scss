@@ -8,12 +8,14 @@
 
 .articleContainer {
     width: 100%;
-    padding: 0.6rem 0;
+    padding: 0.66rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     transition: 300ms ease-in-out;
+
+    color: black;
 
     &:hover {
         color: #1c8cc9;
