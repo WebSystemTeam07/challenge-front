@@ -43,7 +43,7 @@ function GroupBoard() {
             console.log("Error")
         });
 
-        axios.get(port.url + `/user/challenge/${challengeId}`).then((response) => {
+        axios.get(port.url + `/userTask/all/${challengeId}`).then((response) => {
             console.log("Successfully Connected")
             setUsers(response.data);
         }).catch(() => {
@@ -66,18 +66,6 @@ function GroupBoard() {
 
     }, []);
 
-    const challengeList = {
-        id: "17302",
-        title: "하루 한 번 샐러드 먹기",
-        content: "하루 한 번 샐러드 먹기",
-        method: "하루 한 번 샐러드 먹기",
-        tag: ["매일", "식단"],
-        people: 1028,
-        now: new Date('2022-12-02'),
-        startDate: new Date('2022-11-30'),
-        endDate: new Date('2022-12-07'),
-    }
-
     const user = {
         name: "큐티섹시회오리소세지",
         imgSrc: "https://blog.kakaocdn.net/dn/bzKsjn/btq3USZ2HWX/FVn5G8ZMU3avYbgmapPRDK/img.jpg"
@@ -88,10 +76,10 @@ function GroupBoard() {
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > "} content={"그룹 게시판"} />
             <div className={styles.boardContainer}>
                 <GroupTitleBoard 
-                    challenge={challengeList}
+                    challenge={challenge}
                     user={user}
                 />
-                {/* <div className={styles.firstContainer}>
+                <div className={styles.firstContainer}>
                     <div className={styles.successWrapper}>
                         <SuccessRateBoard 
                             challenge={challenge}
@@ -103,16 +91,16 @@ function GroupBoard() {
                     </div>               
                 </div>
                 <div>
-                    <NoticeBoard props={notices} />
+                    <NoticeBoard props={notices} id={challengeId} />
                 </div>
                 <div className={styles.secondContainer}>
                     <div className={styles.confirmWrapper}>
-                        <ConfirmBoard props={confirms} />
+                        <ConfirmBoard props={confirms} id={challengeId} />
                     </div>
                     <div className={styles.chattingWrapper}>
                         <ChattingBoard props={challenge} />
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );

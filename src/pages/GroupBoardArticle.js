@@ -3,9 +3,17 @@ import GroupTitleBoard from '../components/GroupBoardComponent/GroupTitleBoard.j
 
 import styles from "./styles/article.module.scss"
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import port from "../assets/port.json";
 
 function GroupBoardArticle(props) {
+
+    const location = useLocation();
+    const articleId = location.state.articleId;
+
+    // const [article, setArticle] = useState("");
 
     const challenge = {
         title: "하루 한 번 샐러드 먹기",
@@ -28,6 +36,18 @@ function GroupBoardArticle(props) {
         content: "공지사항입니다.",
         user: "관리자"
     }
+
+    // useEffect(() => {
+
+    //     axios.get(port.url + `/post/challenge/${articleId}`).then((response) => {
+    //         console.log("Successfully Connected")
+    //         setArticle(response.data);
+    //     }).catch(() => {
+    //         console.log("Error")
+    //     })
+
+    // }, []);
+
 
     return(
         <div>
