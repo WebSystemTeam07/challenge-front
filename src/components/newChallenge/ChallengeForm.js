@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-import './styles/ChallengeForm.css';
+import styles from '../styles/challengeform.module.scss';
+import { useCookies } from "react-cookie";
 const ChallengeForm=(props)=>{
   const [enteredTitle,setEnteredTitle]=useState('');
   const [enteredStartDate,setEnteredStartDate]=useState('');
@@ -7,22 +8,21 @@ const ChallengeForm=(props)=>{
   const [clickedCategory,setClickedCategory]=useState('');
   const [method,setMethod]=useState('');
   const [content,setContent]=useState('');
-  const [tag,setTag]=useState([]);
+  const [tag,setTag]=useState('');
+  const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
+  const user = cookies.userData.id
+  console.log("cookies user",user);
   const titleChangeHandler=(event)=>{
     setEnteredTitle(event.target.value);
-    console.log(event.target.value);
   }
   const startDateChangeHandler=(event)=>{
     setEnteredStartDate(event.target.value);
-    console.log(event.target.value);
   }
   const endDateChangeHandler=(event)=>{
     setEnteredEndDate(event.target.value);
-    console.log(event.target.value);
   }
   const categoryChangeHandler=(event)=>{
     setClickedCategory(event.target.value)
-    console.log(event.target.value)
     }
   const methodChangeHandler=(event)=>{
     setMethod(event.target.value);
@@ -32,100 +32,101 @@ const ChallengeForm=(props)=>{
     setEnteredStartDate('');
     setEnteredEndDate('');
     setClickedCategory('');
-    setTag([]);
+    setTag('');
     setContent('');
     setMethod('');
   }
   const submitHandler=(event)=>{
     event.preventDefault();
-    const start=new Date(enteredStartDate);
-    const end=new Date(enteredEndDate);
-    console.log(end-start);
-    if(start>end){
+    let startDate=new Date(enteredStartDate);
+    let endDate=new Date(enteredEndDate);
+    if(startDate>endDate){
       alert("잘못된 입력입니다");
       onCancel();
     }
-    const term=(Math.floor((end-start)/(1000*60*60*24))+1);
+  const term=(Math.floor((endDate-startDate)/(1000*60*60*24))+1);
+    
     const challengeData={
       title:enteredTitle,
-      startDate:enteredStartDate,
-      endDate:enteredEndDate,
+      startDate:startDate,
+      endDate:endDate,
       term:term,
       type:'group',
       category:clickedCategory,
       method:method,
-      content:content,
-      tag:tag
+      contents:content,
+      tag:tag,
+      userId:user
     };
+    
     props.onSaveChallengeData(challengeData);
     setEnteredTitle('');
     setEnteredStartDate('');
     setEnteredEndDate('');
     setClickedCategory('');
-    setTag([]);
+    setTag('');
     setContent('');
     setMethod('');
   };
   const contentChangeHandler=(event)=>{
     setContent(event.target.value);
-    console.log(event.target.value);
   }
   const tagChangeHandler=(event)=>{
-    setTag(...tag,event.target.value);
+    setTag(event.target.value);
   }
   return(
     <form onSubmit={submitHandler}>
-      <div className="align_center">
-      <div className="newChallenge">
+      <div className={styles.align_center}>
+      <div className={styles.newChallenge}>
           <label>Title</label>
-          <div className="newText">
+          <div className={styles.newText}>
           <input type='text' 
           onChange={titleChangeHandler}
           value={enteredTitle}
           />
           </div>
           <label>Category</label>
-          <div className="newCategory">
-          <select onChange={categoryChangeHandler} value={clickedCategory}>
-            <option value="운동">운동</option>
+          {console.log(clickedCategory)}
+          <select onChange={categoryChangeHandler} defaultValue="운동">
+            <option value="운동" selected>운동</option>
             <option value="생활">생활</option>
             <option value="취미">취미</option>
             <option value="공부">공부</option>
             </select>
-            </div>
           <label>Tag</label>
-          <div className="newText">
-          <input type="text" onChange={tagChangeHandler} value={tag}/>
+          <div className={styles.newText}>
+          <input type="text" onChange={tagChangeHandler} placeholder={"태그를 ,로 구분해주세요"} value={tag}/>
           </div>
           <label>StartDate</label>
-          <div className="date">
+          <div className={styles.date}>
           <input type='date' 
           onChange={startDateChangeHandler} min='2022-11-15' max='2023-12-31'
           value={enteredStartDate}/>
           </div>
           <label>EndDate</label>
-          <div className="date">
+          <div className={styles.date}>
           <input type='date' onChange={endDateChangeHandler} min='2022-11-15' max='2024-12-31'
           value={enteredEndDate}/>
           </div>
           <label>챌린지 소개</label>
-          <div className="newText">
+          <div className={styles.newText}>
           <input type='text' onChange={contentChangeHandler} value={content}/>
           </div>
           <label>Authentication Method</label>
-          <select onChange={methodChangeHandler} value={method}>
-            <option value="글">글</option>  
-            <option value="사진">사진</option>        
+          <select onChange={methodChangeHandler} defaultValue="text">
+            <option value="text" selected>글</option>  
+            <option value="photo">사진</option>        
             </select>
             </div>
-            <div className="wrap">
-            <div className="form">
-      <button type='submit'>추가</button>
-      </div>
-            <div className="form">
-        <button type='button' onClick={onCancel}>취소</button>
+            <div className={styles.wrap}>
+            <div className={styles.form}>
+               <button type='submit' className={styles.addBtn}>추가</button>
+               </div>
+      <div className={styles.form}>
+
+        <button type='button' onClick={onCancel} className={styles.addBtn}>취소</button>
         </div>
-      </div>
+        </div>
       </div>
     </form>
   );

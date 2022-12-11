@@ -4,8 +4,6 @@
   display: flex;
   list-style: none;
   justify-content: center;
-}
-
   .submenu {
     width:30vw;
     padding: 15px 10px;
@@ -16,6 +14,20 @@
     
   }
   .focused{
+    width:30vw;
+    padding: 15px 10px;
+    cursor: pointer;
     background-color:#16bff7;
     color: white;
+    text-align: center;
   }
+}
+.challenge_title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color:#1c8cc9;
+text-decoration: underline;
+text-underline-position:under;
+}
+ 

@@ -1,4 +1,4 @@
-import ChallengeList from "../components/ChallengeList";
+import ChallengeList from "../components/myChallenge/ChallengeList";
 import Navigator from '../components/Navigator';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
