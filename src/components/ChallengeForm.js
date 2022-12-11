@@ -1,29 +1,27 @@
 import React,{useState} from "react";
+import './styles/button.module.scss';
 import styles from './styles/challengeform.module.scss';
-// import './styles/newchallenge.module.scss';
+import more from './styles/newchallenge.module.scss';
+
 const ChallengeForm=(props)=>{
   const [enteredTitle,setEnteredTitle]=useState('');
   const [enteredStartDate,setEnteredStartDate]=useState('');
   const [enteredEndDate,setEnteredEndDate]=useState('');
-  const [clickedCategory,setClickedCategory]=useState('');
-  const [method,setMethod]=useState('');
+  const [clickedCategory,setClickedCategory]=useState('운동');
+  const [method,setMethod]=useState('text');
   const [content,setContent]=useState('');
-  const [tag,setTag]=useState([]);
+  const [tag,setTag]=useState('');
   const titleChangeHandler=(event)=>{
     setEnteredTitle(event.target.value);
-    console.log(event.target.value);
   }
   const startDateChangeHandler=(event)=>{
     setEnteredStartDate(event.target.value);
-    console.log(event.target.value);
   }
   const endDateChangeHandler=(event)=>{
     setEnteredEndDate(event.target.value);
-    console.log(event.target.value);
   }
   const categoryChangeHandler=(event)=>{
     setClickedCategory(event.target.value)
-    console.log(event.target.value)
     }
   const methodChangeHandler=(event)=>{
     setMethod(event.target.value);
@@ -33,46 +31,47 @@ const ChallengeForm=(props)=>{
     setEnteredStartDate('');
     setEnteredEndDate('');
     setClickedCategory('');
-    setTag([]);
+    setTag('');
     setContent('');
     setMethod('');
   }
   const submitHandler=(event)=>{
     event.preventDefault();
-    const start=new Date(enteredStartDate);
-    const end=new Date(enteredEndDate);
-    console.log(end-start);
-    if(start>end){
+    let startDate=new Date(enteredStartDate);
+    let endDate=new Date(enteredEndDate);
+    if(startDate>endDate){
       alert("잘못된 입력입니다");
       onCancel();
     }
-    const term=(Math.floor((end-start)/(1000*60*60*24))+1);
+  const term=(Math.floor((endDate-startDate)/(1000*60*60*24))+1);
+    
     const challengeData={
       title:enteredTitle,
-      startDate:start,
-      endDate:end,
+      startDate:startDate,
+      endDate:endDate,
       term:term,
       type:'group',
       category:clickedCategory,
       method:method,
-      content:content,
-      tag:tag
+      contents:content,
+      tag:tag,
+      userId:"134623"
     };
+    
     props.onSaveChallengeData(challengeData);
     setEnteredTitle('');
     setEnteredStartDate('');
     setEnteredEndDate('');
     setClickedCategory('');
-    setTag([]);
+    setTag('');
     setContent('');
     setMethod('');
   };
   const contentChangeHandler=(event)=>{
     setContent(event.target.value);
-    console.log(event.target.value);
   }
   const tagChangeHandler=(event)=>{
-    setTag(...tag,event.target.value);
+    setTag(event.target.value);
   }
   return(
     <form onSubmit={submitHandler}>
@@ -97,7 +96,7 @@ const ChallengeForm=(props)=>{
           <input type="text" onChange={tagChangeHandler} placeholder={"태그를 ,로 구분해주세요"} value={tag}/>
           </div>
           <label>StartDate</label>
-          <div className={styles.newText}>
+          <div className={styles.date}>
           <input type='date' 
           onChange={startDateChangeHandler} min='2022-11-15' max='2023-12-31'
           value={enteredStartDate}/>
@@ -113,27 +112,18 @@ const ChallengeForm=(props)=>{
           </div>
           <label>Authentication Method</label>
           <select onChange={methodChangeHandler} value={method}>
-            <option value="글">글</option>  
-            <option value="사진">사진</option>        
+            <option value="text">글</option>  
+            <option value="photo">사진</option>        
             </select>
             </div>
             <div className={styles.wrap}>
-            <div className={styles.form}>
-              {/* <div className="button">
-                <div className='text'>Submit</div>
-              </div>
-              <div className="progess-barr"></div>
-              <svg x="0px" y="0px"
-              viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
-                <path className="check"
-              d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
-                </svg> */}
-      <button type='submit' >추가</button>
-      </div>
+            
+               <button type='submit' className={more.learn_more}>추가</button>
       <div className={styles.form}>
-        <button type='button' onClick={onCancel}>취소</button>
+
+        <button type='button' onClick={onCancel} className="btn btn-success btn-layer-1_3">취소<i class="fa fa_times"></i></button>
         </div>
-      </div>
+        </div>
       </div>
     </form>
   );

@@ -48,9 +48,9 @@
   "imageUrl":"https://cdn.kormedi.com/wp-content/uploads/2022/04/ck_tip101e15090019_l-580x387.jpg"
 },
 {
-  "id":"4",
+  "id":"18427",
     "type":"personal",
-    "ownerId":"4",
+    "userId":"15002",
     "title":"책 읽기",
     "contents":"설명",
     "category":"공부",
@@ -58,8 +58,8 @@
     "tag":["독서","취미"],
     "member":1,
     "startDate":"2022-12-06",
-    "endDate":"2022-12-21",
-    "term":15,
+    "endDate":"2023-01-05",
+    "term":30,
     "img":"https://cdn.kormedi.com/wp-content/uploads/2022/04/ck_tip101e15090019_l-580x387.jpg"
 },
 {
