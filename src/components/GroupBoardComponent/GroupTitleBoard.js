@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GroupChallengeModal from "../atoms/GroupChallengeModal";
 import styles from "./styles/group.module.scss"
 
 import FaceIcon from '@mui/icons-material/Face';
 
-function GroupTitleBoard({challenge, user}) {
+import axios from "axios";
+import port from "../../assets/port.json";
 
+function GroupTitleBoard({challenge}) {
     const [open, setOpen] = useState(0);
+    const [user, setUser] = useState("");
 
     const openModal = () => {
         setOpen(1);
@@ -16,16 +19,17 @@ function GroupTitleBoard({challenge, user}) {
         setOpen(0);
     }
 
-    const tags = challenge.tag;
+    console.log(challenge);
+
     const title = challenge.title;
 
     return(
         <div className={styles.boardContainer}>
             <div className={styles.bodyContainer}>
                 <div className={styles.tagContainer}>
-                    {tags.map((tag) => (
+                    {/* {tags.map((tag) => (
                         <p>#{tag}</p>
-                    ))}
+                    ))} */}
                 </div>
                 <div className={styles.titleContainer}>
                     <p>{challenge.title}</p>
@@ -40,7 +44,7 @@ function GroupTitleBoard({challenge, user}) {
                     <p>·</p>
                     <div className={styles.peopleContainer}>
                         <FaceIcon fontSize="small" />
-                        <p>{challenge.people} 명 참여중</p>
+                        <p>{challenge.member} 명 참여중</p>
                     </div>
                 </div>
                 <div>

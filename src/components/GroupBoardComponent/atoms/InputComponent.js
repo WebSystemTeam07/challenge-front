@@ -10,7 +10,7 @@ import SendIcon from '@mui/icons-material/Send';
 function InputComponent({id, name}) {
 
     const [message, setMessage] = useState("");
-    const [time, setTime] = useState("")
+    const [time, setTime] = useState(dayjs(new Date()).format("HH:mm"))
 
     const socket = useContext(SocketContext);
     const placeholder = "'" + name + "' (으)로 메세지를 남겨보세요!"

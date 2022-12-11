@@ -19,7 +19,7 @@ function ChattingBoard({props}) {
 
     useEffect(() => {
         return () => {
-            socket.disconnect();
+            socket.close();
         }
     }, []);
 

@@ -4,6 +4,10 @@ import styles from "../components/styles/component.module.scss"
 import { useEffect, useState } from "react";
 import { style } from "@mui/system";
 
+<<<<<<< src/components/Header.js
+function Header() {
+    return(
+=======
 function Header({ loginUrl }) {
     const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
     const [login, setLogin] = useState(false);
@@ -15,6 +19,7 @@ function Header({ loginUrl }) {
         setLogin(true)
     },[cookies])
     return (
+>>>>>>> src/components/Header.js
         <div className={styles.headerContainer}>
             {!login &&
                 <>

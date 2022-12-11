@@ -4,13 +4,14 @@ import Header from "../components/Header.js";
 import Footer from '../components/Footer.js';
 import Navigator from "../components/Navigator.js";
 import Path from "../components/Path.js";
-import ChallengeDetailBoard from "../components/groupChallenge/ChallengeDetailBoard.js";
+import Bar from "../components/Bar.js";
+import ChallengeDetailBoard from "../components/GroupBoardComponent/ChallengeDetailBoard.js";
 
 function GroupChallengeDetail(){
     const location = useLocation();
     return(
         <React.Fragment>
-            <Path path="전체보기 > 그룹 챌린지 > 상세"/>
+            <Bar path={"전체보기 > 그룹 챌린지 > "} content={"상세"} />
             <ChallengeDetailBoard challenge={location.state.challenge}/>
         </React.Fragment>
     )

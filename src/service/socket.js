@@ -7,7 +7,8 @@ import axios from 'axios';
 const ENDPOINT = "http://localhost:5500";
 
 export const socket = io.connect(ENDPOINT, {
-    cors: {origin: '*'}
+    cors: {origin: '*'},
+    credentials: true,
 });
 
 export const SocketContext = createContext(socket);
@@ -37,7 +38,7 @@ export const makeMessage = (data) => {
     } else if (type === SOCKET_EVENT.SEND) {
         receiveContent = String(content);
         receiveName = name;
-        receiveTime = time;
+        receiveTime = dayjs(time).format("HH:mm");
 
         return {
             name: receiveName,
