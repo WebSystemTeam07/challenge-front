@@ -8,16 +8,12 @@ import { useCookies} from "react-cookie";
 
 
 function ChallengeDetailBoard(props){
-
     const navigate = useNavigate();
+    const [cookies, setCookie, removeCookie] = useCookies(['userData']);
 
     let challenge = props.challenge
-    let isLogin = true;
     let startDate = challenge.startDate.substr(0,10)
     let endDate = challenge.endDate.substr(0,10)
-
-    const [cookies, setCookie, removeCookie] = useCookies(['userData']);
-    const [userIds, setUserIds] = [...challenge.userIds]; // 현재 챌린지에 참여중인 userIds
     
     // 이미 join한 상태인지 아닌지 판별
     function checkJoin(){
@@ -25,19 +21,21 @@ function ChallengeDetailBoard(props){
         for(const idx of Object.keys(challenge.userIds)){
             tmpUserIds = [...tmpUserIds, challenge.userIds[idx].id]
         }
-        //setUserIds(tmpUserIds)
-        console.log(tmpUserIds.indexOf(cookies.userData.id))
-        if(tmpUserIds.indexOf(cookies.userData.id) >=0 ){
-            // 이미 참여중임
-            return true
+        
+        if(cookies.userData != undefined){
+            if(tmpUserIds.indexOf(cookies.userData.id) >=0 ){
+                // 이미 참여중임
+                return true
+            }else{
+                // 참여안함.
+                return false
+            }
         }else{
-            // 참여안함.
-            return false
+            return false;
         }
     }
 
     const [joined, setJoined] = useState(checkJoin)
-    
     
     async function postChallengeJoin(userId) {
         return await axios.post(port.url + '/challenge/join', {"userId" : userId, "challengeId":challenge.id})
