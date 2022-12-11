@@ -38,7 +38,6 @@ function App() {
         <Route path="/login" element={<SignIn />}/>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/mypage" element={<MyPage/>} />
-        <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
         <Route path="/chat" element={<ChattingBoard />} />
         <Route path="/groupchallengepage/board/detail/certifiregister" element={<CertificationRegister />} />
         <Route path="/groupchallengepage/board/detail/inforegister" element={<InformationRegister />} />
