@@ -10,6 +10,8 @@ import ConfirmList from '../data/ConfirmList.js';
 
 import styles from './styles/detail.module.scss'
 import { useState } from 'react';
+import { Link } from "react-router-dom"
+import { width } from '@mui/system';
 
 function GroupBoardDetail() {
 
@@ -23,6 +25,7 @@ function GroupBoardDetail() {
         now: new Date('2022-12-02'),
         startDate: new Date('2022-11-30'),
         endDate: new Date('2022-12-07'),
+        method: "text",
     }
 
     const user = {
@@ -69,6 +72,24 @@ function GroupBoardDetail() {
                                 list={ConfirmList}
                             />
                         )}
+                    {
+                        notice ? (
+                            <Link to="/groupchallengepage/board/detail/inforegister" state={{challenge:challenge}} style={{ textDecoration: "none" }}>
+                                <div>
+                                    <p style={{border:"solid", backgroundColor:"white", borderWidth:"1px", color:"#1c8cc9", borderColor:"#1c8cc9", borderRadius:"10px", padding:"1vh 2vw", width:"40px"}}>
+                                        글쓰기
+                                    </p>
+                                </div>
+                            </Link>) : (
+                            <Link to="/groupchallengepage/board/detail/certifiregister" state={{challenge:challenge}} style={{ textDecoration: "none" }}>
+                            <div>
+                                <p style={{border:"solid", backgroundColor:"white", borderWidth:"1px", color:"#1c8cc9", borderColor:"#1c8cc9", borderRadius:"15px", padding:"1vh 2vw", width:"40px"}}>
+                                    글쓰기
+                                </p>
+                            </div>
+                            </Link>
+                        )
+                    }
                     </div>
                 </div>
             </div>

@@ -25,7 +25,7 @@ function Navigator() {
                         color: isActive ? "#1c8cc9" : "black",
                     };
                 }}><p>그룹 챌린지</p></NavLink>
-                <NavLink to='/mychallenge' style={({ isActive }) => {
+                <NavLink to='/individualchallengepage' style={({ isActive }) => {
                     return {
                         textDecoration: "none",
                         color: isActive ? "#1c8cc9" : "black",

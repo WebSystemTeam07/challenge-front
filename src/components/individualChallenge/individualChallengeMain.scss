@@ -1,0 +1,43 @@
+.individualChallengeBoardContainer{
+    padding: 100px;
+}
+
+.individualChallengeBoardHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    padding: 0 19.2vw;
+    margin-top: 25px;
+    margin-bottom: 70px;
+    justify-content: space-between;
+}
+
+.individualCategoryPath{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.individualChallengeCategories{
+    display: flex;
+    height: 8vh;
+    padding: 0 19.2vw;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.individualComponentBtn{
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border: solid;
+    border-color: #1c8cc9;
+    border-width: 1px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color:#1c8cc9;
+    background:white;
+}

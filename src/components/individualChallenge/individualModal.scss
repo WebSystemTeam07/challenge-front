@@ -1,0 +1,31 @@
+.individualModalContainer{
+    // 크기
+    z-index: 999;
+    width: 600px;
+    height: 600px;
+    
+    // 중앙배치
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    // 디자인
+    background-color: rgb(255, 255, 255);
+
+}
+
+.individualCloseBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    font-size: 30px;
+    color:#939393;
+    background-color: white;
+}
+
+.contnetGrid{
+    
+    grid-template-columns: (7, 1fr);          
+}

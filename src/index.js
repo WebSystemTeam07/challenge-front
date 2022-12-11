@@ -11,9 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Router>
          <Header />
-            <Navigator />
-    <App/>
-    <Footer />
+        <Navigator />
+        <App/>
+        <Footer />
     </Router>
     
 );
