@@ -33,8 +33,8 @@ function App() {
         <Route path="/individualchallengepage" element={<IndividualChallengeMain/>}/>
         <Route path="/newchallenge" element={<NewChallenge/>}/>
         <Route path="/groupchallengepage/board/*" element={<GroupBoard/>}/>
-        <Route path="/groupchallengepage/board/*/detail" element={<GroupBoardDetail />} />
-        <Route path="/groupchallengepage/board/*/detail/article" element={<GroupBoardArticle />} />
+        <Route path="/groupchallengepage/board/detail/*" element={<GroupBoardDetail />} />
+        <Route path="/groupchallengepage/board/detail/article/*" element={<GroupBoardArticle />} />
         <Route path="/login" element={<SignIn />}/>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/mypage" element={<MyPage/>} />

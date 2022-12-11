@@ -7,9 +7,9 @@ import FaceIcon from '@mui/icons-material/Face';
 import axios from "axios";
 import port from "../../assets/port.json";
 
-function GroupTitleBoard({challenge, user}) {
+function GroupTitleBoard({challenge}) {
     const [open, setOpen] = useState(0);
-    // const [user, setUser] = useState("");
+    const [user, setUser] = useState("");
 
     const openModal = () => {
         setOpen(1);
@@ -19,26 +19,40 @@ function GroupTitleBoard({challenge, user}) {
         setOpen(0);
     }
 
-    console.log(challenge);
+    useEffect(() => {
 
-    const title = challenge.title;
+        if (challenge) {
+                axios.get(port.url + `/user/userId/${challenge.ownerId}`).then((response) => {
+                console.log("Successfully Connected")
+                setUser(response.data);
+            }).catch(() => {
+                console.log("Error")
+            });
+        }
 
-    return(
+    }, []);
+
+    const tags = challenge.tag;
+
+    if (challenge && user) {
+        console.log(user);
+        
+        return(
         <div className={styles.boardContainer}>
             <div className={styles.bodyContainer}>
                 <div className={styles.tagContainer}>
-                    {/* {tags.map((tag) => (
+                    {tags.map((tag) => (
                         <p>#{tag}</p>
-                    ))} */}
+                    ))}
                 </div>
                 <div className={styles.titleContainer}>
-                    <p>{challenge.title}</p>
+                    <p>{challenge?.title}</p>
                 </div>
             </div>
             <div className={styles.infoContainer}>
                 <div className={styles.profileContainer}>
                     <div className={styles.profileBox}>
-                        <img className={styles.profileImage} src={user.imgSrc} alt="profile"></img>
+                        <img className={styles.profileImage} src={user.imgUrl} alt="profile"></img>
                     </div>
                     <p>{user.name}</p>
                     <p>·</p>
@@ -53,7 +67,8 @@ function GroupTitleBoard({challenge, user}) {
                 </div>
             </div>
         </div>
-    );
+        )
+    } else return null;
 }
 
 export default GroupTitleBoard;
