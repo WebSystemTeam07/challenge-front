@@ -1,7 +1,4 @@
-import AddChallenge from '../components/AddChallenge';
-import Header from '../components/Header';
-import Navigator from '../components/Navigator';
-import Footer from '../components/Footer';
+import AddChallenge from '../components/newChallenge/AddChallenge';
 import Bar from '../components/Bar';
 const NewChallenge=()=>{
 return(

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./styles/personal.module.scss";
+import styles from "../styles/personal.module.scss";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CheckAuth from "./CheckAuth";
