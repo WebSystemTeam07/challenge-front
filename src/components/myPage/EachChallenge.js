@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
-import './../../scss/myPageTable.scss'
+import '../styles/myPageTable.scss'
 
 export default function EachChallenge(props) {
     const challenge = props.data

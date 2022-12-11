@@ -1,6 +1,6 @@
 import Bar from "../components/Bar";
 
-import "../scss/register.scss";
+import "../components/styles/register.scss";
 import axios from 'axios';
 import port from "../assets/port.json"
 

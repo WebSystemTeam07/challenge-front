@@ -4,7 +4,7 @@ import Footer from '../components/Footer.js';
 import Navigator from "../components/Navigator.js";
 import Path from "../components/Path.js";
 import Bar from "../components/Bar.js";
-import ChallengeBoard from "../components/groupChallenge/ChallengeBoard";
+import ChallengeBoard from "../components/GroupChallenge/ChallengeBoard";
 
 import axios from 'axios';
 import port from "./../assets/port.json";

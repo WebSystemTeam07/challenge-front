@@ -5,7 +5,7 @@ import MyChallenge from './pages/MyChallenge';
 import GroupChallengeMain from './pages/GroupChallengeMain';
 import NewChallenge from './components/NewChallenge';
 import GroupBoardDetail from './pages/GroupBoardDetail'
-import MyPage from './components/myPage/MyPage'
+import MyPage from './components/MyPage/MyPage'
 import SignIn from './components/user/SignIn';
 import SignUp from './components/user/SignUp';
 

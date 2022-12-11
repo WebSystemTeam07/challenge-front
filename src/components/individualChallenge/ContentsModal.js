@@ -1,5 +1,5 @@
 import { listClasses } from "@mui/material";
-import "../individualChallenge/individualModal.scss"
+import "./individualModal.scss"
 
 function ContentsModal({setModal, taskList, title}){
     let day = 1;

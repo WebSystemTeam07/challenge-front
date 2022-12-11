@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 import axios from 'axios';
-import './../../scss/sign.scss'
+import '../styles/sign.scss'
 import logo from './../../assets/FOFE_임시로고.png'
 const port = require('./../../assets/port.json')
 

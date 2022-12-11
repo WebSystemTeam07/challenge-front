@@ -1,17 +1,17 @@
 import { React, useState, useEffect } from 'react'
 import { json, useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie";
-import './../../scss/myPage.scss'
-import './../../scss/myPageTable.scss'
+import '../styles/myPage.scss'
+import '../styles/myPageTable.scss'
 import EditUserInfo from './EditUserInfo';
 import FinishedChallenge from './FinishedChallenge';
 import MyPost from './MyPost';
 import OngoingChallenge from './OngoingChallenge';
 import { Line } from 'rc-progress';
 
-import dummy from './../../data/dummy.json'
+import dummy from '../../data/dummy.json'
 import axios from 'axios';
-const port = require('./../../assets/port.json')
+const port = require('../../assets/port.json')
 
 export default function MyPage() {
 

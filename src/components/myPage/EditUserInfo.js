@@ -1,10 +1,10 @@
 import {React, useState} from 'react'
 import { json } from 'react-router-dom'
-import './../../scss/sign.scss'
-import './../../scss/myPage.scss'
+import '../styles/sign.scss'
+import '../styles/myPage.scss'
 import axios from 'axios';
 import { useEffect } from 'react';
-const port = require('./../../assets/port.json')
+const port = require('../../assets/port.json')
 
 export default function EditUserInfo(props) {
     // const [userId, setUserId] = useState(props.data.id)
