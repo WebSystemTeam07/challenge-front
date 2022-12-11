@@ -10,7 +10,6 @@ import axios from "axios";
 import styles from "../components/styles/challenge.module.scss"
 
 function ChallengeBoard() {
-
     const [list, setList] = useState([]);
 
     useEffect(() => {

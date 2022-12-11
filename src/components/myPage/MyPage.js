@@ -37,7 +37,7 @@ export default function MyPage() {
     getUserData()
       .then(res => {
         setDbUser(res.data)
-        console.log(res.data)
+        // console.log(res.data)
       }
       ).then(() => {
         console.log(dBUser)
@@ -50,11 +50,10 @@ export default function MyPage() {
   },[])
 
   useEffect(() => {
-
+// console.log(user)
   })
-
+  
   const user = cookies.userData
-  const challenge = dummy.challenge;
 
   function levelIcon(userLevel) {
     switch (userLevel) {
@@ -125,7 +124,7 @@ export default function MyPage() {
           <div id="selectedContents">
             {
               view == 0 &&
-              <EditUserInfo data={JSON.stringify(user)} />
+              <EditUserInfo data={JSON.stringify(user)} userData={dBUser} />
             }
             {
               view == 1 &&

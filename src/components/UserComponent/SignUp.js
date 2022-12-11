@@ -38,7 +38,7 @@ export default function SignIn() {
             <img src={logo} style={{ width: "200px" }} />
             <div id='title'>챌린지를 시작해 보세요</div>
             <div className='bigEnter' />
-            {!next && <div id='inputContainer'>
+            {!next && <div id='inputContainer_sign'>
                 <div id='horizon'>
                     <input className='inputBlock' type='email' id='inputBlock_email' name='email' placeholder='이메일 (예시 : challenge@gmail.com)' onChange={changeSignUp} />
                     <button className='authButton' onClick={onClickAuthButton}>인증</button>
@@ -46,7 +46,7 @@ export default function SignIn() {
                 <input className='inputBlock' type='Number' id='authNum' name='authNum' placeholder='인증번호' onChange={changeSignUp} />
             </div>}
             {next &&
-                <div id='inputContainer'>
+                <div id='inputContainer_sign'>
                     <input className='inputBlock' type='text' id='name' name='name' placeholder='닉네임' onChange={changeSignUp} />
                     <input className='inputBlock' type='password' id='password' name='password' placeholder='비밀번호' onChange={changeSignUp} />
                 </div>

@@ -1,15 +1,13 @@
 import { React, useEffect, useState } from "react";
 
-
 import Bar from "../components/Bar.js";
 import Path from "../components/Path";
-import IndividualChallgeBoard from "../components/IndividualChallenge/IndividualChallgeBoard";
-import ChallengeCategoryFilter from "../components/GroupChallenge/ChallengeCategoryFilter.js";
+import IndividualChallgeBoard from "../components/individualChallenge/IndividualChallgeBoard";
+import ChallengeCategoryFilter from "../components/groupChallenge/ChallengeCategoryFilter.js";
 
 import axios from 'axios';
 import port from "./../assets/port.json";
 
-//import challengeData from "../data/individualChallengeData"
 
 function IndividualChallengeMain(){
     const [challengeData, setChallengeData] = useState([]);
