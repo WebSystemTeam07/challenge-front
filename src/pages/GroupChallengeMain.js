@@ -3,6 +3,7 @@ import Header from "../components/Header.js";
 import Footer from '../components/Footer.js';
 import Navigator from "../components/Navigator.js";
 import Path from "../components/Path.js";
+import Bar from "../components/Bar.js";
 import ChallengeBoard from "../components/groupChallenge/ChallengeBoard";
 
 import axios from 'axios';
@@ -28,7 +29,7 @@ function GroupChallengeMain(){
 
     return(
         <>
-            <Path path="전체보기 > 그룹 챌린지"/>
+            <Bar path={"전체보기 > "} content={"그룹 챌린지"}/>
             <ChallengeBoard challengeData={challengeData}/>
         </>
     )

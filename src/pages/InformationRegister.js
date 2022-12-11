@@ -40,7 +40,7 @@ function InformationRegister(){
 
     return(
         <>
-        <Bar path="전체 > 그룹챌린지 > 상세 > 공지글 > " content="공지글 작성하기" />
+        <Bar path="전체보기 > 그룹챌린지 > 상세 > 공지글 > " content="공지글 작성하기" />
         <p className="part" style={{marginTop:"9.6vh", marginLeft:"19.2vw",color:"#1c8cc9", fontSize:"xx-large", fontWeight:"bold"}}>{challengeTitle}</p>
         <div className="registerContainer">
             <p className="part"style={{fontSize:"xx-large", fontWeight:"bold"}}>공지사항 글쓰기</p>

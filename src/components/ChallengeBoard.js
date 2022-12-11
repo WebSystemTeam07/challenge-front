@@ -39,9 +39,11 @@ function ChallengeBoard() {
                         />
                     ))}
                 </div>
-                <Link to="/groupchallengepage" style={{ textDecoration: "none" }}>
-                    <div className={styles.moreButton}><p>더 보러 가기</p></div>
-                </Link>
+                <div className={styles.buttonWrapper}>
+                    <Link to="/groupchallengepage" style={{ textDecoration: "none" }}>
+                        <div className={styles.moreButton}><p>더 보러 가기</p></div>
+                    </Link>
+                </div>
             </div>
         </div>
     );

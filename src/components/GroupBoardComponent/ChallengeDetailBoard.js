@@ -4,6 +4,7 @@ import axios from 'axios';
 import port from "../../assets/port.json";
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom"
 
 
 function ChallengeDetailBoard(props){
@@ -29,8 +30,8 @@ function ChallengeDetailBoard(props){
                     setJoinBtn("그룹게시판 이동");
                     console.log(res.data.result)
                 })
-            }if(joinBtn == "그룹게시판 이동"){
-                navigate("/groupchallengepage/board", {state:{challengeId:challenge.id}})
+            }if(joinBtn === "그룹게시판 이동"){
+                navigate(`/groupchallengepage/board/${challenge.id}`, {state:{challengeId:challenge.id}});
             }
         }else{
             alert("로그인해야 이용 가능한 서비스입니다");

@@ -51,7 +51,6 @@
 .challengeWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -95,4 +94,10 @@
     flex-direction: column;
 
     row-gap: 0.6rem;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

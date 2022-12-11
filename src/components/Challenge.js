@@ -7,7 +7,7 @@ function Challenge({props}) {
     const tag = props.tag.slice(0, 2);
 
     return(
-        <Link to={`/groupchallengepage/board/${props.id}`} style={{ textDecoration: "none" }}>
+        <Link to="/groupchallengepage/groupChallengeDetail" state={{challenge:props}} style={{ textDecoration: "none" }}>
             <div className={styles.bodyContainer}>
                 <div className={styles.imageContainer}>
                     <img className={styles.logoImage} src={props.imageUrl} alt="default"></img>
