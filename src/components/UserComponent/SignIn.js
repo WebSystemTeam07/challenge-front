@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie";
 import axios from 'axios';
@@ -13,7 +13,10 @@ export default function SignIn() {
         email: "",
         password: ""
     });
+    useEffect(()=>{
+        console.log(signIn)
 
+    },[signIn])
     const changeSignIn = (e) => {
         setSignIn({
           ...signIn,
