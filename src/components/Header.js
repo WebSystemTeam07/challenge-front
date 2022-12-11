@@ -7,13 +7,13 @@ import { style } from "@mui/system";
 function Header({ loginUrl }) {
     const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
     const [login, setLogin] = useState(false);
-    useEffect(()=>{
+    useEffect(() => {
         console.log(login)
-        if(cookies.userData == undefined)
-        setLogin(false)
+        if (cookies.userData == undefined)
+            setLogin(false)
         else
-        setLogin(true)
-    },[cookies])
+            setLogin(true)
+    }, [cookies])
     return (
         <div className={styles.headerContainer}>
             {!login &&
@@ -28,9 +28,11 @@ function Header({ loginUrl }) {
             }
             {
                 login &&
-                <p onClick={()=>{
-                    removeCookie("userData")
-                }} style={{cursor :"pointer"}}>로그아웃</p>
+                <Link to='/' style={{ textDecoration: "none" }}>
+                    <p onClick={() => {
+                        removeCookie("userData")
+                    }} style={{ cursor: "pointer" }}>로그아웃</p>
+                </Link>
             }
         </div>
     );

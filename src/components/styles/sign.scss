@@ -25,6 +25,18 @@
     margin: 0 auto;
 }
 
+#inputContainer_sign{
+    display : flex;
+    width: 40%;
+    min-width: 300px;
+    max-width: 400px;
+    text-align : center;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .bigEnter{
     height : 50px;
 }
@@ -46,19 +58,18 @@
 }
 
 .inputBlock{
-    width: 100%;
-    max-width: 350px; 
+    width: 98%;
+    max-width: 400px; 
     height: 25px;
-    padding: 10px 5px; 
+    padding: 10px 2%; 
     margin: 15px 0px;
-    border: 2px solid #ececec;
+    border: 1px solid #ececec;
     font-size: 12px; 
     font-weight: 500;
-    /* color: #1a1a1a; */
 }
 
 .inputBlock:focus{
-    border: 2px solid #438AC3;
+    border: 1px solid #438AC3;
     outline: none;
 }
 
@@ -66,17 +77,33 @@
     width: 80%;
 }
 
+.inputBlock_edit{
+    width: 60%;
+    max-width: 400px; 
+    height: 25px;
+    padding: 10px 2%; 
+    margin: 15px 0px;
+    border: 1px solid #ececec;
+    font-size: 12px; 
+    font-weight: 500;
+}
+
+.inputBlock_edit:focus{
+    border: 1px solid #438AC3;
+    outline: none;
+}
+
 .authButton{
     border: none;
-    width: 20%; 
-    max-width: 100px; 
+    width: 15%; 
+    max-width: 150px; 
     height: 45px;
-    border: 2px solid #438AC3;
+    border: 1px solid #438AC3;
     border-radius: 5px;
     background-color: white;
     color: #438AC3;
     font-weight: 600;
-    margin: 10px;
+    margin-left: 5%;
 }
 .authButton:hover{
     background-color:  #438AC3;
@@ -98,11 +125,12 @@
 }
 
 
-a{
+#signupLink{
     color : #c2c0c0;
     font-size: 14px; 
+    margin-bottom: 50px;
 }
-a:hover{
+#signupLink:hover{
     color:  #438AC3;
     font-weight: 500;
 }
