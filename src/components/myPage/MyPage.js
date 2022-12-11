@@ -1,17 +1,17 @@
 import { React, useState, useEffect } from 'react'
 import { json, useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie";
-import './../../scss/myPage.scss'
-import './../../scss/myPageTable.scss'
+import '../styles/myPage.scss'
+import '../styles/myPageTable.scss'
 import EditUserInfo from './EditUserInfo';
 import FinishedChallenge from './FinishedChallenge';
 import MyPost from './MyPost';
 import OngoingChallenge from './OngoingChallenge';
 import { Line } from 'rc-progress';
 
-import dummy from './../../data/dummy.json'
+import dummy from '../../data/dummy.json'
 import axios from 'axios';
-const port = require('./../../assets/port.json')
+const port = require('../../assets/port.json')
 
 export default function MyPage() {
 
@@ -37,7 +37,7 @@ export default function MyPage() {
     getUserData()
       .then(res => {
         setDbUser(res.data)
-        console.log(res.data)
+        // console.log(res.data)
       }
       ).then(() => {
         console.log(dBUser)
@@ -50,11 +50,10 @@ export default function MyPage() {
   },[])
 
   useEffect(() => {
-
+// console.log(user)
   })
-
+  
   const user = cookies.userData
-  const challenge = dummy.challenge;
 
   function levelIcon(userLevel) {
     switch (userLevel) {
@@ -125,7 +124,7 @@ export default function MyPage() {
           <div id="selectedContents">
             {
               view == 0 &&
-              <EditUserInfo data={JSON.stringify(user)} />
+              <EditUserInfo data={JSON.stringify(user)} userData={dBUser} />
             }
             {
               view == 1 &&

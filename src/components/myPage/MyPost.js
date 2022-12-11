@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
-const port = require('./../../assets/port.json')
+const port = require('../../assets/port.json')
 
 //게시물 저장 : new Date().getTime()
 //date 가져옴 : date.toISOString().split('T')[0]

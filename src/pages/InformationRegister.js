@@ -3,7 +3,7 @@ import Bar from "../components/Bar";
 
 import {useLocation} from "react-router";
 
-import "../scss/register.scss";
+import "../components/styles/register.scss";
 import axios from 'axios';
 import port from "../assets/port.json"
 

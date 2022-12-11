@@ -2,7 +2,7 @@ import { React, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie";
 import axios from 'axios';
-import './../../scss/sign.scss'
+import '../styles/sign.scss'
 import logo from './../../assets/FOFE_임시로고.png'
 const port = require('./../../assets/port.json')
 
@@ -26,13 +26,13 @@ export default function SignIn() {
                 <img src={logo} style={{width : "200px"}}/>
                 <div id='title'>로그인하고 챌린지 이어하기</div>
                 <div className='bigEnter'/>
-                <div id = 'inputContainer'>
+                <div id = 'inputContainer_sign'>
                     <input className='inputBlock' type='email' id='email' name='email' placeholder='이메일 (예시 : challenge@gmail.com)' onChange= {changeSignIn} onClick={changeSignIn} />
                     <input className='inputBlock' type='password' id='password' name='password' placeholder='비밀번호' onChange = {changeSignIn} onClick={changeSignIn} />
                 </div>
                     <div className='bigEnter'/>
                     <button className='signButton' onClick = {onClickLogin}>로그인</button>
-                <a onClick={() => navigate("/signup")} >회원가입하기</a>
+                <a id ='signupLink' onClick={() => navigate("/signup")} >회원가입하기</a>
         </container>
     )
 

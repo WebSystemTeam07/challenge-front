@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from 'react';
-import dummy from './../../data/dummy.json'
+import dummy from '../../data/dummy.json'
 import EachChallenge from './EachChallenge';
 
 import axios from 'axios';
-const port = require('./../../assets/port.json')
+const port = require('../../assets/port.json')
 
 export default function OngoingChallenge(props) {
   const [userId, setUserId] = useState(props.userId)
