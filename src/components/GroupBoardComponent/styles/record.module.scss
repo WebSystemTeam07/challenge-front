@@ -7,20 +7,28 @@
     column-gap: 0.5rem;
     padding: 0.6rem 0 1rem 0;
     align-items: center;
+
+    p {
+        font-size: 1rem;
+        font-family: "AppleSDGothicNeoR";
+    }
 }
 
 .listContainer {
     display: flex;
     flex-wrap: wrap;
 
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
 
-    column-gap: 1.5rem;
+    column-gap: 1.7rem;
     row-gap: 1rem;
 }
 
 .listWrapper {
-    width: 20vw;
+    width: 24.5rem;
 
     @for $i from 1 through 4 {
         &:nth-child(#{$i}) {

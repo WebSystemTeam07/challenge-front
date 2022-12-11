@@ -1,0 +1,65 @@
+.boardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 19.2vw;
+
+    row-gap: 1.8rem;
+    column-gap: 1.8rem;
+}
+
+.componentContainer {
+    margin: 0.8rem 0 0.3rem 0;
+}
+
+.backWrapper {
+    text-align: right;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+
+    p {
+        color: #aaaaaa;
+
+        &:hover {
+            color: #1c8cc9;
+        }
+    }
+}
+
+.articleContainer {
+    border-top: 2px solid #ebf4f7;
+    border-bottom: 2px solid #ebf4f7;
+
+    padding: 0 0.5rem;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.dateContainer {
+    display: flex;
+
+    p {
+        font-size: 0.8rem;
+        color: #aaaaaa;
+    }
+}
+
+.contentContainer {
+    padding: 1.5rem 0rem;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p:nth-child(1) {
+        font-size: 1.25rem;
+        font-family: "AppleSDGothicNeoR";
+    }
+}

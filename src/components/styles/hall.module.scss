@@ -1,5 +1,6 @@
 .boardContainer {
     padding: 0 19.2vw;
+    margin: 1vw 0 3vw 0;
 }
 
 .titleContainer {
@@ -10,7 +11,8 @@
     margin-bottom: 0.5vmin;
 
     p {
-        font-size: larger;
+        font-size: 1.2rem;
+        font-family: "AppleSDGothicNeoR";
     }
 }
 
@@ -18,4 +20,48 @@
     p {
         font-size: small;
     }
+}
+
+.componentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 1rem;
+    row-gap: 0.8rem;
+}
+
+.componentWrapper {
+    width: 49%;
+
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            order: calc(2 * #{$i} - 1);
+        }
+    }
+
+    @for $i from 5 through 8 {
+        &:nth-child(#{$i}) {
+            order: calc(2 * (#{$i} - 4));
+        }
+    }
+}
+
+.hallContainer {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointContainer {
+    width: 5rem;
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "AppleSDGothicNeoM" !important;
+    color: #1c8cc9;
 }

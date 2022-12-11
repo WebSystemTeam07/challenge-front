@@ -23,10 +23,30 @@
 
     p {
         color: white;
-        font-size: xx-large;
+        font-weight: 550;
+        font-size: 1.8rem;
 
         span {
             display: block;
-        }   
+            font-family: "AppleSDGothicNeoR" !important;
+            line-height: 3.3rem;
+        }
+
+        span:nth-child(2) {
+            font-size: 3rem;
+        }
+
+        span:nth-child(2)::after {
+            content: '';
+            margin-left: 0.6rem;
+            border-right: 3px solid white;
+            animation: cursor 0.9s infinite steps(2);
+        }
+
     }
+}
+
+@keyframes cursor {
+    from { border-right: 3px solid rgba(255, 255, 255, 1); }
+    to { border-right: 3px solid rgba(255, 255, 255, 0); }
 }

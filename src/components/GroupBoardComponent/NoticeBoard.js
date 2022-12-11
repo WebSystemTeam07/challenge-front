@@ -14,7 +14,7 @@ function NoticeBoard({props}) {
         <div className={styles.noticeContainer}>
             <div className={styles.headerContainer}>
                 <div className={styles.titleContainer}>
-                    <NotificationsActiveIcon />
+                    <NotificationsActiveIcon style={{ fill: '#1c8cc9' }} />
                     <p>공지사항</p>
                 </div>
                 <Link to={{
