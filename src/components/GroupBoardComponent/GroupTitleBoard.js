@@ -7,9 +7,9 @@ import FaceIcon from '@mui/icons-material/Face';
 import axios from "axios";
 import port from "../../assets/port.json";
 
-function GroupTitleBoard({challenge}) {
+function GroupTitleBoard({challenge, user}) {
     const [open, setOpen] = useState(0);
-    const [user, setUser] = useState("");
+    // const [user, setUser] = useState("");
 
     const openModal = () => {
         setOpen(1);
@@ -48,8 +48,8 @@ function GroupTitleBoard({challenge}) {
                     </div>
                 </div>
                 <div>
-                    <button onClick={openModal}>챌린지 소개</button>
-                    <GroupChallengeModal open={open} close={closeModal} header={title} />
+                    <button className={styles.onButton} onClick={openModal}>챌린지 소개</button>
+                    <GroupChallengeModal open={open} close={closeModal} challenge={challenge} />
                 </div>
             </div>
         </div>

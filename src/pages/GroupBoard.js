@@ -34,44 +34,43 @@ function GroupBoard() {
 
     console.log(challengeId);
 
-    async function getChallengeData() {
-        return await axios.get(port.url + `/challenge/specific/${challengeId}`)
-    }
-
     useEffect(() => {
 
-        getChallengeData().then((res) => {
-            setChallenge(res.data);
-            console.log(res.data);
-        }).catch(e =>
-            console.log(e.message))
+        axios.get(port.url + `/challenge/specific/${challengeId}`).then((response) => {
+            console.log("Successfully Connected")
+            setChallenge(response.data);
+        }).catch(() => {
+            console.log("Error")
+        });
 
-        // axios.get(port.url + `/user/challenge/${challengeId}`).then((response) => {
-        //     console.log("Successfully Connected")
-        //     setUsers(response.data);
-        // }).catch(() => {
-        //     console.log("Error")
-        // });
+        axios.get(port.url + `/user/challenge/${challengeId}`).then((response) => {
+            console.log("Successfully Connected")
+            setUsers(response.data);
+        }).catch(() => {
+            console.log("Error")
+        });
 
-        // axios.get(port.url + `/post/challenge/${challengeId}`).then((response) => {
-        //     console.log("Successfully Connected")
-        //     setNotices(response.data);
-        // }).catch(() => {
-        //     console.log("Error")
-        // })
+        axios.get(port.url + `/post/challenge/${challengeId}`).then((response) => {
+            console.log("Successfully Connected")
+            setNotices(response.data);
+        }).catch(() => {
+            console.log("Error")
+        })
 
-        // axios.get(port.url + `/task/challenge/${challengeId}`).then((response) => {
-        //     console.log("Successfully Connected")
-        //     setConfirms(response.data);
-        // }).catch(() => {
-        //     console.log("Error")
-        // })
+        axios.get(port.url + `/task/challenge/${challengeId}`).then((response) => {
+            console.log("Successfully Connected")
+            setConfirms(response.data);
+        }).catch(() => {
+            console.log("Error")
+        })
 
     }, []);
 
     const challengeList = {
         id: "17302",
         title: "하루 한 번 샐러드 먹기",
+        content: "하루 한 번 샐러드 먹기",
+        method: "하루 한 번 샐러드 먹기",
         tag: ["매일", "식단"],
         people: 1028,
         now: new Date('2022-12-02'),
@@ -89,7 +88,8 @@ function GroupBoard() {
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > "} content={"그룹 게시판"} />
             <div className={styles.boardContainer}>
                 <GroupTitleBoard 
-                    challenge={challenge}
+                    challenge={challengeList}
+                    user={user}
                 />
                 {/* <div className={styles.firstContainer}>
                     <div className={styles.successWrapper}>

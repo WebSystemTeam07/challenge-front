@@ -13,11 +13,10 @@ function RecommandBoard() {
     useEffect(() => {
         axios.get(`http://localhost:5500/challenge/group/uptodate`).then((response) => {
             console.log("Successfully Connected")
-            setList(response.data);
+            setList((response.data).sort(() => Math.random() - 0.5));
         }).catch(() => {
             console.log("Error")
         })
-
     }, []);
 
     const recommandList = list.slice(0, 2);

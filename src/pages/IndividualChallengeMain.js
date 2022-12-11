@@ -28,7 +28,7 @@ function IndividualChallengeMain(){
 
     return(
         <>
-        <Bar path="전체 > " content="개인 챌린지" />
+        <Bar path="전체보기 > " content="개인 챌린지" />
         <IndividualChallgeBoard challengeData={challengeData}/>
         </>
     )

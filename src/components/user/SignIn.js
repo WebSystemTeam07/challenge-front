@@ -8,7 +8,7 @@ const port = require('./../../assets/port.json')
 
 export default function SignIn() {
     const navigate = useNavigate();
-    const [cookies, setCookie] = useCookies(["userInfo"]);
+    const [cookies, setCookie] = useCookies(["userData"]);
     const [signIn, setSignIn] = useState({
         email: "",
         password: ""
@@ -27,8 +27,8 @@ export default function SignIn() {
                 <div id='title'>로그인하고 챌린지 이어하기</div>
                 <div className='bigEnter'/>
                 <div id = 'inputContainer'>
-                    <input className='inputBlock' type='email' id='email' name='email' placeholder='이메일 (예시 : challenge@gmail.com)' onClick={changeSignIn} />
-                    <input className='inputBlock' type='password' id='password' name='password' placeholder='비밀번호' onClick={changeSignIn} />
+                    <input className='inputBlock' type='email' id='email' name='email' placeholder='이메일 (예시 : challenge@gmail.com)' onChange= {changeSignIn} onClick={changeSignIn} />
+                    <input className='inputBlock' type='password' id='password' name='password' placeholder='비밀번호' onChange = {changeSignIn} onClick={changeSignIn} />
                 </div>
                     <div className='bigEnter'/>
                     <button className='signButton' onClick = {onClickLogin}>로그인</button>

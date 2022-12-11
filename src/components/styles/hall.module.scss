@@ -33,15 +33,15 @@
 .componentWrapper {
     width: 49%;
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
             order: calc(2 * #{$i} - 1);
         }
     }
 
-    @for $i from 5 through 8 {
+    @for $i from 4 through 6 {
         &:nth-child(#{$i}) {
-            order: calc(2 * (#{$i} - 4));
+            order: calc(2 * (#{$i} - 3));
         }
     }
 }
