@@ -26,6 +26,7 @@ function GroupBoardDetail() {
         startDate: new Date('2022-11-30'),
         endDate: new Date('2022-12-07'),
         method: "text",
+        id: "13443",
     }
 
     const user = {

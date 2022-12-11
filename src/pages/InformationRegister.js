@@ -4,11 +4,39 @@ import Bar from "../components/Bar";
 import {useLocation} from "react-router";
 
 import "../scss/register.scss";
+import axios from 'axios';
+import port from "../assets/port.json"
 
 function InformationRegister(){
     const location = useLocation()
     let challenge = location.state.challenge
     let challengeTitle = challenge.title
+    let date = new Date();
+
+    // 임시 userId
+    let userId = "15002"
+    // 공지글 제목 / 내용
+    let title = "";
+    let contents = "";
+
+    async function postInformation(userId) {
+        return await axios.post(port.url + '/post/' + challenge.id, {
+            "userId" : userId,
+            "title":challenge.id,
+            "contents":contents,
+            "date":date,
+        })
+    }
+
+    function onInfoRegist(){
+        postInformation(userId)
+        .then((res) => {
+            console.log(res.data.result)
+        })
+                .catch(()=>{
+            console.log(challenge.id)
+        })
+    }
 
     return(
         <>
@@ -18,21 +46,20 @@ function InformationRegister(){
             <p className="part"style={{fontSize:"xx-large", fontWeight:"bold"}}>공지사항 글쓰기</p>
             <span className="part">
                 <p style={{fontSize:"x-large", fontWeight:"bold"}}>제목</p>
-                <input className="inputArea" style={{fontSize:"large", borderTop:"none", borderRight:"none", borderLeft:"none"}} placeholder="제목을 입력하세요"/>
+                <input className="inputArea" style={{fontSize:"large", borderTop:"none", borderRight:"none", borderLeft:"none"}} placeholder="제목을 입력하세요" onChange={(e)=> (title = e.target.value)}/>
             </span>
             <span className="part">
                 <p style={{fontSize:"x-large", fontWeight:"bold"}}>글 내용</p>
                 <p style={{height:"40vh", marginBottom:"3vh"}}>
-                    <textarea className="inputArea" style={{height:"100%"}} placeholder="글 내용을 입력하세요"/>
+                    <textarea className="inputArea" style={{height:"100%"}} placeholder="글 내용을 입력하세요" onChange={(e)=>(contents = e.target.value)}/>
                 </p>
             </span>
             <span className="part">
                 <p style={{fontSize:"x-large", fontWeight:"bold"}}>사진 첨부</p>
-                <input className="part" type="file" multiple accept=".jpg, .png"/>
+                <input className="part" type="file" accept=".jpg, .png" onChange={(e)=>(contents = e.target.value)}/>
             </span>
             <div className="part" style={{margin:"auto"}}>
-                <button className="registerPageBtn">다시작성</button>
-                <button className="registerPageBtn">등록하기</button>
+                <button className="registerPageBtn" onClick={onInfoRegist}>등록하기</button>
             </div>
         </div>
         

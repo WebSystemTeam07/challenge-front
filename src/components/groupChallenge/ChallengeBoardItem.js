@@ -3,6 +3,9 @@ import "./groupChallengeMain.scss";
 
 function ChallengeBoardItem(props){
     let challenge = props.challenge;
+    let startDate = challenge.startDate.substr(0,10)
+    let endDate = challenge.endDate.substr(0,10)
+
     return(
         <div>
             <Link to="/groupchallengepage/groupChallengeDetail" state={{challenge:challenge}} className="challengeItemContainer" style={{ textDecoration: "none" }}>
@@ -11,7 +14,7 @@ function ChallengeBoardItem(props){
                     <div className="challengeTitle">{challenge.title}</div>
                     <div className="tagsContainer">{challenge.tag.map((item)=>(<span className="tag">{item}</span>))}</div>
                     <div>
-                        <span className="highlightBlue">{challenge.startDate}</span>
+                        <span className="highlightBlue">{startDate}</span>
                         에 시작해서
                         <span className="highlightBlue"> {challenge.term}일 </span>
                         동안 도전해요!

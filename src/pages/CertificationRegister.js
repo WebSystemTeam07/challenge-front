@@ -11,8 +11,8 @@ function CertificationRegister(props){
     const location = useLocation()
     let challenge = location.state.challenge
     let challengeTitle = challenge.title;
-    let date = new Date();
-    let today= `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`; // 오늘 날짜
+    let nowDate = new Date();
+    let today= `${nowDate.getFullYear()}-${nowDate.getMonth() + 1}-${nowDate.getDate()}`; // 오늘 날짜
     let method_photo = (challenge.method == "photo") ? true: false;
     let method_text = (challenge.method == "text") ? true: false;
     
@@ -22,20 +22,30 @@ function CertificationRegister(props){
     let title = "";
     let contents = "";
 
-    // ★?? params???
+    function calculDay(){
+        // 오늘 - 시작 날짜 + 1
+        let diff = (nowDate.getTime() - challenge.startDate.getTime()) / (1000*60*60*24)
+        diff = Math.floor(diff+1)
+        return diff;
+    }
+
     async function postCertification(userId) {
-        return await axios.post(port.url + '/post/' + challenge.id, {
+        return await axios.post(port.url + '/task/' + challenge.id, {
             "userId" : userId,
-            "title":challenge.id,
+            "day" : calculDay(),
+            "title": title,
             "contents":contents,
-            "date":date,
+            "date":nowDate,
         })
     }
 
     function onCertifiRegist(){
         postCertification(userId)
         .then((res)=>{
-            console.log(res.data.result)
+            console.log(res.data) 
+        })
+        .catch((err)=>{
+            console.log(err)
         })
     }
 

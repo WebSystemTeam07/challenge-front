@@ -16,8 +16,13 @@ import ChattingBoard from '../components/GroupBoardComponent/ChattingBoard.js';
 
 import styles from '../pages/styles/board.module.scss'
 
+import {useLocation} from "react-router-dom"
+
 function GroupBoard() {
     
+    const location = useLocation();
+    const challengeId = location.state.challengeId;
+
     const challenge = {
         title: "하루 한 번 샐러드 먹기",
         tag: ["매일", "식단"],
