@@ -5,7 +5,7 @@ import RecordButton from "../atoms/RecordButton";
 function RecordBoard({props}) {
 
     const MemberArray = []
-
+    
     for (let i = 0; i < props.length; i++) {
         const member = props[i];
         const status = member.status;

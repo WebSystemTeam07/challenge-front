@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 import styles from "../components/styles/component.module.scss"
 
-function Header({loginUrl}) {
+function Header() {
     return(
         <div className={styles.headerContainer}>
             <Link to='/login' style={{ textDecoration: "none" }}>

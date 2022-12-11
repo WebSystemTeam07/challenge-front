@@ -12,6 +12,7 @@ import styles from './styles/detail.module.scss'
 import { useState } from 'react';
 import { Link } from "react-router-dom"
 import { width } from '@mui/system';
+import { useEffect } from 'react';
 
 function GroupBoardDetail() {
 
