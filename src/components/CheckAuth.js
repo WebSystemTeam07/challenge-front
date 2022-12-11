@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
 import port from "./../assets/port.json";
-
+import styles from "./styles/personal.module.scss";
 const CheckAuth=(props)=>{
   const [attend,setAttend]=useState([]);//인증확인
   console.log("startDate",props.startDate)
@@ -30,7 +30,7 @@ const CheckAuth=(props)=>{
   }
   return(
     <>
-  <button type='button'  onClick={(e)=>{
+  <button type='button' className={styles.auth_button} onClick={(e)=>{
     checkAuth(props.startDate);
   }}>인증</button> 
   {console.log(attend)}

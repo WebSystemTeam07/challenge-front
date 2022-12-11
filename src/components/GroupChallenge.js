@@ -10,8 +10,9 @@ const GroupChallenge=()=>{
   const [groupUserData, setGroupUserData]=useState([]);
     const navigate=useNavigate();
 
- function onMoveHandler(){
-  navigate("/groupchallengepage/board/");
+ function onMoveHandler(id){
+  console.log("id",id);
+  navigate("/groupchallengepage/board", {state:{challengeId:id}})
 }
 const getUserData=(data)=>{
   console.log(data.data.group);
@@ -28,7 +29,7 @@ const getUserData=(data)=>{
    <div className={styles.textBox}>
   {item.title}
   </div>
-  <button type='button' className={styles.group_button} onClick={onMoveHandler}>그룹 게시판 이동</button>
+  <button type='button' className={styles.group_button} onClick={()=>onMoveHandler(item.id)}>그룹 게시판 이동</button>
   </li>
       )
     }

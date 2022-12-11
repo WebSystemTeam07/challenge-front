@@ -69,7 +69,6 @@ const PersonalChallenge=()=> {
                     <img src={item.img} alt="샐러드 사진"/>
                       <div className={styles.textBox}>
                       {item.title}<br/>  
-                      {item.id}
                       {console.log("date",new Date(item.startDate).toISOString().split('T')[0])}
                      {new Date(item.startDate).toISOString().split('T')[0]}
                       </div>

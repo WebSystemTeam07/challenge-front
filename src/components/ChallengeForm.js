@@ -121,8 +121,9 @@ const ChallengeForm=(props)=>{
             </select>
             </div>
             <div className={styles.wrap}>
-            
-               <button type='submit' className={more.learn_more}>추가</button>
+            <div className={styles.form}>
+               <button type='submit' className={styles.addBtn}>추가</button>
+               </div>
       <div className={styles.form}>
 
         <button type='button' onClick={onCancel} className="btn btn-success btn-layer-1_3">취소<i class="fa fa_times"></i></button>
