@@ -18,6 +18,8 @@ import IndividualChallengeMain from './pages/IndividualChallengeMain';
 import CertificationRegister from './pages/CertificationRegister';
 import InformationRegister from './pages/InformationRegister';
 
+import Test from './pages/Test';
+
 function App() {
   return (
     <div className="App">
@@ -37,6 +39,7 @@ function App() {
         <Route path="/chat" element={<ChattingBoard />} />
         <Route path="/groupchallengepage/board/detail/certifiregister" element={<CertificationRegister />} />
         <Route path="/groupchallengepage/board/detail/inforegister" element={<InformationRegister />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </div>
   );
