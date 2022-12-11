@@ -1,5 +1,5 @@
 import React,{useState,useMemo} from 'react';
-import Tab from './Tab';
+import Tab from '../Tab';
 
 const ChallengeList=()=>{
 return(

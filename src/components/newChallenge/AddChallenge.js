@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import port from "./../assets/port.json";
+import port from "../../assets/port.json";
 import ChallengeForm from "./ChallengeForm";
 import axios from 'axios';
 

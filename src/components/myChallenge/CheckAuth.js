@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
-import port from "./../assets/port.json";
-import styles from "./styles/personal.module.scss";
+import port from "../../assets/port.json";
+import styles from "../styles/personal.module.scss";
 const CheckAuth=(props)=>{
   const [attend,setAttend]=useState([]);//인증확인
   console.log("startDate",props.startDate)

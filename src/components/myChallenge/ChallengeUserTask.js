@@ -1,7 +1,6 @@
 import axios from "axios";
-import React,{useState} from "react";
 import { useEffect } from "react";
-import port from "../assets/port.json";
+import port from "../../assets/port.json";
 let data=[];
 const ChallengeUserTask=(props)=>{
 async function getData(){

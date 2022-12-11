@@ -1,7 +1,5 @@
 import React,{useState} from "react";
-import './styles/button.module.scss';
-import styles from './styles/challengeform.module.scss';
-import more from './styles/newchallenge.module.scss';
+import styles from '../styles/challengeform.module.scss';
 import { useCookies } from "react-cookie";
 const ChallengeForm=(props)=>{
   const [enteredTitle,setEnteredTitle]=useState('');
@@ -126,7 +124,7 @@ const ChallengeForm=(props)=>{
                </div>
       <div className={styles.form}>
 
-        <button type='button' onClick={onCancel} className="btn btn-success btn-layer-1_3">취소<i class="fa fa_times"></i></button>
+        <button type='button' onClick={onCancel} className={styles.addBtn}>취소</button>
         </div>
         </div>
       </div>

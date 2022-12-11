@@ -1,6 +1,5 @@
-import ChallengeData from '../data/ChallengeData.json';
 import { useNavigate } from 'react-router-dom';
-import styles from './styles/personal.module.scss';
+import styles from '../styles/personal.module.scss';
 import UserData from './ChallengeUserData';
 import { useState } from 'react';
 import { useCookies } from "react-cookie";

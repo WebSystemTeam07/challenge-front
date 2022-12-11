@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import styles from './styles/tab.module.scss';
-import PersonalChallenge from './PersonalChallenge';
-import GroupChallenge from './GroupChallenge';
+import PersonalChallenge from './myChallenge/PersonalChallenge';
+import GroupChallenge from './myChallenge/GroupChallenge';
 
 const Tab = () => {
   const [currentTab, setCurrentTab] = useState(0);

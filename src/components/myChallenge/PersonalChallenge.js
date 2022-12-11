@@ -4,12 +4,10 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CheckAuth from "./CheckAuth";
 import AttendanceBoard from "./AttendanceBoard";
-import ChallengeData from '../data/ChallengeData.json';
 import UserData from "./ChallengeUserData";
 import ChallengeUserTask from "./ChallengeUserTask";
 import ChallengeTask from './ChallengeTask';
 import { useCookies } from "react-cookie";
-import { useEffect } from "react";
 const PersonalChallenge=()=> {
     const [attend,setAttend]=useState([]);//인증확인
     const [open, setOpen] = useState([0]);

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import styles from './styles/attend.module.scss';
+import styles from '../styles/attend.module.scss';
 
 const AttendanceBoard=({attend,task,status,challengeId,startDate})=>{
   //  const userTaskData=authData.userTask.filter((item)=>item.challengeId==challengeId);
