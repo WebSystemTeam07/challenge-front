@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
 
-    margin: 0.6rem 0;
+    margin: 0.8rem 0;
 
     justify-items: flex-end;
     row-gap: 0.25rem;
@@ -71,6 +71,47 @@
     padding: 0.7rem;
 
     background-color: #ebf4f7;
+    border-radius: 10px;
+}
+
+.receiveComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 0.8rem 0;
+    row-gap: 0.25rem;
+}
+
+.receiveNameWrapper {
+    text-align: left;
+    font-size: smaller;
+    font-family: "AppleSDGothicNeoM" !important;
+}
+
+.receiveTimeContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    column-gap: 0.4rem;
+
+    p {
+        font-size: smaller;
+    }
+
+    .timeText {
+        color: #bbbbbb;
+        font-size: 0.6rem;
+    }
+}
+
+.contentWrapper {
+    display: flex;
+    padding: 0.7rem;
+
+    background-color: white;
+    border: 1px solid #ebf4f7;
     border-radius: 10px;
 }
 

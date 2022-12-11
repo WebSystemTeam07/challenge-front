@@ -43,6 +43,11 @@
     }
 }
 
+.tagContainer {
+    display: flex;
+    column-gap: 0.3rem;
+}
+
 .challengeWrapper {
     display: flex;
     flex-direction: column;

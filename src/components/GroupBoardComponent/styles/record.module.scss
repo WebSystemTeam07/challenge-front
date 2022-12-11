@@ -28,11 +28,7 @@
 }
 
 .listWrapper {
-<<<<<<< HEAD
     width: 24.5rem;
-=======
-    width: 20vw;
->>>>>>> 9946d762ee2e9c9587b98389c48ef6207f278832
 
     @for $i from 1 through 4 {
         &:nth-child(#{$i}) {

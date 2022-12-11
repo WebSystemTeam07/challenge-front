@@ -34,12 +34,9 @@ function App() {
         <Route path="/login" element={<SignIn />}/>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/mypage" element={<MyPage/>} />
-<<<<<<< HEAD
-=======
         <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
         <Route path="/chat" element={<ChattingBoard />} />
         <Route path="/test" element={<Test />} />
->>>>>>> 9946d762ee2e9c9587b98389c48ef6207f278832
       </Routes>
     </div>
   );

@@ -19,6 +19,7 @@ import styles from '../pages/styles/board.module.scss'
 function GroupBoard() {
     
     const challenge = {
+        id: "17302",
         title: "하루 한 번 샐러드 먹기",
         tag: ["매일", "식단"],
         people: 1028,
@@ -59,7 +60,7 @@ function GroupBoard() {
                         <ConfirmBoard props={ConfirmList} />
                     </div>
                     <div className={styles.chattingWrapper}>
-                        <ChattingBoard />
+                        <ChattingBoard props={challenge} />
                     </div>
                 </div>
             </div>

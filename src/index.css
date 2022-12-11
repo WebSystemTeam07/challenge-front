@@ -36,12 +36,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-<<<<<<< HEAD
 }
-=======
-}
-@font-face {
-  font-family: "AppleSDGothicNeoL";
-  src: url('./fonts/AppleSDGothicNeoL.ttf') format('truetype');
-}
->>>>>>> 9946d762ee2e9c9587b98389c48ef6207f278832

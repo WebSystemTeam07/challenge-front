@@ -3,10 +3,25 @@ import ContentList from "../data/ContentList.js";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { Link } from "react-router-dom"
+import { useEffect, useState } from "react";
+
+import axios from "axios";
 
 import styles from "../components/styles/challenge.module.scss"
 
 function ChallengeBoard() {
+
+    const [list, setList] = useState([]);
+
+    useEffect(() => {
+        axios.get(`http://localhost:5500/challenge/group/uptodate`).then((response) => {
+            console.log("Successfully Connected")
+            setList(response.data);
+        }).catch(() => {
+            console.log("Error")
+        })
+    }, []);
+
     return(
         <div className={styles.boardContainer}>
             <div className={styles.titleContainer}>
@@ -18,12 +33,9 @@ function ChallengeBoard() {
             </div>
             <div className={styles.challengeWrapper}>
                 <div className={styles.challengeContainer}>
-                    {ContentList.map(({ title, tag, url, imgSrc }) => (
+                    {list.map((challenge) => (
                         <Challenge
-                            title={title}
-                            tag={tag}
-                            surveyUrl={url}
-                            imgSrc={imgSrc}
+                            props={challenge}
                         />
                     ))}
                 </div>
