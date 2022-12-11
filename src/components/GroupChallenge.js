@@ -3,17 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import styles from './styles/personal.module.scss';
 import UserData from './ChallengeUserData';
 import { useState } from 'react';
-
+import { useCookies } from "react-cookie";
 const GroupChallenge=()=>{
-  const tmpUserId="15002";
-  const tmpChallengeId="13443";
+  const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
+    const user =  cookies.userData;
   const [groupUserData, setGroupUserData]=useState([]);
-  const gpChallengeData=ChallengeData.data.filter((item)=>
-    item.type=="group")
     const navigate=useNavigate();
 
  function onMoveHandler(){
-  navigate("/GroupChallengePage");
+  navigate("/groupchallengepage/board/");
 }
 const getUserData=(data)=>{
   console.log(data.data.group);
@@ -22,7 +20,7 @@ const getUserData=(data)=>{
   return(
     <>
     <div className={styles.group_center}>
-    <UserData userId={tmpUserId} getUserData={getUserData}/>
+    <UserData userId={user} getUserData={getUserData}/>
     {groupUserData&&groupUserData.map((item)=>{
       return(
   <li key={item.id} className={styles.list}>

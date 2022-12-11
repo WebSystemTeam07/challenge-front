@@ -1,19 +1,22 @@
 .line_container{
   display: flex;
   flex-direction: row;
+  height:11vh;
 }
 .content_container{
   display:flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   border: solid 0.05vw rgb(200, 199, 199); 
   width: 15vw;
   .true{
     background-color:#c8e0f3 ;
+    height: 100%;
+    width: 100%;
     }
     .false{
-
+      height: 100%;
     }
 }
 
@@ -25,10 +28,10 @@ margin: 0;
   font-size:2.2vh;
   margin: 0;
   font-weight: bold;
-  .true{
+  .check{
     color: blue;
   }
-  .false{
+  .noncheck{
     color: brown;
   }
 }

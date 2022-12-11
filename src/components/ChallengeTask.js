@@ -3,21 +3,20 @@ import React,{useState} from "react";
 import { useEffect } from "react";
 import port from "../assets/port.json";
 
-const ChallengeUserTask=(props)=>{
+const ChallengeTask=(props)=>{
 async function getData(){
-  const userTaskData=await axios.get(port.url+'/userTask/',{
+  console.log(props.userId);
+  const taskData=await axios.get(port.url+`/task/userandChallenge`,{
     params:{
       userId:props.userId,
-    challengeId:props.challengeId
-  }
+      challengeId:props.challengeId
+    }
   })
-  console.log("userTaskData",userTaskData);
-
-  props.getUserData(userTaskData);
+  props.getUserData(taskData);
 }
 useEffect(()=>{
   getData();
 },[props.userId])
 
 }
-export default ChallengeUserTask;
+export default ChallengeTask;

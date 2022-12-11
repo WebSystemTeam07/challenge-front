@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import './styles/button.module.scss';
 import styles from './styles/challengeform.module.scss';
 import more from './styles/newchallenge.module.scss';
-
+import { useCookies } from "react-cookie";
 const ChallengeForm=(props)=>{
   const [enteredTitle,setEnteredTitle]=useState('');
   const [enteredStartDate,setEnteredStartDate]=useState('');
@@ -11,6 +11,8 @@ const ChallengeForm=(props)=>{
   const [method,setMethod]=useState('text');
   const [content,setContent]=useState('');
   const [tag,setTag]=useState('');
+  const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
+  const user = cookies.userData
   const titleChangeHandler=(event)=>{
     setEnteredTitle(event.target.value);
   }
@@ -55,7 +57,7 @@ const ChallengeForm=(props)=>{
       method:method,
       contents:content,
       tag:tag,
-      userId:"134623"
+      userId:user
     };
     
     props.onSaveChallengeData(challengeData);
