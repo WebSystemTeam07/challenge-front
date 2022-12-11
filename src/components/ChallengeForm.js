@@ -7,12 +7,13 @@ const ChallengeForm=(props)=>{
   const [enteredTitle,setEnteredTitle]=useState('');
   const [enteredStartDate,setEnteredStartDate]=useState('');
   const [enteredEndDate,setEnteredEndDate]=useState('');
-  const [clickedCategory,setClickedCategory]=useState('운동');
-  const [method,setMethod]=useState('text');
+  const [clickedCategory,setClickedCategory]=useState('');
+  const [method,setMethod]=useState('');
   const [content,setContent]=useState('');
   const [tag,setTag]=useState('');
   const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
-  const user = cookies.userData
+  const user = cookies.userData.id
+  console.log("cookies user",user);
   const titleChangeHandler=(event)=>{
     setEnteredTitle(event.target.value);
   }
@@ -87,8 +88,9 @@ const ChallengeForm=(props)=>{
           />
           </div>
           <label>Category</label>
-          <select onChange={categoryChangeHandler} value={clickedCategory}>
-            <option value="운동">운동</option>
+          {console.log(clickedCategory)}
+          <select onChange={categoryChangeHandler} defaultValue="운동">
+            <option value="운동" selected>운동</option>
             <option value="생활">생활</option>
             <option value="취미">취미</option>
             <option value="공부">공부</option>
@@ -113,8 +115,8 @@ const ChallengeForm=(props)=>{
           <input type='text' onChange={contentChangeHandler} value={content}/>
           </div>
           <label>Authentication Method</label>
-          <select onChange={methodChangeHandler} value={method}>
-            <option value="text">글</option>  
+          <select onChange={methodChangeHandler} defaultValue="text">
+            <option value="text" selected>글</option>  
             <option value="photo">사진</option>        
             </select>
             </div>

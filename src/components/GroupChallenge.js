@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useCookies } from "react-cookie";
 const GroupChallenge=()=>{
   const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
-    const user =  cookies.userData;
+    const user =  cookies.userData.id;
   const [groupUserData, setGroupUserData]=useState([]);
     const navigate=useNavigate();
 

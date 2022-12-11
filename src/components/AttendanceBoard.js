@@ -11,17 +11,22 @@ const AttendanceBoard=({attend,task,status,challengeId,startDate})=>{
   const filteredAttend=attend.filter((item)=>item.id==challengeId)
   console.log("filter",filteredAttend)
   console.log("task",task,status)
-  console.log("startDate",startDate)
+  console.log("startDate",startDate,challengeId)
+
+  const filteredStatus=status.filter((item)=>item.data[0].challengeId==challengeId)
     let contentData=[];
- task.map((item)=>{
+    const filteredTask=task.filter((item)=>item.data[0].userTaskId==filteredStatus[0].data[0].id)
+ filteredTask[0].data.map((item)=>{
     contentData.push({"day":item.day,"content":item.contents});
   })
   console.log("contetnData in main",contentData)
+  console.log("status",task,status)
+  console.log("filtered",filteredStatus,filteredStatus[0].data[0].status)
   useEffect(()=>{
-    <Board givenAuth={filteredAttend} status={status} contentData={contentData} startDate={startDate}/>
+    <Board givenAuth={filteredAttend} status={filteredStatus[0].data[0].status} contentData={contentData} startDate={startDate}/>
   },[status,filteredAttend])
  return(
-  <Board givenAuth={filteredAttend} status={status} contentData={contentData} startDate={startDate}/>
+  <Board givenAuth={filteredAttend} status={filteredStatus[0].data[0].status} contentData={contentData} startDate={startDate}/>
  )
 }
 const Square=({day,attend,content,startDate})=>{

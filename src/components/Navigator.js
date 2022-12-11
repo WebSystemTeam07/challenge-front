@@ -49,7 +49,7 @@ function Navigator() {
                         textDecoration: "none",
                         color: isActive ? "#1c8cc9" : "black",
                     };
-                }}><p>마이 챌린지</p></NavLink>
+                }}><p>개인 챌린지</p></NavLink>
                 <NavLink to='/mypage' style={({ isActive }) => {
                     return {
                         textDecoration: "none",

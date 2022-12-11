@@ -17,7 +17,7 @@ const PersonalChallenge=()=> {
     const [taskStatus,setTaskStatus]=useState([]);
     const [task,setTask]=useState([]);
     const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
-    const user =  cookies.userData;
+    const user =  cookies.userData.id;
     console.log("user cookie",user)
     
     const getUserData=(data)=>{
@@ -51,11 +51,12 @@ const PersonalChallenge=()=> {
       )
     }
     const getUserTaskData=(data)=>{
-        setTaskStatus(data.data[0].status);
+        setTaskStatus(data);
+        console.log("userTaskData",data)
     }
     const getTaskData=(data)=>{
-      setTask(data.data);
-
+      setTask(data);
+      console.log("getTaskData",data)
     }
     return(
         <>
@@ -64,25 +65,24 @@ const PersonalChallenge=()=> {
                 {personalUserData&&personalUserData.map((item,idx)=>{
                 return(
                   <>
-                  <ChallengeUserTask userId={user} getUserData={getUserTaskData} challengeId={item.id} />
-                      <ChallengeTask userId={user} getUserData={getTaskData} challengeId={item.id}/>
                 <div className={styles.text_button_center}>
                     <img src={item.img} alt="샐러드 사진"/>
                       <div className={styles.textBox}>
                       {item.title}<br/>  
+                      {item.id}
                       {console.log("date",new Date(item.startDate).toISOString().split('T')[0])}
                      {new Date(item.startDate).toISOString().split('T')[0]}
                       </div>
+                      <ChallengeTask userId={user} getUserData={getTaskData} challengeId={item.id}/>
+                  <ChallengeUserTask userId={user} getUserData={getUserTaskData} challengeId={item.id} />
                       <button type="button" onClick={()=>toggleAnswer(idx)} className={styles.button_interval}>{ open[idx] ? <Closed/>: <Opened/>}</button></div>
             { open[idx] ? (
-                    <p>{<>
+                    <p>{<> 
                       <div className={styles.board_center}>
-                        {console.log("attend",attend)}
-                      
+                        {console.log("attendCheck",attend,task,taskStatus)}
                       <AttendanceBoard attend={attend} task={task} status={taskStatus} challengeId={item.id} startDate={new Date(item.startDate).toISOString().split('T')[0]}/>
                       </div>
                       <div className={styles.auth_button}>
-                     
                       <CheckAuth getAuth={getAuth} startDate={new Date(item.startDate).toISOString().split('T')[0]} challengeId={item.id} userId={user}/>
                       </div>
                       </>

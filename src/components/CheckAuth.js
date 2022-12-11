@@ -17,7 +17,7 @@ const CheckAuth=(props)=>{
     let today=new Date(year,month,date);
    console.log("date",today,stDate);
     let day=(today.getTime()-stDate.getTime())/(1000*60*60*24);
-     const tmp_attend={"id":props.challengeId,"attend":'T',"userId":props.userId,"day":day}
+     const tmp_attend={"id":props.challengeId,"attend":'T',"userId":props.userId,"day":day+1}
     const req_attend={"challengeId":props.challengeId,"userId":props.userId}
      setAttend([...attend,tmp_attend]);
     axios.put(port.url+`/userTask/status/${day}`,req_attend)
