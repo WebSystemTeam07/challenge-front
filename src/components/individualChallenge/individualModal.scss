@@ -1,0 +1,59 @@
+.individualModalContainer{
+    // 크기
+    z-index: 999;
+    width: 600px;
+    height: 600px;
+    
+    // 중앙배치
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    // 디자인
+    background-color: rgb(249, 254, 255);
+
+}
+
+.individualCloseBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    font-size: 30px;
+    color:#939393;
+    background-color: rgb(249, 254, 255);
+}
+
+.contnetGrid{
+    margin: 10vh 0;
+    border:solid;
+    border-width: 1px;
+    border-color: #1c8cc9;
+    display: grid;
+    margin: 0 4vw;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.taskItem{
+    border:solid;
+    border-width: 1px;
+    border-color: #1c8cc9;
+    text-align: center;
+    font-size: 13px;
+    padding: 5px;;
+}
+
+.inidividualModalTitle{
+    margin: 6vh 0;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#1c8cc9;
+}
+
+.taskDay{
+    font-size: 10px;
+    color:#1c8cc9;
+    padding: 0.5vh 0;
+}

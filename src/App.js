@@ -15,6 +15,9 @@ import Main from './pages/Main';
 import Introduce from './pages/Introduce';
 import GroupBoard from './pages/GroupBoard'
 import GroupBoardArticle from './pages/GroupBoardArticle';
+import IndividualChallengeMain from './pages/IndividualChallengeMain';
+import CertificationRegister from './pages/CertificationRegister';
+import InformationRegister from './pages/InformationRegister';
 
 import Test from './pages/Test';
 
@@ -27,6 +30,7 @@ function App() {
         <Route path="/mychallenge" element={<MyChallenge/>} />
         <Route path="/groupchallengepage" element={<GroupChallengeMain/>}/>
         <Route path="/groupchallengepage/groupChallengeDetail" element={<GroupChallengeDetail/>}/>
+        <Route path="/individualchallengepage" element={<IndividualChallengeMain/>}/>
         <Route path="/newchallenge" element={<NewChallenge/>}/>
         <Route path="/groupchallengepage/board" element={<GroupBoard/>}/>
         <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
@@ -36,6 +40,8 @@ function App() {
         <Route path="/mypage" element={<MyPage/>} />
         <Route path="/groupchallengepage/board/detail" element={<GroupBoardDetail />} />
         <Route path="/chat" element={<ChattingBoard />} />
+        <Route path="/groupchallengepage/board/detail/certifiregister" element={<CertificationRegister />} />
+        <Route path="/groupchallengepage/board/detail/inforegister" element={<InformationRegister />} />
         <Route path="/test" element={<Test />} />
       </Routes>
     </div>
