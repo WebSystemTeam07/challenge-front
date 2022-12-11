@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import { json, useNavigate } from 'react-router-dom';
+import { useCookies } from "react-cookie";
 import './../../scss/myPage.scss'
 import './../../scss/myPageTable.scss'
 import EditUserInfo from './EditUserInfo';
@@ -9,24 +10,51 @@ import OngoingChallenge from './OngoingChallenge';
 import { Line } from 'rc-progress';
 
 import dummy from './../../data/dummy.json'
+import axios from 'axios';
+const port = require('./../../assets/port.json')
 
 export default function MyPage() {
+
+  let userId = 0;
   const [view, setView] = useState(0);
+  const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
+  const [dBUser, setDbUser] = useState({})
+
 
   // 0 : welcome
   // 1 : green
   // 2 : silver
   // 3 : Gold
   // 4 : diamond
-  
+
   //동그라미
   //https://www.npmjs.com/package/react-circular-progressbar
   //바
   //https://www.npmjs.com/package/rc-progress
   //https://progress-react-component.vercel.app/
+  useEffect(() => {
+    // console.log(cookies.userData)
+    getUserData()
+      .then(res => {
+        setDbUser(res.data)
+        console.log(res.data)
+      }
+      ).then(() => {
+        console.log(dBUser)
 
-  const user = dummy.user
- const challenge = dummy.challenge;
+      })
+      .catch(e => {
+        // console.log(e.response.data.error)
+        alert(e.response.data.message)
+      })
+  },[])
+
+  useEffect(() => {
+
+  })
+
+  const user = cookies.userData
+  const challenge = dummy.challenge;
 
   function levelIcon(userLevel) {
     switch (userLevel) {
@@ -36,11 +64,11 @@ export default function MyPage() {
         return "🥉 "// 브론즈"
       case 2:
         return "🥈 "// 실버"
-      case 3: 
+      case 3:
         return "🥇 " // 골드"
       case 4:
         return "💎 "// 다이아"
-      case 5 :
+      case 5:
         return "🪐 "
     }
   }
@@ -56,25 +84,26 @@ export default function MyPage() {
         return "골드" // 골드"
       case 4:
         return "다이아"// 다이아"
-      case 5 :
+      case 5:
         return "마스터"
     }
   }
+
   return (
     <div className='container'>
       <div className="vertical">
         <div id="myInfo">
           <div id="myInfoContents">
             <h1>
-             {user.name} 님,
+              {user.name} 님,
             </h1>
             <div className='horizon'>
-             {levelIcon(user.level)}
-            {levelName(user.level+1)}까지 {100-(user.point - user.level * 100)}점
-              <br/>
-            <div id="barGauge">
-              <Line percent={user.point - user.level * 100} strokeWidth={2} trailWidth={2} strokeColor='#438AC3' />
-            </div>
+              {levelIcon(dBUser.level)}
+              {levelName(dBUser.level + 1)}까지 {100 - (dBUser.point - dBUser.level * 100)}점
+              <br />
+              <div id="barGauge">
+                <Line percent={dBUser.point - dBUser.level * 100} strokeWidth={2} trailWidth={2} strokeColor='#438AC3' />
+              </div>
             </div>
           </div>
         </div>
@@ -103,25 +132,37 @@ export default function MyPage() {
               // onGoingChallenges.map((data) => {
               //   return <OngoingChallenge data={data} />
               // })
-              <OngoingChallenge data = {challenge} />
+              <OngoingChallenge userId={cookies.userData.id} />
             }
             {
               view == 2 &&
               // finishedChallenges.map((data) => {
               //   return <FinishedChallenge data={data} />
               // })
-              <FinishedChallenge data = {challenge} />
+              <FinishedChallenge userId={cookies.userData.id} />
             }
             {
               view == 3 &&
               // myPosts.map((data) => {
               //   return <MyPost data={data} />
               // })
-              <MyPost/>
+              <MyPost userId={cookies.userData.id} />
             }
           </div>
         </div>
       </div>
     </div>
   )
+
+
+  /**
+      * functions
+      */
+  async function getUserData() {
+    const userId = await cookies.userData.id
+    // return await axios.get(port.url + `/user/userId/${userId}`)
+    return await axios.get(port.url + `/user/userId/${userId}`)
+  }
+
+
 }
