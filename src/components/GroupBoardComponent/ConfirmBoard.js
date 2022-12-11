@@ -14,7 +14,7 @@ function ConfirmBoard({props}) {
         <div className={styles.confirmContainer}>
             <div className={styles.headerContainer}>
                 <div className={styles.titleContainer}>
-                    <ChatIcon />
+                    <ChatIcon style={{ fill: '#1c8cc9' }} />
                     <p>인증 게시판</p>
                 </div>
                 <Link to={{
@@ -30,7 +30,7 @@ function ConfirmBoard({props}) {
                     </div>
                 </Link>
             </div>
-            <div>
+            <div className={styles.articleContainer}>
                 {List.map((article) => (
                     <ArticleButton
                         props={article}

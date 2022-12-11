@@ -9,6 +9,7 @@ const GroupChallengeModal = (props) => {
             { open ? (
                 <div className={styles.modalContainer}>
                     {header}
+                    <button onClick={close}>닫기</button>
                 </div>
             ) : null}
         </div>

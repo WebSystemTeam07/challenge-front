@@ -6,7 +6,7 @@ import { FirstNameList, LastNameList } from '../../data/NameList';
 import MessageComponent from './atoms/MessageComponent';
 import styles from "./styles/chat.module.scss"
 
-function ChattingBoard() {
+function ChattingBoard({props}) {
 
     const [name, setName] = useState("");
 
@@ -30,10 +30,12 @@ function ChattingBoard() {
     return(
         <div className={styles.chatContainer}>
             <SocketContext.Provider value={socket}>
-                <MessageComponent name={name} />
+                <MessageComponent 
+                    id={props.id}
+                    name={name}
+                />
             </SocketContext.Provider>
         </div>
-        
     );
 }
 

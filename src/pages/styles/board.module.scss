@@ -33,12 +33,16 @@
 
 .confirmWrapper {
     width: 50%;
+    height: 27rem;
     border: 1px solid #dddddd;
     border-radius: 10px;
+
+    overflow-y: hidden;
 }
 
 .chattingWrapper {
     width: 50%;
+    height: 27rem;
     border: 1px solid #dddddd;
     border-radius: 10px;
 }
