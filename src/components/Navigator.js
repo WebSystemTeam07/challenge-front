@@ -50,12 +50,22 @@ function Navigator() {
                         color: isActive ? "#1c8cc9" : "black",
                     };
                 }}><p>개인 챌린지</p></NavLink>
-                <NavLink to='/mypage' style={({ isActive }) => {
+                {
+                    !login && <NavLink to='/login' style={({ isActive }) => {
                     return {
                         textDecoration: "none",
                         color: isActive ? "#1c8cc9" : "black",
                     };
                 }}><p>마이페이지</p></NavLink>
+                }
+                {
+                    login &&<NavLink to='/mypage' style={({ isActive }) => {
+                        return {
+                            textDecoration: "none",
+                            color: isActive ? "#1c8cc9" : "black",
+                        };
+                    }}><p>마이페이지</p></NavLink>
+                }
             </div>
         </div>
     );

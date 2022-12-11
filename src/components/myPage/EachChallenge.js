@@ -8,26 +8,20 @@ export default function EachChallenge(props) {
     const tags = challenge.tag
     const [percentage, setPercentage] = useState(0)
 
-    /*challenge {
-    id : String,
-    ownerId : String,
-    title : String,  //?곹솕蹂닿린梨뚮┛吏
-    contents : String,
-    category : String, //?대룞
-    method : String, //?ъ쭊 || 湲
-    tag : [String ], //洹몃９梨뚮┛吏硫붿씤?섏씠吏 ?ъ쭊 諛?
-    member : Number,
-    startDate : Date, //?몄젣遺???쒖옉?댁슂
-    endDate : Date,
-    term : Number, //15 30
-    imageUrl : String,
-    type :  String // 'group' 'personal'
-    }*/
     useEffect(() => {
         getPercentage()
     }, []);
     async function getPercentage() {
-        setPercentage(45);
+        const term = challenge.term //term
+        const startDate = new Date(challenge.startDate).getTime() //challenge start
+        const now = new Date() //now
+        const diff = Math.floor((now.getTime() - startDate) / (1000 * 60 * 60 * 24)) //diff of day
+        let percentage = Math.floor((diff / term) * 100) //percentage (ex 13%)
+        if (percentage < 0)
+            percentage = 0
+        if (percentage > 100)
+            percentage = 100
+        setPercentage(parseInt(percentage));
     }
     return (
         <div className='eachContainer'>
@@ -35,14 +29,15 @@ export default function EachChallenge(props) {
                 <img src={challenge.imageUrl} />
             </div>
             <div className='eachContents'>
-                <div className= 'tags'>
-                    
-                {tags.map(tag => {
-                    return (
-                        <span className='tag'>{tag}</span>
-                        )}
-                        )}
-                        </div>
+                <div className='tags'>
+
+                    {tags.map(tag => {
+                        return (
+                            <span className='tag'>{tag}</span>
+                        )
+                    }
+                    )}
+                </div>
                 <div className='challengeTitle'>{challenge.title}</div>
             </div>
 
