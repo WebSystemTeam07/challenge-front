@@ -37,7 +37,7 @@ function RecordBoard({props}) {
                             <div className={styles.listWrapper}>
                                 <RecordButton
                                     rank={index + 1}
-                                    user={member.user}
+                                    user={member}
                                 />
                             </div>
                         ))} 
