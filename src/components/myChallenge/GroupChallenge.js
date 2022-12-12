@@ -28,7 +28,7 @@ const getUserData=(data)=>{
    <div className={styles.textBox}>
   {item.title}
   </div>
-  <button type='button' className={styles.group_button} onClick={()=>onMoveHandler(item.id)}>그룹 게시판 이동</button>
+  <button type='button' className={styles.button_interval} onClick={()=>onMoveHandler(item.id)}>그룹 게시판 이동</button>
   </li>
       )
     }
