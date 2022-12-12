@@ -5,13 +5,14 @@ import styles from "../components/styles/recommand.module.scss"
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import port from "./../assets/port.json";
 
 function RecommandBoard() {
 
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5500/challenge/group/uptodate`).then((response) => {
+        axios.get(`${port.url}/challenge/group/uptodate`).then((response) => {
             console.log("Successfully Connected")
             setList((response.data).sort(() => Math.random() - 0.5));
         }).catch(() => {
