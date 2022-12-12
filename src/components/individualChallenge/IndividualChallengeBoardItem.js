@@ -34,14 +34,16 @@ function IndividualChallengeBoardItem(props){
         for(const idx of Object.keys(challenge.userIds)){
             tmpUserIds = [...tmpUserIds, challenge.userIds[idx].id]
         }
-        //setUserIds(tmpUserIds)
-        console.log(tmpUserIds.indexOf(cookies.userData.id))
-        if(tmpUserIds.indexOf(cookies.userData.id) >=0 ){
-            // 이미 참여중임
-            return true
+        if(cookies.userData != undefined){
+            if(tmpUserIds.indexOf(cookies.userData.id) >=0 ){
+                // 이미 참여중임
+                return true
+            }else{
+                // 참여안함.
+                return false
+            }
         }else{
-            // 참여안함.
-            return false
+            return false;
         }
     }
 
@@ -90,7 +92,6 @@ function IndividualChallengeBoardItem(props){
     return(
         <>
         <div className="challengeItemContainer" >
-            <button onClick={printlog}>tasks 로그 찍기</button>
             <img className="challengeImg" src={challenge.imageUrl} alt="이미지가 없습니다." />
             <span className="challengeTextInfo">
                 <div className="challengeTitle">{challenge.title}</div>
