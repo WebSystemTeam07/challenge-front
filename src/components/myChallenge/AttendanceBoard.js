@@ -37,14 +37,17 @@ const Square=({day,attend,content,startDate})=>{
   let date = now.getDate(); 
   startDate=String(startDate)
   let startDate_arr=startDate.split("-");
-  let compDate=new Date(startDate_arr[0],startDate_arr[1]-1,Number(startDate_arr[2])+Number(day));
+  let compDate=new Date(startDate_arr[0],startDate_arr[1]-1,Number(startDate_arr[2])+Number(day)-1);
   let today=new Date(year,month,date);
   console.log("attend in Square",attend)
+  console.log("today",today,compDate,today>compDate)
   if(attend==='T'){
     auth="O";
   }
   else if(attend==='F'||today>compDate){
     auth="X";
+    attend='F';
+    console.log("in");
   }
   else{
     auth=" ";

@@ -17,7 +17,10 @@ const PersonalChallenge=()=> {
     const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
     const user =  cookies.userData.id;
     console.log("user cookie",user)
-    
+    let year=2022;
+    let month=12;
+    let day=8;
+    console.log("new Date",new Date(year,month-1,day))
     const getUserData=(data)=>{
       setPersonalUserData(data.data.personal);
       console.log(data.data.personal);
@@ -64,7 +67,7 @@ const PersonalChallenge=()=> {
                 return(
                   <>
                 <div className={styles.text_button_center}>
-                    <img src={item.img} alt="샐러드 사진"/>
+                    <img src={item.imageUrl} alt="샐러드 사진"/>
                       <div className={styles.textBox}>
                       {item.title}<br/>  
                       {console.log("date",new Date(item.startDate).toISOString().split('T')[0])}
