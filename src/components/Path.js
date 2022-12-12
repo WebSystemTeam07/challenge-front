@@ -1,4 +1,4 @@
-import "./groupChallenge/groupChallengeMain.scss";
+import "./GroupChallenge/groupChallengeMain.scss";
 
 function Path(props){
     const path = props.path

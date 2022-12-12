@@ -22,7 +22,7 @@ function InformationRegister(){
     async function postInformation(userId) {
         return await axios.post(port.url + '/post/' + challenge.id, {
             "userId" : userId,
-            "title":challenge.id,
+            "title": title,
             "contents":contents,
             "date":date,
         })

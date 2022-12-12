@@ -65,19 +65,13 @@ function GroupBoard() {
         })
 
     }, []);
-
-    const user = {
-        name: "큐티섹시회오리소세지",
-        imgSrc: "https://blog.kakaocdn.net/dn/bzKsjn/btq3USZ2HWX/FVn5G8ZMU3avYbgmapPRDK/img.jpg"
-    }
-
+    
     return (
         <div className={styles.bodyContainer}>
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > "} content={"그룹 게시판"} />
             <div className={styles.boardContainer}>
                 <GroupTitleBoard 
                     challenge={challenge}
-                    user={user}
                 />
                 <div className={styles.firstContainer}>
                     <div className={styles.successWrapper}>

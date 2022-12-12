@@ -56,7 +56,7 @@ function ChallengeDetailBoard(props){
             } else {
                 // 이미 참여중. 그룹 게시판으로 이동해야함
                 console.log("참여중인 챌린지입니다. 그룹게시판으로 이동합니다.")
-                navigate("/groupchallengepage/board", {state:{challengeId:challenge.id}})
+                navigate(`/groupchallengepage/board/${challenge.id}`, {state:{challengeId:challenge.id}})
             }
             
         }

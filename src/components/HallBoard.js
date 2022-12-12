@@ -20,6 +20,8 @@ function HallBoard() {
         })
     }, []);
 
+    const hallList = list.slice(0, 6);
+
     return (
         <div className={styles.boardContainer}>
             <div>
@@ -30,7 +32,7 @@ function HallBoard() {
                     </div>
                 </div>
                 <div className={styles.componentContainer}>
-                    {list.map((user) => (
+                    {hallList.map((user) => (
                         <div className={styles.componentWrapper}>
                             <Hall
                                 props={user}

@@ -11,10 +11,10 @@ function RecordBoard({props}) {
         const MemberArray = []
 
         for (let i = 0; i < props.length; i++) {
-            // const member = props[i];
-            // const status = member.status;
-            // const tmp = status.filter(status => 't' === status).length;
-            // MemberArray.push({user: member, count: tmp});
+            const member = props[i];
+            const status = member.status;
+            const tmp = status.filter(status => 't' === status).length;
+            MemberArray.push({user: member, count: tmp});
         }
 
         let sorting = "count";

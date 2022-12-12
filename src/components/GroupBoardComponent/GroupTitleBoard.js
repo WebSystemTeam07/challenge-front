@@ -21,20 +21,18 @@ function GroupTitleBoard({challenge}) {
 
     useEffect(() => {
 
-        if (challenge) {
-                axios.get(port.url + `/user/userId/${challenge.ownerId}`).then((response) => {
-                console.log("Successfully Connected")
-                setUser(response.data);
-            }).catch(() => {
-                console.log("Error")
-            });
-        }
+        axios.get(port.url + `/user/userId/${challenge.ownerId}`).then((response) => {
+        console.log("Successfully Connected")
+        setUser(response.data);
+        }).catch(() => {
+            console.log("Error")
+        });
 
-    }, []);
+    }, [challenge]);
 
     const tags = challenge.tag;
 
-    if (challenge && user) {
+    if (challenge) {
         console.log(user);
         
         return(
@@ -46,7 +44,7 @@ function GroupTitleBoard({challenge}) {
                     ))}
                 </div>
                 <div className={styles.titleContainer}>
-                    <p>{challenge?.title}</p>
+                    <p>{challenge.title}</p>
                 </div>
             </div>
             <div className={styles.infoContainer}>

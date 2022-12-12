@@ -15,7 +15,7 @@ const GroupChallengeModal = (props) => {
                         <div className={styles.contentContainer}>
                             <div className={styles.articleContainer}>
                                 <p>챌린지 소개</p>
-                                <p>{challenge.content}</p>
+                                <p>{challenge.contents}</p>
                             </div>
                             <div className={styles.articleContainer}>
                                 <p>챌린지 방법</p>

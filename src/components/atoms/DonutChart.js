@@ -1,24 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import styles from './atom.module.scss'
 
-// function DonutChart({ percent }) {
-//     return(
-//         <div className={styles.donutContainer}>
-//             <div className={styles.svgContainer} viewBox="0 0 200 200">
-//                 <div className={styles.circleWrapper}>
-
-//                 </div>
-//                 <div className={styles.animationWrapper}>
-
-//                 </div>
-//                 <div className={styles.percentContainer}>
-
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
 function DonutChart({ color, percent, size, font }) {
 
     if (font < "1rem") {

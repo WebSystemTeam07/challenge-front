@@ -53,6 +53,7 @@
     padding: 1.3rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .pointContainer {
@@ -64,4 +65,25 @@
     font-weight: bold;
     font-family: "AppleSDGothicNeoM" !important;
     color: #1c8cc9;
+}
+
+.profileBox {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 70%;
+
+    margin: 0;
+}
+
+.nameContainer {
+    display: flex;
+    column-gap: 0.8rem;
+    align-items: center;
 }

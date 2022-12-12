@@ -15,19 +15,19 @@ function GroupBoardArticle(props) {
 
     // const [article, setArticle] = useState("");
 
-    const challenge = {
-        title: "하루 한 번 샐러드 먹기",
-        tag: ["매일", "식단"],
-        people: 1028,
-        now: new Date('2022-12-02'),
-        startDate: new Date('2022-11-30'),
-        endDate: new Date('2022-12-07'),
-    }
+    // const challenge = {
+    //     title: "하루 한 번 샐러드 먹기",
+    //     tag: ["매일", "식단"],
+    //     people: 1028,
+    //     now: new Date('2022-12-02'),
+    //     startDate: new Date('2022-11-30'),
+    //     endDate: new Date('2022-12-07'),
+    // }
 
-    const user = {
-        name: "큐티섹시회오리소세지",
-        imgSrc: "https://blog.kakaocdn.net/dn/bzKsjn/btq3USZ2HWX/FVn5G8ZMU3avYbgmapPRDK/img.jpg"
-    }
+    // const user = {
+    //     name: "큐티섹시회오리소세지",
+    //     imgSrc: "https://blog.kakaocdn.net/dn/bzKsjn/btq3USZ2HWX/FVn5G8ZMU3avYbgmapPRDK/img.jpg"
+    // }
 
     const article = {
         title: "공지사항",
@@ -53,10 +53,6 @@ function GroupBoardArticle(props) {
         <div>
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > 그룹 게시판 > "} content={"공지사항"}/>
             <div className={styles.boardContainer}>
-                <GroupTitleBoard 
-                    challenge={challenge}
-                    user={user}
-                />
                 <div className={styles.componentContainer}>
                     {/* <Link to="/groupchallengepage/board/detail" style={{ textDecoration: "none" }}>
                         <div className={styles.backWrapper}><p>돌아가기</p></div>
