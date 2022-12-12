@@ -8,32 +8,34 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import port from "../assets/port.json";
 
-function GroupBoardArticle(props) {
+function GroupBoardTaskArticle(props) {
 
     const navigate = useNavigate();
     const location = useLocation();
 
-    const userId = location.state.userId;
+    const usertaskId = location.state.usertaskId;
     const challengeId = location.state.challengeId;
+    const newDate = location.state.date;
+    
 
     const [article, setArticle] = useState("");
     const [user, setUser] = useState("");
 
     useEffect(() => {
 
-        axios.get(port.url + `/post/userandChallenge`, { params: { userId: userId, challengeId: challengeId }}).then((response) => {
+        axios.get(port.url + `/task/userbyiddate`, { params: { usertaskId: usertaskId, date: newDate }}).then((response) => {
             console.log("Successfully Connected")
             setArticle(response.data);
         }).catch(() => {
-            console.log("Error")
+                console.log("Error")
         });
-            
-        axios.get(port.url + `/user/userId/${userId}`).then((response) => {
-            console.log("Successfully Connected")
-            setUser(response.data);
-        }).catch(() => {
-            console.log("Error")
-        });
+
+        // axios.get(port.url + `/user/userId/${userId}`).then((response) => {
+        //     console.log("Successfully Connected")
+        //     setUser(response.data);
+        // }).catch(() => {
+        //     console.log("Error")
+        // });
 
     }, []);
 
@@ -49,7 +51,6 @@ function GroupBoardArticle(props) {
     const onClickHandler = () => {
         navigate("/groupchallengepage/board/detail/", { state: { challengeId : challengeId } })
     }
-
 
     return(
         <div>
@@ -68,7 +69,7 @@ function GroupBoardArticle(props) {
                             </div>
                             <div className={styles.headerContainer}>
                                 <p>{article.title}</p>
-                                <p>{user.name}</p>
+                                {/* <p>{user.name}</p> */}
                             </div>
                         </div>
                         <div className={styles.contentContainer}>
@@ -81,4 +82,4 @@ function GroupBoardArticle(props) {
     );
 }
 
-export default GroupBoardArticle;
+export default GroupBoardTaskArticle;

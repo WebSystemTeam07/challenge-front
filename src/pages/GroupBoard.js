@@ -57,7 +57,7 @@ function GroupBoard() {
             console.log("Error")
         })
 
-        axios.get(port.url + `/task/challenge/${challengeId}`).then((response) => {
+        axios.get(port.url + `/task/challenge/list/${challengeId}`).then((response) => {
             console.log("Successfully Connected")
             setConfirms(response.data);
         }).catch(() => {
@@ -65,7 +65,7 @@ function GroupBoard() {
         })
 
     }, []);
-    
+
     return (
         <div className={styles.bodyContainer}>
             <Bar path={"전체보기 > 그룹 챌린지 > 상세 > "} content={"그룹 게시판"} />

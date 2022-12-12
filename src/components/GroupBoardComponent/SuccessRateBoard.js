@@ -4,14 +4,15 @@ import DonutChart from "../atoms/DonutChart";
 function SuccessRateBoard({challenge, users}) {
 
     if (challenge && users) {
+        
+        let count = 0;
 
-        const MemberArray = []
-        const count = 0;
+        console.log(users);
 
         for (let i = 0; i < users.length; i++) {
             const member = users[i];
             const status = member.status;
-            const tmp = status.filter(status => 't' === status).length;
+            const tmp = status.filter(status => 'T' === status).length;
             const percent = tmp / status.length;
             count = count + percent;
         }
@@ -34,7 +35,7 @@ function SuccessRateBoard({challenge, users}) {
                     font="large"
                 /> : <DonutChart 
                     color="#1c8cc9"
-                    percent={0.1}
+                    percent={finalPercent}
                     size="13rem"
                     font="large"
                 />}

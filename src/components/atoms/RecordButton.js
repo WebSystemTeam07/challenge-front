@@ -19,8 +19,9 @@ function RecordButton({rank, user}) {
     }, [user]);
 
     if (user) {
+        console.log(user);
         const status = user.status;
-        const count = status.filter(status => 't' === status).length;
+        const count = status.filter(status => 'T' === status).length;
         const percent = count / status.length;
 
         return(

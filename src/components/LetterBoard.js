@@ -1,18 +1,27 @@
 import { useState } from "react";
 import ArticleComponent from "./atoms/ArticleComponent";
+import TaskComponent from "./atoms/TaskComponent";
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import styles from "./styles/letter.module.scss"
 
-function LetterBoard({title, list}) {
+function LetterBoard({title, list, id, type}) {
 
     const [page, setPage] = useState(1);
 
     if (list) {
 
         console.log(list);
+
+        function flattenProps(arr, d = 1) {
+            return ( d > 0 
+                ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flattenProps(val, d - 1) : val), [])
+                : arr.slice());
+        };
+    
+        const newList = flattenProps(list, Infinity);
 
         const incrementHandler = () => {
             if (list.length < (page + 1) * 13) {
@@ -30,7 +39,9 @@ function LetterBoard({title, list}) {
             }
         }
 
-        const List = list.slice((page - 1) * 13, page * 13)
+        console.log();
+
+        const List = newList.slice((page - 1) * 13, page * 13)
 
         return(
             <div className={styles.boardContainer}>
@@ -55,16 +66,28 @@ function LetterBoard({title, list}) {
                         <div className={styles.emptyContainer}>
                             <p>글이 없습니다.</p>
                         </div> 
-                    :
-                        <div>
+                    :(
+                        type === 1 ? 
+                        (<div>
                             {List.map((article, index) => (
                                 <ArticleComponent
                                     props={article}
                                     index={index + 1}
-                                    id={list[index]._id}
+                                    userId={list[index].userId}
+                                    challengeId={id}
+                                    type={type}
                                 />
                             ))}
-                        </div>
+                        </div>) : (<div>
+                            {List.map((article, index) => (
+                                <TaskComponent
+                                    props={article}
+                                    index={index + 1}
+                                    challengeId={id}
+                                />
+                            ))}
+                        </div>)
+                    )
                     }
                 </div>
                 <div className={styles.arrowContainer}>

@@ -54,9 +54,10 @@ function GroupBoardDetail() {
             console.log("Error")
         })
 
-        axios.get(port.url + `/task/challenge/${challengeId}`).then((response) => {
+        axios.get(port.url + `/task/challenge/list/${challengeId}`).then((response) => {
             console.log("Successfully Connected")
             setConfirms(response.data);
+            console.log(confirms);
         }).catch(() => {
             console.log("Error")
         })
@@ -82,11 +83,15 @@ function GroupBoardDetail() {
                             <LetterBoard 
                                 title={"공지사항"} 
                                 list={ notices }
+                                id = {challengeId}
+                                type = { notice }
                             />
                         ) : (
                             <LetterBoard 
                                 title={"인증 게시판"} 
                                 list={ confirms }
+                                id = {challengeId}
+                                type = { notice }
                             />
                         )}
                     {

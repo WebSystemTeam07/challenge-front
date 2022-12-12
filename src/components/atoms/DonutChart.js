@@ -59,7 +59,7 @@ function DonutChart({ color, percent, size, font }) {
             />
                 </AniSvg>
                 <Percent className={styles.percentContainer} color={color} font={font}>
-                    {percent * 100}%
+                    {Math.round(percent * 100)}%
                     <p>성공율</p>
                 </Percent>
             </Chart>

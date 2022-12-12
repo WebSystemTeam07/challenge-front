@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 
 import axios from "axios";
-import port from "./../assets/port.json";
 
 import styles from "../components/styles/challenge.module.scss"
 
@@ -14,13 +13,15 @@ function ChallengeBoard() {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${port.url}/challenge/group/uptodate`).then((response) => {
+        axios.get(`http://localhost:5500/challenge/group/uptodate`).then((response) => {
             console.log("Successfully Connected")
             setList(response.data);
         }).catch(() => {
             console.log("Error")
         })
     }, []);
+
+    const challengeList = list.slice(0, 8);
 
     return(
         <div className={styles.boardContainer}>
@@ -33,7 +34,7 @@ function ChallengeBoard() {
             </div>
             <div className={styles.challengeWrapper}>
                 <div className={styles.challengeContainer}>
-                    {list.map((challenge) => (
+                    {challengeList.map((challenge) => (
                         <Challenge
                             props={challenge}
                         />

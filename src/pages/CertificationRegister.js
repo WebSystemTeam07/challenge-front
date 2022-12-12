@@ -57,7 +57,7 @@ function CertificationRegister(props){
         <div className="registerContainer">
             <p style={{fontSize:"xx-large", fontWeight:"bold"}}>인증 글쓰기</p>
             <div className="part">
-                <sapn style={{marginRight:"15px", color:"#1c8cc9", fontSize:"medium"}}>{challenge.method}로 인증해요!</sapn>
+                <span style={{marginRight:"15px", color:"#1c8cc9", fontSize:"medium"}}>{challenge.method}로 인증해요!</span>
             </div>
             <span className="part">
                 <p style={{fontSize:"x-large", fontWeight:"bold"}}>제목</p>

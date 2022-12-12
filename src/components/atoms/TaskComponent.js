@@ -6,7 +6,9 @@ import axios from "axios";
 import port from "../../assets/port.json";
 import { useState } from "react";
 
-function ArticleComponent({props, index, userId, challengeId, type}) {
+function TaskComponent({props, index, challengeId}) {
+
+    console.log(props);
     
     const navigate = useNavigate();
 
@@ -23,19 +25,19 @@ function ArticleComponent({props, index, userId, challengeId, type}) {
 
     useEffect(() => {
 
-        if(userId) {
-            axios.get(port.url + `/user/userId/${userId}`).then((response) => {
-                console.log("Successfully Connected")
-                setUser(response.data);
-            }).catch(() => {
-                console.log("Error")
-            });
-        }
+        // if(props) {
+        //     axios.get(port.url + `/user/userId/${userId}`).then((response) => {
+        //         console.log("Successfully Connected")
+        //         setUser(response.data);
+        //     }).catch(() => {
+        //         console.log("Error")
+        //     });
+        // }
 
     }, []);
 
     const onClickHandler = () => {
-        navigate("/groupchallengepage/board/detail/article/post", { state: { userId : userId, challengeId : challengeId, type: type } })
+        navigate("/groupchallengepage/board/detail/article/task", { state: { usertaskId : props.usertaskId, date: props.date, challengeId: challengeId } })
     }
 
     return(
@@ -47,7 +49,7 @@ function ArticleComponent({props, index, userId, challengeId, type}) {
                 <p>{props.title}</p>
             </div>
             <div className={styles.nameWrapper}>
-                <p>{user.name}</p>
+                {/* <p>{user.name}</p> */}
             </div>
             <div className={styles.dateWrapper}>
                 <div className={styles.dateContainer}>
@@ -61,4 +63,4 @@ function ArticleComponent({props, index, userId, challengeId, type}) {
     );
 }
 
-export default ArticleComponent;
+export default TaskComponent;
