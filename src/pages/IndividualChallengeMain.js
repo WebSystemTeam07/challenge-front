@@ -2,7 +2,7 @@ import { React, useEffect, useState } from "react";
 
 import Bar from "../components/Bar.js";
 import Path from "../components/Path";
-import IndividualChallengeBoard from "../components/IndividualChallenge/IndividualChallengeBoard.js";
+import IndividualChallengeBoard from "../components/individualChallenge/IndividualChallengeBoard.js";
 
 import axios from 'axios';
 import port from "./../assets/port.json";
