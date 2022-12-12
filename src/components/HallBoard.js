@@ -5,6 +5,7 @@ import Hall from "./Hall";
 
 import axios from "axios";
 import { useEffect } from "react";
+import port from "./../assets/port.json";
 
 function HallBoard() {
 
@@ -12,7 +13,7 @@ function HallBoard() {
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
-        axios.get(`http://localhost:5500/user/point`).then((response) => {
+        axios.get(`${port.url}/user/point`).then((response) => {
             console.log("Successfully Connected")
             setList(response.data);
         }).catch(() => {
